@@ -1,0 +1,90 @@
+#!/usr/bin/env sh
+
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# global settings
+yabai -m config window_placement             second_child
+yabai -m config split_ratio                  0.5
+yabai -m config mouse_follows_focus          on
+yabai -m config focus_follows_mouse          autofocus
+
+# window spacing
+yabai -m config layout                       bsp
+yabai -m config top_padding                  30
+yabai -m config bottom_padding               06
+yabai -m config left_padding                 06
+yabai -m config right_padding                06
+yabai -m config window_gap                   06
+
+# Space 1 is default
+# Space 2 is default
+# yabai -m config --space 3  layout            stack
+# yabai -m config --space 4  layout            stack
+yabai -m config --space 6  layout            stack
+yabai -m config --space 7  layout            stack
+yabai -m config --space 8  layout            stack
+# Space 5 is default
+# Space 6 is default
+
+# Best thing so far to pure columns layout
+yabai -m window --toggle split
+yabai -m space --balance
+yabai -m config auto_balance on
+
+# Unmanaged apps
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Docker Desktop$" manage=off
+yabai -m rule --add app="^Surfshark$" manage=off
+
+# Managed Apps
+yabai -m rule --add app="^Alacritty$" space=2
+yabai -m rule --add app="^TickTick$" space=7
+yabai -m rule --add app="^Calendar$" space=7
+yabai -m rule --add app="^Microsoft Outlook$" space=7
+yabai -m rule --add app="^Messenger$" space=8
+yabai -m rule --add app="^WhatsApp$" space=8
+yabai -m rule --add app="^Messages$" space=8
+yabai -m rule --add app="^Spotify$" space=9
+
+# Autostart applications on launch
+open -a "Spotify"
+
+open -a "Messenger"
+open -a "Whatsapp"
+open -a "Messages"
+
+open -a "TickTick"
+open -a "Calendar"
+open -a "Microsoft Outlook"
+
+# Stackline config
+STACKLINE_EVENTS="\
+    application_activated \
+    application_front_switched \
+    application_hidden \
+    application_launched \
+    application_terminated \
+    application_visible \
+    window_created \
+    window_deminimized \
+    window_focused \
+    window_minimized \
+    window_resized"
+
+yabai -m signal --add \
+    event="window_destroyed" \
+    label="stackline_window_destroyed" \
+    action="echo ':window_destroyed' | /usr/local/bin/hs -m stackline-events"
+
+for event in $STACKLINE_EVENTS
+do
+    yabai -m signal --add \
+        event="$event" \
+        label="stackline_$event" \
+        app!="Hammerspoon" \
+        action="echo ':$event' | /usr/local/bin/hs -m stackline-events"
+done

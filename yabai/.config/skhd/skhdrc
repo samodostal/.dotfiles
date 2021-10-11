@@ -1,0 +1,46 @@
+alt - h   : yabai -m space --focus  1 # Safari
+alt - m   : yabai -m space --focus  2 # Terminal
+alt - w   : yabai -m space --focus  3 # Anything
+alt - v   : yabai -m space --focus  4 # Anything
+alt - z   : yabai -m space --focus  5 # Outlook + Teams
+alt - 0x06: yabai -m space --focus  6
+alt - q   : yabai -m space --focus  7 # TickTick + Calendar
+alt - j   : yabai -m space --focus  8 # Messenger + WhatsApp + Messages
+alt - k   : yabai -m space --focus  9 # Spotify
+alt - u   : yabai -m space --focus 10 # Secondary monitor
+
+alt + cmd - h   : yabai -m window --space  1; yabai -m space --focus  1
+alt + cmd - m   : yabai -m window --space  2; yabai -m space --focus  2
+alt + cmd - w   : yabai -m window --space  3; yabai -m space --focus  3
+alt + cmd - v   : yabai -m window --space  4; yabai -m space --focus  4
+alt + cmd - z   : yabai -m window --space  5; yabai -m space --focus  5
+alt + cmd - 0x06: yabai -m window --space  6; yabai -m space --focus  6
+alt + cmd - q   : yabai -m window --space  7; yabai -m space --focus  7
+alt + cmd - j   : yabai -m window --space  8; yabai -m space --focus  8
+alt + cmd - k   : yabai -m window --space  9; yabai -m space --focus  9
+alt + cmd - u   : yabai -m window --space 10; yabai -m space --focus 10
+
+alt + shift - j: yabai -m window --focus south
+alt + shift - k: yabai -m window --focus north
+alt + shift - l: yabai -m window --focus east
+alt + shift - h: yabai -m window --focus west
+
+alt + cmd + shift - j: yabai -m window --swap south
+alt + cmd + shift - k: yabai -m window --swap north
+alt + cmd + shift - h: yabai -m window --swap west
+alt + cmd + shift - l: yabai -m window --swap east
+
+# alt - p: yabai -m space --display recent
+
+alt - f: yabai -m window --toggle zoom-fullscreen
+alt + cmd - f: yabai -m window --toggle native-fullscreen
+
+alt + cmd - c: yabai -m window --close
+
+alt - n: yabai -m window --focus stack.next
+alt - p: yabai -m window --focus stack.prev
+
+alt - o: yabai -m window --toggle split
+
+alt - t: open -n -a "Alacritty"
+alt - s: open -n -a "Safari"

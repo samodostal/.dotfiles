@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+spacebar -m config position             top
+spacebar -m config height               24
+spacebar -m config title                off
+spacebar -m config spaces               on
+spacebar -m config clock                on
+spacebar -m config power                on
+spacebar -m config padding_left         20
+spacebar -m config padding_right        20
+spacebar -m config spacing_left         15
+spacebar -m config spacing_right        15
+spacebar -m config text_font            "Helvetica Neue:Normal:13.0"
+spacebar -m config icon_font            "SFMono Nerd Font:Regular:13.0"
+
+spacebar -m config background_color     0xff1a1a1a
+spacebar -m config foreground_color     0xffa8a8a8
+spacebar -m config space_icon_color     0xff458588
+
+spacebar -m config power_icon_color     0xffa8a8a8
+spacebar -m config battery_icon_color   0xffa8a8a8
+spacebar -m config clock_icon_color     0xffa8a8a8
+spacebar -m config dnd_icon_color       0xffa8a8a8 #do not disturb
+
+# spacebar -m config power_icon_strip      
+spacebar -m config space_icon_strip     1 2 3 4 5 6 7 8 9 0
+spacebar -m config clock_format         "%a %d %b  %R"
