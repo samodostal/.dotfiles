@@ -4,3 +4,5 @@
 	email = samuel.dostal.sk@gmail.com
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
