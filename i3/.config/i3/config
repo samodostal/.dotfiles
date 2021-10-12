@@ -1,0 +1,131 @@
+# --- Set's ----------------------------------------------------------------
+
+set $mod Mod1
+set $win Mod4
+font pango: SFMono Nerd Font 16px
+floating_modifier $mod
+set $refresh_i3status killall -SIGUSR1 i3status
+for_window [class="^.*"] border pixel 2
+
+# --- Bindings ----------------------------------------------------------------
+
+bindsym $mod+Return exec alacritty
+bindsym $mod+c exec chromium
+
+bindsym $mod+Shift+c kill
+
+bindsym $mod+d exec i3-dmenu-desktop
+#bindsym $mod+d exec dmenu_run
+
+bindsym $win+h focus left
+bindsym $win+l focus right
+# bindsym $mod+n focus down
+# bindsym $mod+p focus up
+
+bindsym $win+Shift+h move left
+bindsym $win+Shift+l move right
+# bindsym $mod+Shift+j move down
+# bindsym $mod+Shift+k move up
+
+bindsym $mod+p move workspace to output right
+
+bindsym $win+w split h
+# bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+# bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+shift+x exec /home/$USER/.i3/i3lock-multimonitor/lock
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym l resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
+
+        bindsym Escape mode "default"
+}
+
+# --- Workspaces --------------------------------------------------------------
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "0"
+
+bindsym $mod+h workspace $ws1
+bindsym $mod+m workspace $ws2
+bindsym $mod+w workspace $ws3
+bindsym $mod+v workspace $ws4
+bindsym $mod+z workspace $ws5
+# bindsym $mod+; workspace $ws6
+bindsym $mod+q workspace $ws7
+bindsym $mod+j workspace $ws8
+bindsym $mod+k workspace $ws9
+bindsym $mod+u workspace $ws10
+
+bindsym $mod+Shift+h move container to workspace $ws1
+bindsym $mod+Shift+m move container to workspace $ws2
+bindsym $mod+Shift+w move container to workspace $ws3
+bindsym $mod+Shift+v move container to workspace $ws4
+bindsym $mod+Shift+z move container to workspace $ws5
+# bindsym $mod+Shift+; move container to workspace $ws6
+bindsym $mod+Shift+q move container to workspace $ws7
+bindsym $mod+Shift+j move container to workspace $ws8
+bindsym $mod+Shift+k move container to workspace $ws9
+bindsym $mod+Shift+u move container to workspace $ws10
+
+# --- Autostart Apps ----------------------------------------------------------
+
+for_window [class="Spotify"] move container to workspace $ws9
+for_window [class="Teams"] move container to workspace $ws8
+exec --no-startup-id spotify
+exec --no-startup-id teams
+
+# --- Exec's ------------------------------------------------------------------
+
+# exec_always setxkbmap -layout "us" -variant "dvorak" -option "ctrl:nocaps"
+# exec xcape -e 'Control_L=Escape'
+# exec_always xcape -e 'Control_L=Escape'
+
+exec --no-startup-id nitrogen --restore
+exec_always compton
+
+#exec xrandr --output eDP-1 --mode 1920x1080 --pos 0x345 --rotate normal --output HDMI-1 --off --output DP-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+
+# --- FN Keys -----------------------------------------------------------------
+
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && $refresh_i3status
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && $refresh_i3status
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
+bindsym XF86MonBrightnessUp exec sudo sh ~/.config/i3/brightness/up.sh
+bindsym XF86MonBrightnessDown exec sudo sh ~/.config/i3/brightness/down.sh 
+
+# bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# --- I3Bar -------------------------------------------------------------------
+
+bar {
+        position top
+        tray_output none
+        status_command i3status | ~/.config/i3/scripts/i3spotifystatus/pystatus.py
+}
+

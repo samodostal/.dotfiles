@@ -1,0 +1,46 @@
+general {
+        colors = false
+        interval = 1
+        markup = "pango"
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "volume master"
+order += "read_file UPTIME"
+order += "battery all"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "(%essid)%quality 直 "
+        format_down = "睊 "
+}
+
+ethernet _first_ {
+        format_up = ""
+        format_down = ""
+}
+
+volume master {
+        format = "%volume  "
+        format_muted = "%volume  "
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+read_file UPTIME {
+        path = "/sys/class/backlight/intel_backlight/brightness"
+        format = "%content%  "
+        Max_characters = 2
+}
+
+battery all {
+        format = "%percentage "
+        last_full_capacity = true
+        integer_battery_capacity = true
+}
+
+tztime local {
+        format = "%m-%d %H:%M "
+}
