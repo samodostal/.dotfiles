@@ -85,7 +85,7 @@ map('n', '<leader>fb', '<cmd>Telescope buffers theme=get_dropdown<CR>')
 map('n', '<leader>fh', '<cmd>lua require"telescope.builtin".help_tags()<CR>')
 map('n', '<leader>fo', '<cmd>lua require"telescope.builtin".oldfiles()<CR>')
 map('n', '<leader>fr', '<cmd>lua require"telescope.builtin".live_grep()<CR>')
--- map('n', '<leader>fd', '<cmd>lua require"telescope.builtin".git_files({ cwd = "$HOME/.dotfiles" })<CR>')
+map('n', '<leader>fd', '<cmd>lua require"telescope.builtin".git_files({ cwd = "$HOME/.dotfiles" })<CR>')
 
 map('n', '<leader>b', '<cmd>NvimTreeToggle<CR>')
 map('n', '<leader>ft', '<cmd>NvimTreeFindFile<CR>')
