@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export SSH_AGENT_PID:653
-SETUVAR --export SSH_AUTH_SOCK:/var/folders/5b/sjq88zg90zv2663x52_jgvd80000gn/T//ssh\x2dKZ4En5fQXkBS/agent\x2e651
+SETUVAR --export SSH_AGENT_PID:711
+SETUVAR --export SSH_AUTH_SOCK:/var/folders/5b/sjq88zg90zv2663x52_jgvd80000gn/T//ssh\x2d2bjMHdQLdRJf/agent\x2e709
 SETUVAR __fish_initialized:3100
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/samueldostal/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/samueldostal/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:/Users/samueldostal/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e/Users/samueldostal/\x2econfig/fish/functions/_nvm_list\x2efish\x1e/Users/samueldostal/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e/Users/samueldostal/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e/Users/samueldostal/\x2econfig/fish/functions/nvm\x2efish\x1e/Users/samueldostal/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e/Users/samueldostal/\x2econfig/fish/completions/nvm\x2efish
