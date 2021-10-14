@@ -6,6 +6,7 @@ o.number = true
 o.relativenumber = true
 o.numberwidth = 1
 o.guicursor = 'i:block'
+vim.cmd[[set fillchars+=vert:\ ]]
 o.showmode = false
 o.signcolumn = 'yes'
 o.cursorline = false
