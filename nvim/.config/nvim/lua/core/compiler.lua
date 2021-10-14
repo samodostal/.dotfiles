@@ -7,6 +7,7 @@ local term_wrapper = function(command, file)
   -- 2: Optional: a fmt argument with %
   -- Eg: term_wrapper('echo I am editing %s', vim.fn.expand("%"))
   vim.cmd 'vnew'
+  vim.cmd 'vertical resize 70'
   vim.cmd('term ' .. fmt(command, file))
   vim.cmd 'silent! file CompileAndRun'
   vim.cmd 'set nobuflisted'

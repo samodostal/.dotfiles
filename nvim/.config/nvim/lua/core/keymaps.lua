@@ -10,7 +10,7 @@ map('n', 'q:', '<Nop>')
 map('n', 'Y', 'y$')
 map('n', 'x', '"_x')
 map('n', 'X', '"_X')
--- map('n', '<leader>pc', '<cmd>lua require"core.compiler".compile_and_run()<CR>')
+map('n', '<leader>pc', '<cmd>lua require"core.compiler".compile_and_run()<CR>')
 -- map('n', '<leader>fp', '<cmd>let @*=fnamemodify(expand("%"), ":~:.")<CR>') -- Copy relative filepath
 
 vim.cmd [[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]]
