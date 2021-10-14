@@ -22,7 +22,7 @@ return function(client)
   lua_nmap('<leader>pd', 'vim.lsp.diagnostic.show_line_diagnostics()')
   lua_nmap('[d', 'vim.lsp.diagnostic.goto_prev()')
   lua_nmap(']d', 'vim.lsp.diagnostic.goto_next()')
-  lua_nmap('<space>fp', 'vim.lsp.buf.formatting()')
+  lua_nmap('<leader>fp', 'vim.lsp.buf.formatting()')
 
   require('lsp_signature').on_attach({
     bind = true,
