@@ -45,6 +45,10 @@ return packer.startup(function(use)
     -- setup = require 'modules.config.gitsigns',
   }
 
+  use {
+    'pwntester/octo.nvim'
+  }
+
   -----[[------------]]-----
   ---        LSP         ---
   -----]]------------[[-----
@@ -89,15 +93,28 @@ return packer.startup(function(use)
   }
 
   use {
-    'tzachar/cmp-tabnine',
-    after = 'nvim-cmp',
-    setup = require 'modules.config.tabnine',
-    run = './install.sh',
-    requires = 'hrsh7th/nvim-cmp'
+    'onsails/lspkind-nvim'
   }
+
+  -- use {
+  --   'tzachar/cmp-tabnine',
+  --   after = 'nvim-cmp',
+  --   setup = require 'modules.config.tabnine',
+  --   run = './install.sh',
+  --   requires = 'hrsh7th/nvim-cmp'
+  -- }
 
   use {
     'simrat39/symbols-outline.nvim'
+  }
+
+  use {
+    'folke/todo-comments.nvim',
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+      }
+    end
   }
 
   use {

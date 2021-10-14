@@ -14,7 +14,6 @@ return function()
       enable = true,
       auto_open = true,
     },
-    auto_close = true,
     open_on_setup = true,
     view = {
       width = 35,

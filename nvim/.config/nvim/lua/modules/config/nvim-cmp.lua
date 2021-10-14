@@ -1,5 +1,6 @@
 return function()
-  local cmp = require 'cmp'
+  local cmp = require('cmp')
+  local lspkind = require('lspkind')
 
   local check_back_space = function()
     local col = vim.fn.col '.' - 1
@@ -49,12 +50,14 @@ return function()
       }),
     },
     sources = {
-      { name = 'cmp_tabnine' },
       { name = 'nvim_lsp' },
       { name = 'buffer' },
       { name = 'path' },
       { name = 'emoji' },
       { name = 'vsnip' },
     },
+    formatting = {
+      format = lspkind.cmp_format({with_text = true, maxwidth = 50})
+    }
   }
 end
