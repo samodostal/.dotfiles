@@ -31,8 +31,13 @@ return packer.startup(function(use)
   ---        Git         ---
   -----]]------------[[-----
 
+  -- TPOPE!!!
   use {
     'tpope/vim-fugitive',
+  }
+
+  use {
+    'tpope/vim-rhubarb'
   }
 
   use {
