@@ -9,7 +9,7 @@ clear
 
 if grep -qs "$selected" /Users/samueldostal/local_bin/tmux-cht-languages; then
     query=`echo $query | tr ' ' '+'`
-    echo "Language: $selected, Query: $query" & echo & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done
+    curl -s cht.sh/$selected/$query | less -R
 else
-    curl cht.sh/$selected~$query | less
+    curl -s cht.sh/$selected~$query | less -R
 fi
