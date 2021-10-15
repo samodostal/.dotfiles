@@ -150,7 +150,7 @@ return packer.startup(function(use)
   -----]]------------[[-----
 
   use { 'unblevable/quick-scope' }
-  use { 'mfussenegger/nvim-dap', setup = require 'modules.config.nvim-dap' }
+  use { '~/Projects/nvim-plugins/nvim-dap', setup = require 'modules.config.nvim-dap' }
   use { 'rcarriga/nvim-dap-ui', setup = require 'modules.config.nvim-dap-ui' }
   use { 'szw/vim-maximizer' }
 
