@@ -104,7 +104,7 @@ map('n', '<leader>as', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>')
 -- endfun
 
 map('n', '<leader>dd', '<cmd>NvimTreeClose<CR><cmd>lua require("dapui").open()<CR><cmd>lua require("dap").continue()<CR>');
-map('n', '<leader>de', '<cmd>lua require("dapui").close()<CR><cmd>lua require("dap").clear_all_breakpoints()<CR><cmd>NvimTreeOpen<CR>');
+map('n', '<leader>de', '<cmd>lua require("dapui").close()<CR><cmd>lua require("dap.breakpoints").clear()<CR><cmd>NvimTreeOpen<CR>');
 map('n', '<leader>m', '<cmd>MaximizerToggle<CR>');
 
 map('n', '<leader>db', '<cmd>lua require"dap".toggle_breakpoint()<CR>');
