@@ -4,7 +4,7 @@ env:
 window:
   title: Alacritty
   decorations: Buttonless
-  opacity: 0.70
+  opacity: 0.60
   class:
     instance: Alacritty
     general: Alacritty
