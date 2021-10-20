@@ -81,8 +81,6 @@ return packer.startup(function(use)
     },
   }
 
-  use { 'mfussenegger/nvim-jdtls' }
-
   use {
     'hrsh7th/nvim-cmp',
     setup = require 'modules.config.nvim-cmp',
@@ -95,6 +93,16 @@ return packer.startup(function(use)
       'hrsh7th/cmp-vsnip',
       { 'hrsh7th/vim-vsnip', requires = { 'rafamadriz/friendly-snippets' } },
     },
+  }
+
+  use { 'mfussenegger/nvim-jdtls' }
+
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    }
   }
 
   use {
@@ -168,7 +176,7 @@ return packer.startup(function(use)
     setup = require 'modules.config.telescope',
   }
 
-  use { 'ThePrimeagen/harpoon' }
+  use { '~/Projects/nvim-plugins/harpoon' }
 
   use {
     'kyazdani42/nvim-tree.lua',
