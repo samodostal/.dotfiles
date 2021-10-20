@@ -57,11 +57,12 @@ map('c', '<C-f>', '<C-R>=expand("%:p")<CR>', { silent = false })
 -- Git
 map('n', '<leader>gs', ':vert Git<CR>')
 map('n', '<leader>gd', ':Gdiff<CR>')
+map('n', '<leader>gn', 'ZZ:Gedit<CR>')
 map('n', '<leader>gp', ':Git push -u<CR>')
 map('n', '<leader>gl', ':Git pull<CR>')
 map('n', '<leader>gba', ':Git blame<CR>')
 map('n', '<leader>gbl', '<cmd>lua require"gitsigns".blame_line()<CR>')
-map('n', '<leader>gt', ':Git log<CR>')
+map('n', '<leader>gt', ':Gclog --<CR>')
 map('n', '<leader>gc', '<cmd>lua require"telescope.builtin".git_branches()<CR>')
 
 map('n', '<leader>gm', ':Gvdiffsplit!<CR>')
