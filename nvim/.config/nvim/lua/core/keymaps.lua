@@ -98,6 +98,8 @@ map('n', '<leader>at', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>')
 map('n', '<leader>an', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>')
 map('n', '<leader>as', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>')
 
+map('v', '<leader>re', '<cmd>lua require("refactoring").refactor("Extract Function")<CR>');
+
 -- fun GotoWindow(id)
 --     call win_gotoid(a:id)
 --     MaximizerToggle
