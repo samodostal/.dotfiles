@@ -17,10 +17,13 @@ vim.cmd [[
     au ColorScheme * hi SignColumn ctermbg=none guibg=none
     au ColorScheme * hi CursorLineNr guifg=#fabd2f guibg=none ctermbg=none
     au ColorScheme * hi GitSignsAdd guifg=#009900 guibg=none ctermbg=none
-    au ColorScheme * hi GitSignsDelete guifg=#2871cc guibg=none ctermbg=none
-    au ColorScheme * hi GitSignsChange guifg=#ff2222 guibg=none ctermbg=none
+    au ColorScheme * hi GitSignsDelete guifg=#ff2222 guibg=none ctermbg=none
+    au ColorScheme * hi GitSignsChange guifg=#2871cc guibg=none ctermbg=none
     au ColorScheme * hi QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
     au ColorScheme * hi QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
     au ColorScheme * hi LineNr guifg=#bbbbbb
+    au ColorScheme * hi DiffAdd guifg=#009900
+    au ColorScheme * hi DiffDelete guifg=#ff2222
+    au ColorScheme * hi DiffChange guifg=#2871cc
   augroup END
 ]]
