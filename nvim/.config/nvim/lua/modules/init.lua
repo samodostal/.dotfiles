@@ -176,7 +176,7 @@ return packer.startup(function(use)
     setup = require 'modules.config.telescope',
   }
 
-  use { '~/Projects/nvim-plugins/harpoon' }
+  use { 'thePrimeagen/harpoon' }
 
   use {
     'kyazdani42/nvim-tree.lua',

@@ -82,10 +82,18 @@ return function()
       GitBranch = {
         provider = 'GitBranch',
         condition = condition.check_git_workspace,
-        separator = ' ',
+        separator = '  ',
         separator_highlight = { 'NONE', colors.bg },
         highlight = { colors.yellow, colors.bg, 'bold' },
       },
+    },
+    {
+     Harpoon = {
+        provider = require("harpoon.mark").status,
+        separator = '  ',
+        highlight = { colors.white, colors.bg, 'bold' },
+        separator_highlight = { 'NONE', colors.bg },
+      }
     },
     {
       DiffAdd = {
@@ -167,8 +175,8 @@ return function()
           return '▊'
         end,
         separator = ' ',
-        separator_highlight = { 'NONE', colors.bg },
         highlight = { colors.grey, colors.bg, 'bold' },
+        separator_highlight = { 'NONE', colors.bg },
       },
     },
   }
