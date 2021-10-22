@@ -107,7 +107,7 @@ map('v', '<leader>re', '<cmd>lua require("refactoring").refactor("Extract Functi
 -- endfun
 
 map('n', '<leader>dd', '<cmd>NvimTreeClose<CR><cmd>lua require("dapui").open()<CR><cmd>lua require("dap").continue()<CR>');
-map('n', '<leader>de', '<cmd>lua require("dapui").close()<CR><cmd>lua require("dap.breakpoints").clear()<CR><cmd>NvimTreeOpen<CR>');
+map('n', '<leader>de', '<cmd>lua require("dapui").close()<CR><cmd>lua require("dap.breakpoints").clear()<CR><cmd>NvimTreeOpen<CR><C-l>');
 map('n', '<leader>m', '<cmd>MaximizerToggle<CR>');
 
 map('n', '<leader>db', '<cmd>lua require"dap".toggle_breakpoint()<CR>');
@@ -116,3 +116,30 @@ map('n', '<leader>d<leader>', '<cmd>lua require("dap").continue()<CR>');
 map('n', '<leader>dl', '<cmd>lua require"dap".step_over()<CR>');
 map('n', '<leader>dj', '<cmd>lua require"dap".step_into()<CR>');
 map('n', '<leader>dk', '<cmd>lua require"dap".step_out()<CR>');
+
+map('n', '<leader>c', '<Nop>')
+map('v', '<leader>c', '<Nop>')
+map('n', '<leader>cr', '<Nop>')
+map('v', '<leader>cr', '<Nop>')
+-- map('n', '<leader>cr', '<Nop>')
+-- map('v', '<leader>cr', '<Nop>')
+map('n', '<leader>ca', '<cmd>lua require"jdtls".code_action()<CR>')
+map('n', '<leader>co', '<cmd>lua require"jdtls".organize_imports()<CR>')
+map('n', '<leader>crv', '<cd>lua require"jdtls".extract_variable()<CR>')
+map('n', '<leader>crc', '<cmd>lua require"jdtls".extract_constant()<CR>')
+map('n', '<leader>crm', '<cmd>lua require"jdtls".extract_method(true)<CR>')
+map('v', '<leader>crm', '<cmd>lua require"jdtls".extract_method(true)<CR>')
+
+
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+map('n', '<leader>ca', '<cmd>lua require("jdtls").code_action()<CR>') -- jdtls should also work with other languages, a subset of <cmd>lua vim.lsp.buf.code_action
+map('n', '<leader>gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+map('n', '<leader>pd', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
+map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+map('n', '<leader>fp', '<cmd>lua vim.lsp.buf.formatting()<CR>')
