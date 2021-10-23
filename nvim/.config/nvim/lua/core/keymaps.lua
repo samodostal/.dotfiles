@@ -28,8 +28,17 @@ map('v', '<leader>p', '"*p');
 
 map('n', '<leader>t', ':b#<CR>')
 
-map('n', '<leader>j', ':cnext<CR>')
-map('n', '<leader>k', ':cprev<CR>')
+-- Quick-fix list
+map('n', '<leader>co', ':copen<CR>')
+map('n', '<leader>cc', ':cclose<CR>')
+map('n', '<leader>cj', ':cnext<CR>')
+map('n', '<leader>ck', ':cprev<CR>')
+
+-- Location list
+map('n', '<leader>lo', ':lopen<CR>')
+map('n', '<leader>lc', ':lclose<CR>')
+map('n', '<leader>j', ':lnext<CR>')
+map('n', '<leader>k', ':lprev<CR>')
 
 map('n', '<C-h>', '<cmd>wincmd l<CR>')
 map('n', '<C-j>', '<cmd>wincmd j<CR>')
@@ -87,6 +96,7 @@ map('n', '<leader>fh', '<cmd>lua require"telescope.builtin".help_tags()<CR>')
 map('n', '<leader>fo', '<cmd>lua require"telescope.builtin".oldfiles()<CR>')
 map('n', '<leader>fr', '<cmd>lua require"telescope.builtin".live_grep()<CR>')
 map('n', '<leader>fd', '<cmd>lua require"telescope.builtin".git_files({ cwd = "$HOME/.dotfiles" })<CR>')
+map('n', '<leader>cq', '<cmd>lua require"telescope.builtin".quickfix()<CR>')
 
 map('n', '<leader>b', '<cmd>NvimTreeToggle<CR>')
 map('n', '<leader>ft', '<cmd>NvimTreeFindFile<CR>')
@@ -124,7 +134,7 @@ map('v', '<leader>cr', '<Nop>')
 -- map('n', '<leader>cr', '<Nop>')
 -- map('v', '<leader>cr', '<Nop>')
 map('n', '<leader>ca', '<cmd>lua require"jdtls".code_action()<CR>')
-map('n', '<leader>co', '<cmd>lua require"jdtls".organize_imports()<CR>')
+map('n', '<leader>ci', '<cmd>lua require"jdtls".organize_imports()<CR>')
 map('n', '<leader>crv', '<cd>lua require"jdtls".extract_variable()<CR>')
 map('n', '<leader>crc', '<cmd>lua require"jdtls".extract_constant()<CR>')
 map('n', '<leader>crm', '<cmd>lua require"jdtls".extract_method(true)<CR>')
