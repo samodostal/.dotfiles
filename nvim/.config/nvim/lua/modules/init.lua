@@ -109,13 +109,13 @@ return packer.startup(function(use)
     'onsails/lspkind-nvim'
   }
 
-  -- use {
-  --   'tzachar/cmp-tabnine',
-  --   after = 'nvim-cmp',
-  --   setup = require 'modules.config.tabnine',
-  --   run = './install.sh',
-  --   requires = 'hrsh7th/nvim-cmp'
-  -- }
+  use {
+    'tzachar/cmp-tabnine',
+    after = 'nvim-cmp',
+    setup = require 'modules.config.tabnine',
+    run = './install.sh',
+    requires = 'hrsh7th/nvim-cmp'
+  }
 
   use {
     'simrat39/symbols-outline.nvim'
