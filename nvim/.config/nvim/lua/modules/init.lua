@@ -173,8 +173,10 @@ return packer.startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim',
-    setup = require 'modules.config.telescope',
+    setup = require 'modules.config.telescope'
   }
+
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   use { 'ThePrimeagen/harpoon' }
 
