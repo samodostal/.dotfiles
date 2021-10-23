@@ -55,7 +55,7 @@ map('c', '<C-d>', '<Del>', { silent = false })
 map('c', '<C-f>', '<C-R>=expand("%:p")<CR>', { silent = false })
 
 -- Git
-map('n', '<leader>gs', ':vert Git<CR>')
+map('n', '<leader>gs', ':vert Git<CR><cmd>vertical resize 70<CR>')
 map('n', '<leader>gd', ':Gdiff<CR>')
 map('n', '<leader>gn', 'ZZ:Gedit<CR>')
 map('n', '<leader>gp', ':Git push -u<CR>')
