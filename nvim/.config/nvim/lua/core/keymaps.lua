@@ -105,9 +105,10 @@ map('n', '<leader>pr', '<cmd>NvimTreeRefresh<CR>')
 map('n', '<leader>af', '<cmd>lua require("harpoon.mark").add_file()<CR>')
 map('n', '<leader>ac', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
 map('n', '<leader>ah', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>')
-map('n', '<leader>at', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>')
-map('n', '<leader>an', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>')
-map('n', '<leader>as', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>')
+map('n', '<leader>am', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>')
+map('n', '<leader>aw', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>')
+map('n', '<leader>av', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>')
+map('n', '<leader>az', '<cmd>lua require("harpoon.ui").nav_file(5)<CR>')
 
 map('v', '<leader>re', '<cmd>lua require("refactoring").refactor("Extract Function")<CR>');
 
