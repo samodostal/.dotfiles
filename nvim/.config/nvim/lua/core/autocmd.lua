@@ -25,5 +25,9 @@ vim.cmd [[
     au ColorScheme * hi DiffAdd guifg=#98971a
     au ColorScheme * hi DiffDelete guifg=#cc241d
     au ColorScheme * hi DiffChange guifg=#458588
+    au ColorScheme * hi CmpItemAbbr guifg=#a89984
+    au ColorScheme * hi CmpItemAbbrMatch guifg=#fbf1c7
+    au ColorScheme * hi CmpItemKind guifg=#d5c4a1
+    au ColorScheme * hi CmpItemMenu guifg=#d5c4a1
   augroup END
 ]]
