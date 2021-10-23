@@ -22,8 +22,8 @@ vim.cmd [[
     au ColorScheme * hi QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
     au ColorScheme * hi QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
     au ColorScheme * hi LineNr guifg=#bbbbbb
-    au ColorScheme * hi DiffAdd guifg=#009900
-    au ColorScheme * hi DiffDelete guifg=#ff2222
-    au ColorScheme * hi DiffChange guifg=#2871cc
+    au ColorScheme * hi DiffAdd guifg=#98971a
+    au ColorScheme * hi DiffDelete guifg=#cc241d
+    au ColorScheme * hi DiffChange guifg=#458588
   augroup END
 ]]
