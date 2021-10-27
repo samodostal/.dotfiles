@@ -23,7 +23,6 @@ return function()
     },
     tray = {
       elements = { "repl" },
-      size = 0,
       position = "bottom",
     },
     floating = {
