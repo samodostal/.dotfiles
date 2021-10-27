@@ -16,7 +16,7 @@ local config = {
     '--add-opens java.base/java.util=ALL-UNNAMED',
     '--add-opens java.base/java.lang=ALL-UNNAM'
   },
-  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
+  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'package.bluej'}),
   init_options = {
     bundles = {
       vim.fn.glob("~/.config/nvim/after/dap-adapters/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar")

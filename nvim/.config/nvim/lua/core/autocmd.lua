@@ -11,11 +11,6 @@ vim.cmd [[
     au TextYankPost * silent! lua vim.highlight.on_yank { timeout = 150 }
   augroup END
 
-  augroup lsp_location_list
-    au!
-    au! BufWrite,BufEnter,InsertLeave * lua vim.lsp.diagnostic.set_loclist({ open_loclist = false })
-  augroup END
-
   augroup transparent_background
     au!
     au ColorScheme * hi Normal ctermbg=none guibg=none
