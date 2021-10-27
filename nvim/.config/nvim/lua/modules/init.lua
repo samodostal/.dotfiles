@@ -16,6 +16,8 @@ return packer.startup(function(use)
     profile = { enable = true },
   }
 
+  use { 'github/copilot.vim' }
+
   -- Plugin manager
   use { 'wbthomason/packer.nvim' }
 
