@@ -31,14 +31,14 @@ map('n', '<leader>t', ':b#<CR>')
 -- Quick-fix list
 map('n', '<leader>co', ':copen<CR>')
 map('n', '<leader>cc', ':cclose<CR>')
-map('n', '<leader>cj', ':cnext<CR>')
-map('n', '<leader>ck', ':cprev<CR>')
+map('n', '<leader>j', ':cnext<CR>')
+map('n', '<leader>k', ':cprev<CR>')
 
 -- Location list
-map('n', '<leader>lo', ':lopen<CR>')
-map('n', '<leader>lc', ':lclose<CR>')
-map('n', '<leader>j', ':lnext<CR>')
-map('n', '<leader>k', ':lprev<CR>')
+-- map('n', '<leader>lo', ':lopen<CR>')
+-- map('n', '<leader>lc', ':lclose<CR>')
+-- map('n', '<leader>j', ':lnext<CR>')
+-- map('n', '<leader>k', ':lprev<CR>')
 
 map('n', '<C-h>', '<cmd>wincmd l<CR>')
 map('n', '<C-j>', '<cmd>wincmd j<CR>')
@@ -72,7 +72,7 @@ map('n', '<leader>gl', ':Git pull<CR>')
 map('n', '<leader>gba', ':Git blame<CR>')
 map('n', '<leader>gbl', '<cmd>lua require"gitsigns".blame_line()<CR>')
 map('n', '<leader>gt', ':Gclog --<CR>')
-map('n', '<leader>gc', '<cmd>lua require"telescope.builtin".git_branches()<CR>')
+map('n', '<leader>gsc', '<cmd>lua require"telescope.builtin".git_branches()<CR>')
 
 map('n', '<leader>gm', ':Gvdiffsplit!<CR>')
 map('n', '<leader>gh', ':diffget //3<CR>')
@@ -119,7 +119,7 @@ map('v', '<leader>re', '<cmd>lua require("refactoring").refactor("Extract Functi
 
 map('n', '<leader>dd', '<cmd>NvimTreeClose<CR><cmd>lua require("dapui").open()<CR><cmd>lua require("dap").continue()<CR>');
 map('n', '<leader>de', '<cmd>lua require("dapui").close()<CR><cmd>lua require("dap.breakpoints").clear()<CR><cmd>NvimTreeOpen<CR><C-l>');
-map('n', '<leader>m', '<cmd>MaximizerToggle<CR>');
+-- map('n', '<leader>m', '<cmd>MaximizerToggle<CR>');
 
 map('n', '<leader>db', '<cmd>lua require"dap".toggle_breakpoint()<CR>');
 map('n', '<leader>d<leader>', '<cmd>lua require("dap").continue()<CR>');
@@ -151,6 +151,9 @@ map('n', '<leader>ca', '<cmd>lua require("jdtls").code_action()<CR>') -- jdtls s
 map('n', '<leader>gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 map('n', '<leader>pd', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
-map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
-map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+map('n', '<leader>pn', '<cmd>lua vim.lsp.diagnostic.goto_next({ enable_popup = false })<CR>')
+map('n', '<leader>pp', '<cmd>lua vim.lsp.diagnostic.goto_prev({ enable_popup = false })<CR>')
 map('n', '<leader>fp', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+
+-- map('n', '<leader>gc', ':CreateCompletion 3000<CR>')
+-- map('i', '<leader>gc', '<Esc>li<C-g>u<Esc>l:CreateCompletion 3000<CR>')
