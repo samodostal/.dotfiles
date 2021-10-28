@@ -4,7 +4,6 @@ alias f="vifm"
 alias v="nvim"
 alias vim="nvim"
 alias c="clear"
-alias ff="open_project"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias git-clean="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 alias JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/"
@@ -22,4 +21,9 @@ function sudo
     else
         command sudo $argv
     end
+end
+
+if status is-interactive
+and not set -q TMUX
+    exec tmux new-session -A -s main
 end
