@@ -111,13 +111,13 @@ return packer.startup(function(use)
     'onsails/lspkind-nvim'
   }
 
-  use {
-    'tzachar/cmp-tabnine',
-    after = 'nvim-cmp',
-    setup = require 'modules.config.tabnine',
-    run = './install.sh',
-    requires = 'hrsh7th/nvim-cmp'
-  }
+  -- use {
+  --   'tzachar/cmp-tabnine',
+  --   after = 'nvim-cmp',
+  --   setup = require 'modules.config.tabnine',
+  --   run = './install.sh',
+  --   requires = 'hrsh7th/nvim-cmp'
+  -- }
 
   use {
     'simrat39/symbols-outline.nvim'
@@ -165,7 +165,7 @@ return packer.startup(function(use)
   -----]]------------[[-----
 
   use { 'unblevable/quick-scope' }
-  use { '~/Projects/nvim-plugins/nvim-dap', setup = require 'modules.config.nvim-dap' }
+  use { 'mfussenegger/nvim-dap', setup = require 'modules.config.nvim-dap' }
   use { 'rcarriga/nvim-dap-ui', setup = require 'modules.config.nvim-dap-ui' }
   use { 'szw/vim-maximizer' }
 

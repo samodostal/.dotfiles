@@ -58,7 +58,7 @@ return function()
       }),
     },
     sources = {
-      { name = 'cmp_tabnine' },
+      -- { name = 'cmp_tabnine' },
       { name = 'nvim_lsp' },
       { name = 'buffer' },
       { name = 'vsnip' },
