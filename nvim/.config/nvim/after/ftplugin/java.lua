@@ -1,5 +1,11 @@
 local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
+local bundles = {
+  vim.fn.glob("~/.config/nvim/after/dap-adapters/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar")
+}
+
+vim.list_extend(bundles, vim.split(vim.fn.glob("~/.config/nvim/after/dap-adapters/vscode-java-test/server/*.jar"), "\n"))
+
 local config = {
   cmd = {
     '/usr/bin/java',
@@ -18,9 +24,7 @@ local config = {
   },
   root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'package.bluej'}),
   init_options = {
-    bundles = {
-      vim.fn.glob("~/.config/nvim/after/dap-adapters/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar")
-    }
+    bundles = bundles
   },
   on_attach = function(client, bufnr)
     require('jdtls').setup_dap({ hotcodereplace = 'auto' })
