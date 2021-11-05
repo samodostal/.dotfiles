@@ -8,3 +8,5 @@
 	rebase = false
 [core]
 	editor = nvim
+[diff]
+	colorMoved = zebra
