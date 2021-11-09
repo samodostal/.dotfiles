@@ -26,7 +26,7 @@ return packer.startup(function(use)
   use { 'nvim-lua/popup.nvim' }
   use {
     'kyazdani42/nvim-web-devicons',
-    setup = require 'modules.config.nvim-web-devicons',
+    setup = require 'plugins.config.nvim-web-devicons',
   }
 
   -----[[------------]]-----
@@ -44,12 +44,12 @@ return packer.startup(function(use)
 
   use {
     'lewis6991/gitsigns.nvim',
-    setup = require 'modules.config.gitsigns',
+    setup = require 'plugins.config.gitsigns',
   }
 
   use {
     'stsewd/fzf-checkout.vim',
-    -- setup = require 'modules.config.gitsigns',
+    -- setup = require 'plugins.config.gitsigns',
   }
 
   use {
@@ -62,7 +62,7 @@ return packer.startup(function(use)
 
   use {
     'nvim-treesitter/nvim-treesitter',
-    setup = require 'modules.config.nvim-treesitter',
+    setup = require 'plugins.config.nvim-treesitter',
     requires = {
       'windwp/nvim-ts-autotag',
       'JoosepAlviste/nvim-ts-context-commentstring',
@@ -75,7 +75,7 @@ return packer.startup(function(use)
 
   use {
     'neovim/nvim-lspconfig',
-    setup = require 'modules.config.nvim-lspconfig',
+    setup = require 'plugins.config.nvim-lspconfig',
     requires = {
       { 'kabouzeid/nvim-lspinstall' },
       { 'ray-x/lsp_signature.nvim' },
@@ -85,7 +85,7 @@ return packer.startup(function(use)
 
   use {
     'hrsh7th/nvim-cmp',
-    setup = require 'modules.config.nvim-cmp',
+    setup = require 'plugins.config.nvim-cmp',
     event = 'InsertEnter',
     requires = {
       'hrsh7th/cmp-buffer',
@@ -114,7 +114,7 @@ return packer.startup(function(use)
   -- use {
   --   'tzachar/cmp-tabnine',
   --   after = 'nvim-cmp',
-  --   setup = require 'modules.config.tabnine',
+  --   setup = require 'plugins.config.tabnine',
   --   run = './install.sh',
   --   requires = 'hrsh7th/nvim-cmp'
   -- }
@@ -135,7 +135,7 @@ return packer.startup(function(use)
   use {
     'windwp/nvim-autopairs',
     after = 'nvim-cmp',
-    setup = require 'modules.config.nvim-autopairs',
+    setup = require 'plugins.config.nvim-autopairs',
   }
 
   use { 'tpope/vim-surround', requires = { 'tpope/vim-repeat' } }
@@ -152,12 +152,12 @@ return packer.startup(function(use)
 
   use {
     'glepnir/galaxyline.nvim',
-    setup = require 'modules.config.galaxyline',
+    setup = require 'plugins.config.galaxyline',
   }
 
   use {
     'norcalli/nvim-colorizer.lua',
-    setup = require 'modules.config.nvim-colorizer',
+    setup = require 'plugins.config.nvim-colorizer',
   }
 
   -----[[------------]]-----
@@ -165,8 +165,8 @@ return packer.startup(function(use)
   -----]]------------[[-----
 
   use { 'unblevable/quick-scope' }
-  use { 'mfussenegger/nvim-dap', setup = require 'modules.config.nvim-dap' }
-  use { 'rcarriga/nvim-dap-ui', setup = require 'modules.config.nvim-dap-ui' }
+  use { 'mfussenegger/nvim-dap', setup = require 'plugins.config.nvim-dap' }
+  use { 'rcarriga/nvim-dap-ui', setup = require 'plugins.config.nvim-dap-ui' }
   use { 'szw/vim-maximizer' }
 
   -----[[------------]]-----
@@ -175,7 +175,7 @@ return packer.startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim',
-    setup = require 'modules.config.telescope'
+    setup = require 'plugins.config.telescope'
   }
 
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -184,7 +184,7 @@ return packer.startup(function(use)
 
   use {
     'kyazdani42/nvim-tree.lua',
-    setup = require 'modules.config.nvim-tree',
+    setup = require 'plugins.config.nvim-tree',
   }
 
   -----[[------------]]-----

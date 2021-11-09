@@ -1,10 +1,10 @@
 return function()
   local lspconfig = require 'lspconfig'
   local lspinstall = require 'lspinstall'
-  local on_attach = require 'modules.config.nvim-lspconfig.on-attach'
-  local format_config = require 'modules.config.nvim-lspconfig.format'
-  require('modules.config.nvim-lspconfig.ui').symbols_override()
-  require('modules.config.nvim-lspconfig.ui').disable_virtual_text()
+  local on_attach = require 'plugins.config.nvim-lspconfig.on-attach'
+  local format_config = require 'plugins.config.nvim-lspconfig.format'
+  require('plugins.config.nvim-lspconfig.ui').symbols_override()
+  require('plugins.config.nvim-lspconfig.ui').disable_virtual_text()
 
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities.textDocument.completion.completionItem.snippetSupport = true
