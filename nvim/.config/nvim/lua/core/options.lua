@@ -20,7 +20,7 @@ o.writebackup = false
 o.swapfile = false
 o.autoread = true
 o.undofile = true
-o.undodir = '~/.local/share/nvim/undo'
+o.undodir = vim.fn.stdpath("data") .. '/undo'
 
 -- Completion
 o.completeopt = 'menuone,noselect'
