@@ -1,3 +1,21 @@
+-- require 'lspinstall'.install_server("angular")
+-- require 'lspinstall'.install_server("bash")
+-- require 'lspinstall'.install_server("cpp")
+-- require 'lspinstall'.install_server("csharp")
+-- require 'lspinstall'.install_server("css")
+-- require 'lspinstall'.install_server("dockerfile")
+-- require 'lspinstall'.install_server("go")
+-- require 'lspinstall'.install_server("graphql")
+-- require 'lspinstall'.install_server("html")
+-- require 'lspinstall'.install_server("json")
+-- require 'lspinstall'.install_server("lua")
+-- require 'lspinstall'.install_server("python")
+-- require 'lspinstall'.install_server("rust")
+-- require 'lspinstall'.install_server("typescript")
+-- require 'lspinstall'.install_server("vim")
+-- require 'lspinstall'.install_server("yaml")
+-- require 'lspinstall'.install_server("diagnosticls")
+
 return function()
   local lspconfig = require 'lspconfig'
   local lspinstall = require 'lspinstall'
