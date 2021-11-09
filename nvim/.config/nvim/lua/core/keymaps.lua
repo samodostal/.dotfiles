@@ -72,7 +72,7 @@ map('n', '<leader>gl', ':Git pull<CR>')
 map('n', '<leader>gba', ':Git blame<CR>')
 map('n', '<leader>gbl', '<cmd>lua require"gitsigns".blame_line()<CR>')
 map('n', '<leader>gt', ':Gclog --<CR>')
-map('n', '<leader>gsc', '<cmd>lua require"telescope.builtin".git_branches()<CR>')
+map('n', '<leader>gc', '<cmd>lua require"telescope.builtin".git_branches()<CR>')
 
 map('n', '<leader>gm', ':Gvdiffsplit!<CR>')
 map('n', '<leader>gh', ':diffget //3<CR>')
@@ -155,5 +155,3 @@ map('n', '<leader>pn', '<cmd>lua vim.lsp.diagnostic.goto_next({ enable_popup = f
 map('n', '<leader>pp', '<cmd>lua vim.lsp.diagnostic.goto_prev({ enable_popup = false })<CR>')
 map('n', '<leader>fp', '<cmd>lua vim.lsp.buf.formatting()<CR>')
 
--- map('n', '<leader>gc', ':CreateCompletion 3000<CR>')
--- map('i', '<leader>gc', '<Esc>li<C-g>u<Esc>l:CreateCompletion 3000<CR>')

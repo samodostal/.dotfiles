@@ -20,7 +20,7 @@ o.writebackup = false
 o.swapfile = false
 o.autoread = true
 o.undofile = true
-o.undodir = vim.fn.stdpath('config') .. '/undo'
+o.undodir = '~/.local/share/nvim/undo'
 
 -- Completion
 o.completeopt = 'menuone,noselect'
