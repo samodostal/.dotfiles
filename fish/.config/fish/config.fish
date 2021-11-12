@@ -7,7 +7,8 @@ alias c="clear"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias git-clean="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 alias JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/"
-alias chrome-debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
+# alias chrome-debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
+alias chrome-debug="/Applications/Chromium.app/Contents/MacOS/Chromium --remote-debugging-port=9222"
 
 if test -z (pgrep ssh-agent | string collect)
     eval (ssh-agent -c)
