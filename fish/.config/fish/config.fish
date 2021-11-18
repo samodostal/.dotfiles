@@ -28,3 +28,5 @@ if status is-interactive
 and not set -q TMUX
     exec tmux new-session -A -s main
 end
+
+fish_add_path /opt/homebrew/opt/mongodb-community@4.2/bin
