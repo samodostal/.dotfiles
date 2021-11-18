@@ -1,4 +1,6 @@
 git/.config/gh/hosts.yml
+git/.gitconfig-github
+git/.gitconfig-work
 vifm/.config/vifm/vifminfo.json
 fish/.config/fish/fish_variables
 nvim/.config/nvim/undo
