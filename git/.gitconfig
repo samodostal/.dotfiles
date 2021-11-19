@@ -2,6 +2,8 @@
 [user]
 	name = samodostal
 	email = samuel.dostal.sk@gmail.com
+[includeIf "gitdir:~/Projects/smart_trial/"]
+	path = ~/.dotfiles/git/.gitconfig-work
 [init]
 	defaultBranch = main
 [pull]
