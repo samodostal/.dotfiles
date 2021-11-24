@@ -16,6 +16,12 @@ return packer.startup(function(use)
     profile = { enable = true },
   }
 
+  -- Experiment
+  use {
+    'ggandor/lightspeed.nvim',
+    setup = require 'plugins.config.lightspeed',
+  }
+
   use { 'github/copilot.vim' }
 
   -- Plugin manager

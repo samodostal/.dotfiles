@@ -13,6 +13,15 @@ map('n', 'X', '"_X')
 map('n', '<leader>pc', '<cmd>lua require"core.compiler".compile_and_run()<CR>')
 -- map('n', '<leader>fp', '<cmd>let @*=fnamemodify(expand("%"), ":~:.")<CR>') -- Copy relative filepath
 
+map('n', 'f', 'f')
+map('v', 'f', 'f')
+map('n', 'F', 'F')
+map('v', 'F', 'F')
+map('n', 't', 't')
+map('v', 't', 't')
+map('n', 'T', 'T')
+map('v', 'T', 'T')
+
 vim.cmd [[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]]
 vim.cmd [[command! PackerDelete silent! !rm  -rf ~/.local/share/nvim/site <CR>]]
 
