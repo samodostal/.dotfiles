@@ -21,6 +21,8 @@ return packer.startup(function(use)
     'ggandor/lightspeed.nvim',
     setup = require 'plugins.config.lightspeed',
   }
+  use { 'tpope/vim-dispatch' }
+
 
   use { 'github/copilot.vim' }
 
