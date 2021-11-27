@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
   augroup ftplugin
    au!
     au FileType man setl laststatus=0 noruler
@@ -30,4 +30,4 @@ vim.cmd [[
     au ColorScheme * hi CmpItemKind guifg=#d5c4a1
     au ColorScheme * hi CmpItemMenu guifg=#d5c4a1
   augroup END
-]]
+]])

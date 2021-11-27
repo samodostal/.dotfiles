@@ -1,14 +1,14 @@
 local o = vim.opt
 -- Appearance
 o.cmdheight = 1
-o.colorcolumn = '80'
+o.colorcolumn = "80"
 o.number = true
 o.relativenumber = true
 o.numberwidth = 1
-o.guicursor = 'i:block'
-vim.cmd[[set fillchars+=vert:\ ]]
+o.guicursor = "i:block"
+vim.cmd([[set fillchars+=vert:\ ]])
 o.showmode = false
-o.signcolumn = 'yes'
+o.signcolumn = "yes"
 o.cursorline = false
 o.termguicolors = true
 o.hlsearch = false
@@ -20,10 +20,10 @@ o.writebackup = false
 o.swapfile = false
 o.autoread = true
 o.undofile = true
-o.undodir = vim.fn.stdpath("data") .. '/undo'
+o.undodir = vim.fn.stdpath("data") .. "/undo"
 
 -- Completion
-o.completeopt = 'menuone,noselect'
+o.completeopt = "menuone,noselect"
 o.pumblend = 10 -- Popup menu transparency
 o.pumheight = 8 -- Popup menu height
 
@@ -37,42 +37,45 @@ o.splitbelow = true
 o.splitright = true
 o.timeoutlen = 1000
 o.updatetime = 100
-o.virtualedit = 'block'
-o.iskeyword = o.iskeyword + '-'
+o.virtualedit = "block"
+o.iskeyword = o.iskeyword + "-"
 
 -- Performance
 o.lazyredraw = true
 
 -- Search
-o.inccommand = 'nosplit' -- show substitutions incrementally
+o.inccommand = "nosplit" -- show substitutions incrementally
 o.ignorecase = true
 o.smartcase = true
-o.wildignore = { '.git/*', 'node_modules/*' }
+o.wildignore = { ".git/*", "node_modules/*" }
 o.wildignorecase = true
 
 -- Tabs
-o.expandtab = true
+-- o.expandtab = true
 o.shiftwidth = 2
 o.softtabstop = 2
 o.tabstop = 2
 
 -- Shortmess
 o.shortmess = o.shortmess
-  + {
-    A = true, -- don't give the "ATTENTION" message when an existing swap file is found.
-    I = true, -- don't give the intro message when starting Vim |:intro|.
-    W = true, -- don't give "written" or "[w]" when writing a file
-    c = true, -- don't give |ins-completion-menu| messages
-    m = true, -- use "[+]" instead of "[Modified]"
-  }
+	+ {
+		A = true, -- don't give the "ATTENTION" message when an existing swap file is found.
+		I = true, -- don't give the intro message when starting Vim |:intro|.
+		W = true, -- don't give "written" or "[w]" when writing a file
+		c = true, -- don't give |ins-completion-menu| messages
+		m = true, -- use "[+]" instead of "[Modified]"
+	}
 
 -- Format options
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+	[[
   augroup echo_formatoptions
     autocmd!
     autocmd BufEnter * set formatoptions-=cro
   augroup END
-]], false)
+]],
+	false
+)
 
 -- Remove builtin plugins
 vim.g.loaded_netrw = 1
