@@ -8,6 +8,7 @@ return function()
 	tree_opts.cursorline = true
 
 	require("nvim-tree").setup({
+		ignore_ft_on_setup = { ".git", "node_modules", ".cache", ".next", "*.out" },
 		update_to_buf_dir = {
 			enable = true,
 			auto_open = true,
@@ -15,7 +16,7 @@ return function()
 		update_focused_file = {
 			enable = true,
 			update_cwd = true,
-			ignore_list = {},
+			ignore_list = { ".git", "node_modules", ".cache", ".next", "*.out" },
 		},
 		open_on_setup = true,
 		view = {
