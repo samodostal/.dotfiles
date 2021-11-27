@@ -12,6 +12,11 @@ return function()
 			enable = true,
 			auto_open = true,
 		},
+		update_focused_file = {
+			enable = true,
+			update_cwd = true,
+			ignore_list = {},
+		},
 		open_on_setup = true,
 		view = {
 			width = 35,
