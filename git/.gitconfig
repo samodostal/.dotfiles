@@ -12,3 +12,5 @@
 	editor = nvim
 [diff]
 	colorMoved = zebra
+[push]
+	default = current
