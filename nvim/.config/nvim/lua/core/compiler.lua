@@ -16,7 +16,7 @@ local term_wrapper = function(command, file)
 end
 
 local commands = {
-	cpp = "g++ -std=c++11 %s && ./a.out",
+	cpp = "g++ -g -std=c++17 %s && ./a.out",
 	javascript = "node %s",
 }
 
