@@ -14,6 +14,7 @@ else
             ls -d ~/Projects/university/* | xargs -n 1 
             ls -d ~/Projects/university/eclipse/*| xargs -n 1 
             ls -d ~/Projects/termtick/cpp/ | xargs -n 1
+            ls -d ~/Projects/projects/* | xargs -n 1
         ) | cut -c 30- | fzf --reverse
     )
 fi
