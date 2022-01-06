@@ -9,8 +9,8 @@ window:
     y: 8
   dynamic_padding: true
 
+background_opacity: 0.8
 # background_opacity: 1
-background_opacity: 0.6
 
 scrolling:
   history: 5000
