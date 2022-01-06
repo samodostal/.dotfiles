@@ -51,7 +51,7 @@ o.wildignore = { ".git/*", "node_modules/*" }
 o.wildignorecase = true
 
 -- Tabs
--- o.expandtab = true
+o.expandtab = true
 o.shiftwidth = 2
 o.softtabstop = 2
 o.tabstop = 2
