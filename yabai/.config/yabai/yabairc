@@ -53,9 +53,9 @@ yabai -m rule --add app="^Spotify$" space=9
 # Autostart applications on launch
 open -a "Spotify"
 
-open -a "Messenger"
-open -a "Whatsapp"
-open -a "Messages"
+# open -a "Messenger"
+# open -a "Whatsapp"
+# open -a "Messages"
 
 open -a "TickTick"
 open -a "Calendar"
