@@ -21,6 +21,7 @@ map("n", "f", "f")
 map("v", "f", "f")
 map("n", "F", "F")
 map("v", "F", "F")
+map("n", ";", ";")
 
 vim.cmd([[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]])
 vim.cmd([[command! PackerDelete silent! !rm  -rf ~/.local/share/nvim/site <CR>]])
@@ -40,8 +41,8 @@ map("n", "<leader>t", ":b#<CR>")
 -- Quick-fix list
 map("n", "<leader>co", ":copen<CR>")
 map("n", "<leader>cc", ":cclose<CR>")
-map("n", "<leader>j", ":cnext<CR>")
-map("n", "<leader>k", ":cprev<CR>")
+map("n", "<C-n>", ":cnext<CR>")
+map("n", "<C-p>", ":cprev<CR>")
 
 -- Location list
 -- map('n', '<leader>lo', ':lopen<CR>')
@@ -81,7 +82,7 @@ map("n", "<leader>gl", ":Git pull<CR>")
 map("n", "<leader>gba", ":Git blame<CR>")
 map("n", "<leader>gbl", '<cmd>lua require"gitsigns".blame_line()<CR>')
 map("n", "<leader>gt", ":Gclog --<CR>")
-map("n", "<leader>gc", '<cmd>lua require"telescope.builtin".git_branches()<CR>')
+map("n", "<leader>gc", "<cmd>Merginal<CR>")
 
 map("n", "<leader>gm", ":Gvdiffsplit!<CR>")
 map("n", "<leader>gh", ":diffget //3<CR>")
@@ -157,28 +158,22 @@ map("n", "<leader>crv", '<cd>lua require"jdtls".extract_variable()<CR>')
 map("n", "<leader>crc", '<cmd>lua require"jdtls".extract_constant()<CR>')
 map("n", "<leader>crm", '<cmd>lua require"jdtls".extract_method(true)<CR>')
 map("v", "<leader>crm", '<cmd>lua require"jdtls".extract_method(true)<CR>')
-
+map("n", "<leader>ctc", '<cmd>lua require"jdtls".test_class()<CR>')
+map("n", "<leader>ctm", '<cmd>lua require"jdtls".test_nearest_method()<CR>')
+map("n", "<leader>cs", '<cmd>lua require"dap".repl.open()<CR>')
 
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-
 map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-
 map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-
 map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-
 map("n", "<leader>ca", '<cmd>lua require("jdtls").code_action()<CR>') -- jdtls should also work with other languages, a subset of <cmd>lua vim.lsp.buf.code_action
-
 map("n", "<leader>gh", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
-
 map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-
 map("n", "<leader>pd", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
-
 map("n", "<leader>pn", "<cmd>lua vim.lsp.diagnostic.goto_next({ enable_popup = false })<CR>")
-
 map("n", "<leader>pp", "<cmd>lua vim.lsp.diagnostic.goto_prev({ enable_popup = false })<CR>")
-
 map("n", "<leader>fp", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+
+map("n", "<leader>cu", "<cmd>SymbolsOutline<CR>")
+map("n", "<leader>ns", "<cmd>lua require('package-info').show()<cr>")

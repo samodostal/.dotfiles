@@ -22,6 +22,13 @@ return function()
 			filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 			root_dir = lspconfig.util.root_pattern({ "package.json", "node_modules/", ".git/" }),
 		},
+		clangd = {
+			cmd = {
+				"/Users/samueldostal/.local/share/nvim/lsp_servers/clangd/clangd",
+				"--background-index",
+				"--clang-tidy",
+			},
+		},
 	}
 
 	local function get_config(server_name)

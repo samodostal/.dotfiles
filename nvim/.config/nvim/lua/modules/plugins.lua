@@ -32,6 +32,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		config = conf("nvim-treesitter"),
+		run = ":TSUpdate",
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -40,36 +41,28 @@ return {
 	{
 		"hrsh7th/nvim-cmp",
 		config = conf("nvim-cmp"),
+		requires = {
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-vsnip" },
+			{ "hrsh7th/vim-vsnip" },
+			{ "onsails/lspkind-nvim" },
+		},
 	},
-	{ "ThePrimeagen/refactoring.nvim" },
-	{ "jose-elias-alvarez/nvim-lsp-ts-utils" },
 	{ "mfussenegger/nvim-jdtls" },
-
 	{ "tpope/vim-surround" },
-	{ "tpope/vim-repeat" },
-	{ "tpope/vim-commentary" },
-
-	{ "windwp/nvim-ts-autotag" },
-	{ "JoosepAlviste/nvim-ts-context-commentstring" },
-
-	{ "hrsh7th/cmp-buffer" },
-	{ "hrsh7th/cmp-emoji" },
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-path" },
-	{ "hrsh7th/cmp-vsnip" },
-	{ "hrsh7th/vim-vsnip" },
-	{ "rafamadriz/friendly-snippets" },
-	{ "williamboman/nvim-lsp-installer" },
-	{ "ray-x/lsp_signature.nvim" },
-
-	{ "onsails/lspkind-nvim" },
-	{ "simrat39/symbols-outline.nvim" },
-
 	{
-		"folke/todo-comments.nvim",
-		config = conf("todo-comments"),
+		"tpope/vim-commentary",
+		requires = {
+			{ "JoosepAlviste/nvim-ts-context-commentstring" },
+		},
 	},
-
+	{ "williamboman/nvim-lsp-installer" },
+	{
+		"simrat39/symbols-outline.nvim",
+		config = conf("symbols-outline"),
+	},
 	{
 		"windwp/nvim-autopairs",
 		config = conf("nvim-autopairs"),
@@ -81,7 +74,7 @@ return {
 
 	{ "gruvbox-community/gruvbox" },
 	{
-		"glepnir/galaxyline.nvim",
+		"NTBBloodbath/galaxyline.nvim",
 		config = conf("galaxyline"),
 	},
 	{
@@ -98,7 +91,6 @@ return {
 		config = conf("lightspeed"),
 	},
 	{ "unblevable/quick-scope" },
-	{ "szw/vim-maximizer" },
 	{
 		"mfussenegger/nvim-dap",
 		config = conf("nvim-dap"),
@@ -115,10 +107,10 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		config = conf("telescope"),
-	},
-	{
-		"nvim-telescope/telescope-fzf-native.nvim",
-		run = "make",
+		requires = {
+			{ "BurntSushi/ripgrep" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+		},
 	},
 	{ "ThePrimeagen/harpoon" },
 	{
@@ -132,6 +124,4 @@ return {
 
 	{ "christoomey/vim-tmux-navigator" },
 	{ "mbbill/undotree" },
-	{ "davidgranstrom/nvim-markdown-preview" },
-	{ "vimwiki/vimwiki" },
 }

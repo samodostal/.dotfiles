@@ -29,5 +29,10 @@ vim.cmd([[
     au ColorScheme * hi CmpItemAbbrMatch guifg=#fbf1c7
     au ColorScheme * hi CmpItemKind guifg=#d5c4a1
     au ColorScheme * hi CmpItemMenu guifg=#d5c4a1
+    au ColorScheme * hi LightspeedGreywash guifg=none guibg=none
+  augroup END
+
+  augroup quickfix_list
+    au QuickFixCmdPost * botright copen 8 | wincmd p
   augroup END
 ]])

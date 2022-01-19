@@ -26,8 +26,8 @@ return function()
 		sources = {
 			-- { name = 'cmp_tabnine' },
 			{ name = "nvim_lsp" },
-			{ name = "buffer" },
 			{ name = "vsnip" },
+			{ name = "buffer" },
 			{ name = "path" },
 		},
 		formatting = {
