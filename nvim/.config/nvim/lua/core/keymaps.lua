@@ -41,8 +41,8 @@ map("n", "<leader>t", ":b#<CR>")
 -- Quick-fix list
 map("n", "<leader>co", ":copen<CR>")
 map("n", "<leader>cc", ":cclose<CR>")
-map("n", "<C-n>", ":cnext<CR>")
-map("n", "<C-p>", ":cprev<CR>")
+map("n", "<C-n>", ":cnext<CR>zz")
+map("n", "<C-p>", ":cprev<CR>zz")
 
 -- Location list
 -- map('n', '<leader>lo', ':lopen<CR>')
@@ -175,5 +175,5 @@ map("n", "<leader>pn", "<cmd>lua vim.lsp.diagnostic.goto_next({ enable_popup = f
 map("n", "<leader>pp", "<cmd>lua vim.lsp.diagnostic.goto_prev({ enable_popup = false })<CR>")
 map("n", "<leader>fp", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 
-map("n", "<leader>cu", "<cmd>SymbolsOutline<CR>")
+map("n", "<leader>fs", "<cmd>SymbolsOutline<CR>")
 map("n", "<leader>ns", "<cmd>lua require('package-info').show()<cr>")
