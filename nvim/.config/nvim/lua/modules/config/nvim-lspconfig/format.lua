@@ -14,6 +14,7 @@ local black = { formatCommand = "black --quiet -", formatStdin = true }
 
 return {
 	cpp = { clang_format },
+  c = { clang_format },
 	css = { prettier },
 	html = { prettier },
 	javascript = { prettier, eslint },
