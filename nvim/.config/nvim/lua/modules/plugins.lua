@@ -90,7 +90,7 @@ return {
 		"ggandor/lightspeed.nvim",
 		config = conf("lightspeed"),
 	},
-	{ "unblevable/quick-scope" },
+	-- { "unblevable/quick-scope" },
 	{
 		"mfussenegger/nvim-dap",
 		config = conf("nvim-dap"),
