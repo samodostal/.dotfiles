@@ -26,4 +26,5 @@ return function()
 	}
 	dap.configurations.typescriptreact = dap.configurations.typescript
 	dap.configurations.javascript = dap.configurations.typescript
+  dap.configurations.javascriptreact = dap.configurations.typescript
 end

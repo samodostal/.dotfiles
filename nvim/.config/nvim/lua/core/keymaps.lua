@@ -177,4 +177,3 @@ map("n", "<leader>fp", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 map("i", "<C-c>", "<cmd>lua require'cmp'.complete()<CR>")
 
 map("n", "<leader>fs", "<cmd>SymbolsOutline<CR>")
-map("n", "<leader>ns", "<cmd>lua require('package-info').show()<cr>")

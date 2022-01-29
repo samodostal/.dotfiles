@@ -99,6 +99,9 @@ return {
 		"rcarriga/nvim-dap-ui",
 		config = conf("nvim-dap-ui"),
 	},
+  {
+    "Pocco81/DAPInstall.nvim"
+  },
 
 	-----[[------------]]-----
 	---Jumping between files--

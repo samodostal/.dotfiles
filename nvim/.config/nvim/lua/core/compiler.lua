@@ -18,6 +18,7 @@ end
 local commands = {
 	cpp = "g++ -g -std=c++17 %s && ./a.out",
 	javascript = "node %s",
+  java = "cd src && find . -type f -name '*.class' -delete && javac gui/LoginScreen.java -Xlint:unchecked && java -cp . gui/LoginScreen"
 }
 
 M.compile_and_run = function()
