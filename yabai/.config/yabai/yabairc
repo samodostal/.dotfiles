@@ -11,11 +11,11 @@ yabai -m config focus_follows_mouse          autofocus
 
 # window spacing
 yabai -m config layout                       bsp
-yabai -m config top_padding                  30
-yabai -m config bottom_padding               06
-yabai -m config left_padding                 06
-yabai -m config right_padding                06
-yabai -m config window_gap                   06
+yabai -m config top_padding                  28
+yabai -m config bottom_padding               04
+yabai -m config left_padding                 04
+yabai -m config right_padding                04
+yabai -m config window_gap                   04
 
 # Space 1 is default
 # Space 2 is default
