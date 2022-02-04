@@ -1,6 +1,8 @@
 window:
   title: Alacritty
   decorations: Buttonless
+  opacity: 0.6
+  # opacity: 1
   class:
     instance: Alacritty
     general: Alacritty
@@ -8,9 +10,6 @@ window:
     x: 8
     y: 8
   dynamic_padding: true
-
-background_opacity: 0.7
-# background_opacity: 1
 
 scrolling:
   history: 5000
