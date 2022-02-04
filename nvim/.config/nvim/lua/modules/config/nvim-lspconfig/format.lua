@@ -11,6 +11,7 @@ local clang_format = { formatCommand = "clang-format -style=LLVM ${INPUT}", form
 local prettier = { formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true }
 local stylua = { formatCommand = "stylua -s -", formatStdin = true }
 local black = { formatCommand = "black --quiet -", formatStdin = true }
+local golang = { formatCommand = "gofmt", formatStdin = true }
 
 return {
 	cpp = { clang_format },
@@ -27,4 +28,5 @@ return {
 	typescript = { prettier, eslint },
 	typescriptreact = { prettier, eslint },
 	yaml = { prettier },
+  go = { golang }
 }
