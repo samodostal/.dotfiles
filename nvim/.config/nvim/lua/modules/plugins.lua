@@ -28,7 +28,8 @@ return {
 	---        LSP         ---
 	-----]]------------[[-----
 
-	{ "github/copilot.vim" },
+	-- { "github/copilot.vim" },
+	{ "samodostal/copilot.vim" },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		config = conf("nvim-treesitter"),
