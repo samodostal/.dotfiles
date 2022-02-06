@@ -1,0 +1,7 @@
+# Example comment, ignore this line
+
+set client_id=test
+set available_port=8080 # This is a comment that that is at the end of the line
+set client_secret=test
+
+#another comment
