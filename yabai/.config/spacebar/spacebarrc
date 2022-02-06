@@ -2,7 +2,7 @@
 
 spacebar -m config position             top
 spacebar -m config height               24
-spacebar -m config title                off
+spacebar -m config title                on
 spacebar -m config spaces               on
 spacebar -m config clock                on
 spacebar -m config power                on

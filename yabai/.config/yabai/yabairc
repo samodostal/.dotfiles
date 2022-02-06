@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --install-sa"
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # global settings
@@ -51,15 +52,15 @@ yabai -m rule --add app="^Messages$" space=8
 yabai -m rule --add app="^Spotify$" space=9
 
 # Autostart applications on launch
-open -a "Spotify"
+# open -a "Spotify"
 
 # open -a "Messenger"
 # open -a "Whatsapp"
 # open -a "Messages"
 
-open -a "TickTick"
-open -a "Calendar"
-open -a "Microsoft Outlook"
+# open -a "TickTick"
+# open -a "Calendar"
+# open -a "Microsoft Outlook"
 
 # Stackline config
 STACKLINE_EVENTS="\
