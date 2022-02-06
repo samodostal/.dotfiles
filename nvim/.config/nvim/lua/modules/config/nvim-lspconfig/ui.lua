@@ -51,9 +51,19 @@ function M.disable_virtual_text()
 	})
 end
 
+function M.lsp_colors()
+	require("lsp-colors").setup({
+		Error = "#db4b4b",
+		Warning = "#e0af68",
+		Information = "#0db9d7",
+		Hint = "#10B981",
+	})
+end
+
 M.setup = function()
 	M.symbols_override()
 	M.disable_virtual_text()
+	M.lsp_colors()
 end
 
 return M

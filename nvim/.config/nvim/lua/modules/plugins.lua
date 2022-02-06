@@ -59,7 +59,7 @@ return {
 			{ "JoosepAlviste/nvim-ts-context-commentstring" },
 		},
 	},
-	{ "williamboman/nvim-lsp-installer" },
+	{ "~/Projects/nvim_plugins/nvim-lsp-installer" },
 	{
 		"simrat39/symbols-outline.nvim",
 		config = conf("symbols-outline"),
@@ -68,6 +68,9 @@ return {
 		"windwp/nvim-autopairs",
 		config = conf("nvim-autopairs"),
 	},
+  {
+    "folke/lsp-colors.nvim"
+  },
 
 	-----[[------------]]-----
 	---        Theme       ---
@@ -100,9 +103,9 @@ return {
 		"rcarriga/nvim-dap-ui",
 		config = conf("nvim-dap-ui"),
 	},
-  {
-    "Pocco81/DAPInstall.nvim"
-  },
+	{
+		"Pocco81/DAPInstall.nvim",
+	},
 
 	-----[[------------]]-----
 	---Jumping between files--

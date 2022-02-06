@@ -29,6 +29,18 @@ return function()
 				"--clang-tidy",
 			},
 		},
+		-- golangci_lint_ls = {
+		-- 	cmd = { "golangci-lint-langserver" },
+		-- 	filetypes = { "go", "gomod" },
+		-- 	init_options = {
+		-- 		command = { "golangci-lint", "run", "--out-format", "json" },
+		-- 	},
+		-- 	root_dir = lspconfig.util.root_pattern("go.work") or lspconfig.util.root_pattern(
+		-- 		"go.mod",
+		-- 		".golangci.yaml",
+		-- 		".git"
+		-- 	),
+		-- },
 	}
 
 	local function get_config(server_name)
