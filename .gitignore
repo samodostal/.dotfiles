@@ -5,4 +5,5 @@ vifm/.config/vifm/vifminfo.json
 fish/.config/fish/fish_variables
 nvim/.config/nvim/undo
 scripts/local_bin/nvim-osx64
+scripts/local_bin/hidden/*
 vifm/.config/vifm/vifminfo.json*
