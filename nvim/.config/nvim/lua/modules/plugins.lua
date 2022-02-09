@@ -4,6 +4,12 @@ end
 
 return {
 	-----[[------------]]-----
+	---     Development    ---
+	-----]]------------[[-----
+
+	{ "~/Projects/nvim_plugins/image.nvim", config = conf("image") },
+
+	-----[[------------]]-----
 	---       General      ---
 	-----]]------------[[-----
 
