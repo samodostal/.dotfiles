@@ -74,9 +74,9 @@ return {
 		"windwp/nvim-autopairs",
 		config = conf("nvim-autopairs"),
 	},
-  {
-    "folke/lsp-colors.nvim"
-  },
+	{
+		"folke/lsp-colors.nvim",
+	},
 
 	-----[[------------]]-----
 	---        Theme       ---
@@ -104,6 +104,9 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		config = conf("nvim-dap"),
+	},
+	{
+		"puremourning/vimspector",
 	},
 	{
 		"rcarriga/nvim-dap-ui",
