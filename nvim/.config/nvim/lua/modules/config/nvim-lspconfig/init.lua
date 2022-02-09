@@ -29,6 +29,15 @@ return function()
 				"--clang-tidy",
 			},
 		},
+		sumneko_lua = {
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+				},
+			},
+		},
 		-- golangci_lint_ls = {
 		-- 	cmd = { "golangci-lint-langserver" },
 		-- 	filetypes = { "go", "gomod" },
