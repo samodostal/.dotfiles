@@ -1,3 +1,9 @@
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - --login
+    - --init-command
+    - "echo hello"
 window:
   title: Alacritty
   decorations: Buttonless
