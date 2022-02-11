@@ -123,9 +123,26 @@ return function()
 
 	gls.right = {
 		{
+			IsPrimeOnline = {
+				provider = function()
+					local status = require("is-prime-online").status()
+					if status == true then
+						return "🟢 Prime is online!"
+					elseif status == false then
+						return "🔴 Prime is offline."
+					else
+						return "🟠 Status syncing..."
+					end
+				end,
+				separator = " ",
+				highlight = { colors.gray, colors.bg, "bold" },
+				separator_highlight = { "NONE", colors.bg },
+			},
+		},
+		{
 			DiagnosticError = {
 				provider = "DiagnosticError",
-				icon = "  ",
+				icon = "    ",
 				highlight = { colors.red, colors.bg },
 			},
 		},

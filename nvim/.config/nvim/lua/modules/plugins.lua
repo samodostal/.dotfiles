@@ -8,6 +8,7 @@ return {
 	-----]]------------[[-----
 
 	{ "~/Projects/nvim_plugins/image.nvim", config = conf("image") },
+	{ "~/Projects/nvim_plugins/is-prime-online.nvim", config = conf("is-prime-online") },
 
 	-----[[------------]]-----
 	---       General      ---
