@@ -113,9 +113,8 @@ map("n", "<leader>fr", '<cmd>lua require"telescope.builtin".live_grep()<CR>')
 map("n", "<leader>fd", '<cmd>lua require"telescope.builtin".git_files({ cwd = "$HOME/.dotfiles" })<CR>')
 map("n", "<leader>cq", '<cmd>lua require"telescope.builtin".quickfix()<CR>')
 
-map("n", "<leader>b", "<cmd>NvimTreeToggle<CR>")
+map("n", "<leader>b", '<cmd>lua require"nvim-tree".toggle(false, false)<CR>')
 map("n", "<leader>ft", "<cmd>NvimTreeFindFile<CR>")
-map("n", "<leader>pr", "<cmd>NvimTreeRefresh<CR>")
 
 map("n", "<leader>af", '<cmd>lua require("harpoon.mark").add_file()<CR>')
 map("n", "<leader>ac", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
