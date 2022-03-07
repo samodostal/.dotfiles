@@ -9,6 +9,7 @@ else
             ls -d ~/Projects/archive/resco/* | xargs -n 1
             ls -d ~/Projects/freelance/* | xargs -n 1
             ls -d ~/Projects/learning/udemy/* | xargs -n 1 
+            ls -d ~/Projects/learning/youtube/* | xargs -n 1 
             ls -d ~/Projects/nvim_plugins/* | xargs -n 1 
             ls -d ~/Projects/smart_trial/* | xargs -n 1 
             ls -d ~/Projects/university/* | xargs -n 1 
