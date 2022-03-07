@@ -127,11 +127,11 @@ return function()
 				provider = function()
 					local status = require("is-prime-online").status()
 					if status == true then
-						return "🟢 Prime is online!"
+						return "🟢 Prime is online!  "
 					elseif status == false then
-						return "🔴 Prime is offline."
+						return "🔴 Prime is offline.  "
 					else
-						return "🟠 Status syncing..."
+						return "🟠 Status syncing...  "
 					end
 				end,
 				separator = " ",
@@ -142,7 +142,7 @@ return function()
 		{
 			DiagnosticError = {
 				provider = "DiagnosticError",
-				icon = "    ",
+				icon = "  ",
 				highlight = { colors.red, colors.bg },
 			},
 		},
