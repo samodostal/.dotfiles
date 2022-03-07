@@ -10,6 +10,7 @@
 	rebase = false
 [core]
 	editor = nvim
+	excludesfile = /Users/samueldostal/.gitignore_global
 [diff]
 	colorMoved = zebra
 [push]
