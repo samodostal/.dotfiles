@@ -11,7 +11,7 @@ order += "battery all"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "(%essid)%quality 直 "
+        format_up = "%essid %quality 直 "
         format_down = "睊 "
 }
 
