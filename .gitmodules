@@ -1,0 +1,3 @@
+[submodule "keyboard"]
+	path = keyboard
+	url = git@github.com:samodostal/keyboard.git

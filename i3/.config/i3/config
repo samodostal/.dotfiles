@@ -1,0 +1,125 @@
+# --- Sets -----------------------------------------------------------
+
+set $mod Mod1
+set $win Mod4
+floating_modifier $mod
+font pango:Hack Regular Nerd Font Complete 10
+for_window [class="^.*"] border pixel 1
+
+set $refresh_i3status killall -SIGUSR1 i3status
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #4c7899   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+
+# --- Execs ----------------------------------------------------------
+
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id picom -b
+exec --no-startup-id dunst
+
+for_window [class="Chromium"] move container to workspace $ws1
+for_window [class="Alacritty"] move container to workspace $ws2
+for_window [class="Thunderbird"] move container to workspace $ws7
+for_window [class="ticktick"] move container to workspace $ws8
+for_window [class="Spotify"] move container to workspace $ws9
+
+exec chromium
+exec alacritty
+exec thunderbird
+exec ticktick
+exec spotify
+
+# --- Bindings -------------------------------------------------------
+
+bindsym $mod+g kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+p move workspace to output right
+
+bindsym $mod+r mode "resize"
+
+bindsym $win+h focus left
+bindsym $win+j focus down
+bindsym $win+k focus up
+bindsym $win+l focus right
+
+bindsym $win+Shift+h move left
+bindsym $win+Shift+j move down
+bindsym $win+Shift+k move up
+bindsym $win+Shift+l move right
+
+bindsym $mod+e exec --no-startup-id i3-dmenu-desktop
+
+bindsym $mod+t exec alacritty
+bindsym $mod+c exec chromium
+
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# --- FN Keys --------------------------------------------------------
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
+
+bindsym XF86Favorites exec toggle-keyboard.sh
+
+# --- Workspaces -----------------------------------------------------
+
+bindsym $mod+h workspace $ws1
+bindsym $mod+m workspace $ws2
+bindsym $mod+w workspace $ws3
+bindsym $mod+v workspace $ws4
+bindsym $mod+z workspace $ws5
+bindsym $mod+semicolon workspace $ws6
+bindsym $mod+q workspace $ws7
+bindsym $mod+j workspace $ws8
+bindsym $mod+k workspace $ws9
+bindsym $mod+u workspace $ws10
+
+bindsym $mod+Shift+h move container to workspace $ws1
+bindsym $mod+Shift+m move container to workspace $ws2
+bindsym $mod+Shift+w move container to workspace $ws3
+bindsym $mod+Shift+v move container to workspace $ws4
+bindsym $mod+Shift+z move container to workspace $ws5
+bindsym $mod+Shift+semicolon move container to workspace $ws6
+bindsym $mod+Shift+q move container to workspace $ws7
+bindsym $mod+Shift+j move container to workspace $ws8
+bindsym $mod+Shift+k move container to workspace $ws9
+bindsym $mod+Shift+u move container to workspace $ws10
+
+# --- i3bar ----------------------------------------------------------
+
+bar {
+	position top
+        status_command ~/.config/i3status/custom.sh
+}

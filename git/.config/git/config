@@ -1,0 +1,14 @@
+[user]
+	name = samodostal
+	email = samuel.dostal.sk@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	editor = nvim
+	excludesfile = ~/.config/git/.gitignore_global
+[diff]
+	colorMoved = zebra
+[push]
+	default = current
