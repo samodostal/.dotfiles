@@ -17,7 +17,9 @@ function M.load(...)
   for _, variant in ipairs({...}) do
     local variant_plugins = require('plugins.plugins-' .. variant)
     if(table_size(variant_plugins) > 0) then
-      table.insert(plugins, unpack(variant_plugins))
+      for _, plugin in ipairs(variant_plugins) do
+        table.insert(plugins, plugin)
+      end
     end
     variant_name = variant_name .. variant
   end

@@ -1,3 +1,4 @@
 return {
-  { 'tpope/vim-surround' },
+  { "sainnhe/gruvbox-material" },
+  { "christoomey/vim-tmux-navigator" },
 }

@@ -1,6 +1,8 @@
-require 'core.utils'
 require 'core.options'
+require 'core.utils'
 
 local plugins = require 'plugins'
 plugins.init()
-plugins.load("common", "code")
+plugins.load('common', 'code')
+
+require 'core.theme'
