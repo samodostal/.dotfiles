@@ -91,6 +91,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
 
+bindsym XF86AudioPlay exec "media-keys-handle.sh play-pause";
+bindsym XF86AudioPrev exec "media-keys-handle.sh previous";
+bindsym XF86AudioNext exec "media-keys-handle.sh next";
+
 bindsym XF86Favorites exec toggle-keyboard.sh
 
 # --- Workspaces -----------------------------------------------------
