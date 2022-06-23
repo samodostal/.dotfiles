@@ -10,5 +10,6 @@
 	excludesfile = ~/.config/git/.gitignore_global
 [diff]
 	colorMoved = zebra
+  external = difft
 [push]
 	default = current
