@@ -106,7 +106,7 @@ bindsym $mod+m workspace $ws2
 bindsym $mod+w workspace $ws3
 bindsym $mod+v workspace $ws4
 bindsym $mod+z workspace $ws5
-bindsym $mod+semicolon workspace $ws6
+bindsym $mod+Shift+colon workspace $ws6
 bindsym $mod+q workspace $ws7
 bindsym $mod+j workspace $ws8
 bindsym $mod+k workspace $ws9
@@ -117,7 +117,7 @@ bindsym $mod+Shift+m move container to workspace $ws2
 bindsym $mod+Shift+w move container to workspace $ws3
 bindsym $mod+Shift+v move container to workspace $ws4
 bindsym $mod+Shift+z move container to workspace $ws5
-bindsym $mod+Shift+semicolon move container to workspace $ws6
+# bindsym $mod+Shift+colon move container to workspace $ws6
 bindsym $mod+Shift+q move container to workspace $ws7
 bindsym $mod+Shift+j move container to workspace $ws8
 bindsym $mod+Shift+k move container to workspace $ws9
