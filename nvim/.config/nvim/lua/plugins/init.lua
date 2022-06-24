@@ -7,6 +7,7 @@ function M.init()
   if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
     vim.cmd 'packadd packer.nvim'
+    print("Packer installed, call ':PackerSync' to install packages")
   end
 end
 

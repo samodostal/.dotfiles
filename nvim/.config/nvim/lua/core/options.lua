@@ -24,6 +24,7 @@ o.hidden = true
 o.ignorecase = true
 o.smartcase = true
 o.lazyredraw = true
+o.hlsearch = false
 
 o.matchpairs = "(:),{:},[:],<:>"
 o.preserveindent = true
@@ -46,9 +47,9 @@ o.shortmess = o.shortmess
   W = true,
 }
 
-o.formatoptions = o.formatoptions
-+ {
-  c = false,
-  o = false,
-  r = true,
-}
+-- formatoptions overriden by ftplugin
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    vim.opt.formatoptions:remove "o"
+  end
+})

@@ -53,6 +53,8 @@ bindsym $mod+g kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+p move workspace to output right
 
+bindsym $mod+Shift+e exec --no-startup-id dm-tool lock
+
 bindsym $mod+r mode "resize"
 
 bindsym $win+h focus left

@@ -1,6 +1,6 @@
 window:
   title: Alacritty
-  opacity: 0.85
+  opacity: 0.8
   class:
     instance: Alacritty
     general: Alacritty
