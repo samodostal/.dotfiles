@@ -5,7 +5,7 @@ function _G.safe_require(module, silent)
   local ok, result = pcall(require, module)
   if not ok then
     if not silent then
-      vim.notify(string.format('Could not safe_require: %s', module), vim.log.levels.ERROR)
+      vim.notify(string.format('Could not safe_require: %s', module))
     end
     return ok
   end
