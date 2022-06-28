@@ -44,7 +44,7 @@ function M.load(...)
   for _, plugin in ipairs(plugins) do
     packer.use(plugin)
 
-    -- Temporarily load plugin config manually, conifg in packer does not work with custom package_root
+    -- Temporarily load plugin config manually, config in packer does not work with custom package_root
     local config = plugin.config
     if config then
       load_plugin_config(config)
