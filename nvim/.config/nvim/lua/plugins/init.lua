@@ -1,4 +1,6 @@
-local table_size = require('core/utils').table_size
+local utils = require 'core.utils'
+local table_size = utils.table_size
+local plugin_loaded = utils.plugin_loaded
 
 local M = {}
 
@@ -25,25 +27,35 @@ function M.load(...)
     variant_name = variant_name .. variant
   end
 
-  local packer = safe_require 'packer'
+  local packer = require 'packer'
 
-  local package_root = vim.fn.stdpath("data") .. "/site/pack/" .. variant_name .. "/"
-  local compile_path = vim.fn.stdpath("data") .. "/plugin/packer_compiled_" .. variant_name .. ".lua"
+  local package_root = vim.fn.stdpath("data") .. "/site/" .. variant_name .. "/"
+  local compile_path = vim.fn.stdpath("data") .. "/compiled/packer_compiled_" .. variant_name .. ".lua"
 
-	packer.init({
-    package_root = package_root,
-		compile_path = compile_path,
-	})
+  packer.init({
+   package_root = package_root,
+   compile_path = compile_path,
+  })
 
-  -- Add plugins to runtimepath manually
-  vim.opt.runtimepath:append('~/.local/share/nvim/site/pack/' .. variant_name .. '/packer/start/*')
+  -- Add plugins to packpath / runtimepath manually [https://github.com/wbthomason/packer.nvim/issues/575]
+  vim.opt.packpath:append(package_root .. "packer")
 
-	return packer.startup(function(use)
-		use("wbthomason/packer.nvim")
-		for _, plugin in ipairs(plugins) do
-			use(plugin)
-		end
-	end)
+  packer.use("wbthomason/packer.nvim")
+  for _, plugin in ipairs(plugins) do
+    packer.use(plugin)
+    -- Temporarily load plugin config manually, conifg in packer does not work with custom package_root
+    load_plugin_config(plugin)
+  end
+end
+
+function load_plugin_config(plugin)
+    for _, full_name in ipairs(plugin) do
+      local name = string.match(full_name, "/(.-)$")
+      local config_fn = safe_require('lua.plugins.config.' .. name, true)
+      if config_fn then
+        config_fn()
+      end
+    end
 end
 
 return M

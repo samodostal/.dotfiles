@@ -1,16 +1,19 @@
 local M = {}
 
-function _G.safe_require(module)
+function _G.safe_require(module, silent)
+  silent = silent or false
   local ok, result = pcall(require, module)
   if not ok then
-    vim.notify(string.format('Could not safe_require: %s', module), vim.log.levels.ERROR)
+    if not silent then
+      vim.notify(string.format('Could not safe_require: %s', module), vim.log.levels.ERROR)
+    end
     return ok
   end
   return result
 end
 
 function M.plugin_conf(name)
-	return require(string.format("modules.config.%s", name))
+	return require(string.format("plugins.config.%s", name))
 end
 
 function M.table_size(t)
