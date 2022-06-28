@@ -43,19 +43,20 @@ function M.load(...)
   packer.use("wbthomason/packer.nvim")
   for _, plugin in ipairs(plugins) do
     packer.use(plugin)
+
     -- Temporarily load plugin config manually, conifg in packer does not work with custom package_root
-    load_plugin_config(plugin)
+    local config = plugin.config
+    if config then
+      load_plugin_config(config)
+    end
   end
 end
 
-function load_plugin_config(plugin)
-    for _, full_name in ipairs(plugin) do
-      local name = string.match(full_name, "/(.-)$")
-      local config_fn = safe_require('lua.plugins.config.' .. name, true)
-      if config_fn then
-        config_fn()
-      end
-    end
+function load_plugin_config(config)
+  local config_fn = safe_require('plugins.config.' .. config)
+  if config_fn then
+    config_fn()
+  end
 end
 
 return M
