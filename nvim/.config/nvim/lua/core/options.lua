@@ -6,7 +6,7 @@ o.number = true
 o.relativenumber = true
 o.numberwidth = 1
 
-o.signcolumn = "yes:1"
+o.signcolumn = 'yes:1'
 o.cursorline = true
 o.termguicolors = true
 
@@ -26,7 +26,7 @@ o.smartcase = true
 o.lazyredraw = true
 o.hlsearch = false
 
-o.matchpairs = "(:),{:},[:],<:>"
+o.matchpairs = '(:),{:},[:],<:>'
 o.preserveindent = true
 
 o.expandtab = true
@@ -40,16 +40,15 @@ o.splitright = true
 o.swapfile = false
 o.undofile = true
 
-o.shortmess = o.shortmess
-+ {
+o.shortmess = o.shortmess + {
   A = true,
   I = true,
   W = true,
 }
 
 -- formatoptions overriden by ftplugin
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd('FileType', {
   callback = function()
-    vim.opt.formatoptions:remove "o"
-  end
+    vim.opt.formatoptions:remove 'o'
+  end,
 })

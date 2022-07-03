@@ -4,22 +4,22 @@ local plugin_loaded = utils.plugin_loaded
 
 local M = {}
 
-function M.init() 
+function M.init()
   local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
   if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
     vim.cmd 'packadd packer.nvim'
-    print("Packer installed, call ':PackerSync' to install packages")
+    print "Packer installed, call ':PackerSync' to install packages"
   end
 end
 
 function M.load(...)
   local plugins = {}
-  local variant_name = ""
+  local variant_name = ''
 
-  for _, variant in ipairs({...}) do
+  for _, variant in ipairs { ... } do
     local variant_plugins = require('plugins.plugins-' .. variant)
-    if(table_size(variant_plugins) > 0) then
+    if table_size(variant_plugins) > 0 then
       for _, plugin in ipairs(variant_plugins) do
         table.insert(plugins, plugin)
       end
@@ -29,18 +29,18 @@ function M.load(...)
 
   local packer = require 'packer'
 
-  local package_root = vim.fn.stdpath("data") .. "/site/" .. variant_name .. "/"
-  local compile_path = vim.fn.stdpath("data") .. "/compiled/packer_compiled_" .. variant_name .. ".lua"
+  local package_root = vim.fn.stdpath 'data' .. '/site/' .. variant_name .. '/'
+  local compile_path = vim.fn.stdpath 'data' .. '/compiled/packer_compiled_' .. variant_name .. '.lua'
 
-  packer.init({
-   package_root = package_root,
-   compile_path = compile_path,
-  })
+  packer.init {
+    package_root = package_root,
+    compile_path = compile_path,
+  }
 
   -- Add plugins to packpath / runtimepath manually [https://github.com/wbthomason/packer.nvim/issues/575]
-  vim.opt.packpath:append(package_root .. "packer")
+  vim.opt.packpath:append(package_root .. 'packer')
 
-  packer.use("wbthomason/packer.nvim")
+  packer.use 'wbthomason/packer.nvim'
   for _, plugin in ipairs(plugins) do
     packer.use(plugin)
 

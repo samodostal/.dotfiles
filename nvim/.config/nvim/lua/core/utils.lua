@@ -13,12 +13,14 @@ function _G.safe_require(module, silent)
 end
 
 function M.plugin_conf(name)
-	return require(string.format("plugins.config.%s", name))
+  return require(string.format('plugins.config.%s', name))
 end
 
 function M.table_size(t)
   local s = 0
-  for _ in pairs(t) do s = s + 1 end
+  for _ in pairs(t) do
+    s = s + 1
+  end
   return s
 end
 
