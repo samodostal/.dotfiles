@@ -6,7 +6,7 @@ o.number = true
 o.relativenumber = true
 o.numberwidth = 1
 
-o.signcolumn = "auto"
+o.signcolumn = "yes:1"
 o.cursorline = true
 o.termguicolors = true
 
