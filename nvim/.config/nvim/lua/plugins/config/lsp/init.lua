@@ -37,6 +37,15 @@ return function()
       filetypes = vim.tbl_keys(format_config),
       settings = { languages = format_config },
     },
+    sumneko_lua = {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' }
+          }
+        }
+      }
+    }
   }
 
   lsp_installer.setup {
