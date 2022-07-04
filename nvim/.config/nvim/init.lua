@@ -4,6 +4,6 @@ require 'core.keymaps'
 
 local plugins = require 'plugins'
 plugins.init()
-plugins.load 'common'
+plugins.load('common', 'code', 'note')
 
 require 'core.theme'
