@@ -1,6 +1,5 @@
 local utils = require 'core.utils'
 local table_size = utils.table_size
-local plugin_loaded = utils.plugin_loaded
 
 local M = {}
 

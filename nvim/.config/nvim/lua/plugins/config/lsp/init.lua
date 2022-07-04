@@ -52,9 +52,13 @@ return function()
     ensure_installed = servers,
   }
 
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
   for _, server in ipairs(servers) do
     local config = servers_config[server] or {}
     config.on_attach = on_attach
+    config.capabilities = capabilities
     lspconfig[server].setup(config)
   end
 end
