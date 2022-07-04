@@ -4,11 +4,7 @@ return function()
 		return
 	end
 
-	copilot.setup({
-		cmp = {
-			enabled = true,
-			method = "getCompletionsCycling",
- 	 	  plugin_manager_path = vim.fn.stdpath("data") .. "/site/commoncode/packer", 
-		},
-	})
+	vim.schedule(function()
+		copilot.setup()
+	end)
 end
