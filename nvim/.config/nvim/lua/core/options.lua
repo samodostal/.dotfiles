@@ -40,15 +40,16 @@ o.splitright = true
 o.swapfile = false
 o.undofile = true
 
+o.completeopt = 'menu,menuone,noselect'
 o.shortmess = o.shortmess + {
-  A = true,
-  I = true,
-  W = true,
+	A = true,
+	I = true,
+	W = true,
 }
 
 -- formatoptions overriden by ftplugin
 vim.api.nvim_create_autocmd('FileType', {
-  callback = function()
-    vim.opt.formatoptions:remove 'o'
-  end,
+	callback = function()
+		vim.opt.formatoptions:remove 'o'
+	end,
 })

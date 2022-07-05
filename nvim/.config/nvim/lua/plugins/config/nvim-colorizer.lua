@@ -1,8 +1,8 @@
 return function()
-  local colorizer = safe_require 'colorizer'
-  if not colorizer then
-    return
-  end
+	local colorizer = safe_require 'colorizer'
+	if not colorizer then
+		return
+	end
 
-  colorizer.setup()
+	colorizer.setup()
 end
