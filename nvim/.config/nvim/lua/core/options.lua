@@ -28,6 +28,7 @@ o.hlsearch = false
 
 o.matchpairs = '(:),{:},[:],<:>'
 o.preserveindent = true
+o.laststatus = 3
 
 o.expandtab = true
 o.shiftwidth = 2

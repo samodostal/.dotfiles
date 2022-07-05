@@ -18,6 +18,10 @@ return {
 	-----]]------------[[-----
 
 	{ 'sainnhe/gruvbox-material' },
+	{
+		'glepnir/galaxyline.nvim',
+		config = conf 'galaxyline',
+	},
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'nvim-colorizer' },
 
 	-----[[------------]]-----

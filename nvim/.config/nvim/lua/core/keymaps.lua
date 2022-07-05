@@ -9,6 +9,10 @@ map('n', 'q:', '<Nop>')
 
 map('n', '<leader>t', ':b#<CR>')
 
+-- Packer
+map('n', '<leader>pc', ':PackerCompile<CR>')
+map('n', '<leader>ps', ':PackerSync<CR>')
+
 -- LSP
 map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
 map('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')

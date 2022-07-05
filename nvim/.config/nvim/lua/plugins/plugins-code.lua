@@ -1,4 +1,4 @@
- local conf = require('core.utils').plugin_conf
+local conf = require('core.utils').plugin_conf
 
 return {
 	-----[[------------]]-----
@@ -37,7 +37,7 @@ return {
 	{
 		'nvim-telescope/telescope.nvim',
 		requires = {
-			'kyazdani42/nvim-web-devicons'
-		}
+			'kyazdani42/nvim-web-devicons',
+		},
 	},
 }

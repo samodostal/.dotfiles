@@ -1,3 +1,3 @@
 return {
-	'nvim-neorg/neorg'
+	'nvim-neorg/neorg',
 }
