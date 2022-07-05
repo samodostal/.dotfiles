@@ -1,4 +1,4 @@
-local conf = require('core.utils').plugin_conf
+ local conf = require('core.utils').plugin_conf
 
 return {
 	-----[[------------]]-----
@@ -26,5 +26,18 @@ return {
 			'David-Kunz/cmp-npm',
 			'saadparwaiz1/cmp_luasnip',
 		},
+	},
+	{ 'github/copilot.vim' },
+
+	-----[[------------]]-----
+	---   File switching   ---
+	-----]]------------[[-----
+
+	{ 'ThePrimeagen/harpoon' },
+	{
+		'nvim-telescope/telescope.nvim',
+		requires = {
+			'kyazdani42/nvim-web-devicons'
+		}
 	},
 }

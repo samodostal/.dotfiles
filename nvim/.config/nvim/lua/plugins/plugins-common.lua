@@ -5,6 +5,7 @@ return {
 	---       General      ---
 	-----]]------------[[-----
 
+	{ 'nvim-lua/plenary.nvim' },
 	{
 		'nvim-treesitter/nvim-treesitter',
 		config = conf 'nvim-treesitter',
