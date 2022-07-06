@@ -36,7 +36,7 @@ return function()
 			GitBranch = {
 				provider = "GitBranch",
 				condition = condition.check_git_workspace,
-				separator = " | ",
+				separator = "  ",
 				separator_highlight = { "NONE", colors.bg },
 				highlight = { colors.yellow, colors.bg, "bold" },
 			},

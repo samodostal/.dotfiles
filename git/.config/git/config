@@ -5,11 +5,28 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[push]
+	default = current
 [core]
 	editor = nvim
 	excludesfile = ~/.config/git/.gitignore_global
-[diff]
-	colorMoved = zebra
-  external = difft
-[push]
-	default = current
+	pager = diff-so-fancy | less --tabs=2 -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff-so-fancy]
+	stripLeadingSymbols = true
