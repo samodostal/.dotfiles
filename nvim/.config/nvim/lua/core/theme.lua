@@ -18,6 +18,12 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 	end,
 })
 
+vim.api.nvim_create_autocmd('TextYankPost', {
+	callback = function()
+		vim.highlight.on_yank { timeout = 150 }
+	end,
+})
+
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	signs = false,
 	update_in_insert = true,
