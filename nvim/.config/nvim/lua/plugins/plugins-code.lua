@@ -40,4 +40,22 @@ return {
 			'kyazdani42/nvim-web-devicons',
 		},
 	},
+
+	-----[[------------]]-----
+	---        Git         ---
+	-----]]------------[[-----
+
+	{ 'lewis6991/gitsigns.nvim', config = conf 'gitsigns' },
+
+	-----[[------------]]-----
+	---      Editing       ---
+	-----]]------------[[-----
+
+	{ 'windwp/nvim-autopairs', config = conf 'autopairs' },
+	{ 'windwp/nvim-ts-autotag', config = conf 'autotag' },
+
+
+	-----[[------------]]-----
+	---     Debugging      ---
+	-----]]------------[[-----
 }
