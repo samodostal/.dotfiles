@@ -42,6 +42,8 @@ o.swapfile = false
 o.undofile = true
 
 o.completeopt = 'menu,menuone,noselect'
+o.showmode = false
+
 o.shortmess = o.shortmess + {
 	A = true,
 	I = true,
