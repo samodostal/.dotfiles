@@ -8,6 +8,8 @@ map('n', '<leader>', '<Nop>')
 map('n', 'q:', '<Nop>')
 
 map('n', '<leader>t', ':b#<CR>')
+map('x', '<', '<gv')
+map('x', '>', '>gv')
 
 -- Packer
 map('n', '<leader>pc', ':PackerCompile<CR>')
@@ -33,5 +35,9 @@ map('n', '<leader>av', ':lua require("harpoon.ui").nav_file(4)<CR>')
 map('n', '<leader>az', ':lua require("harpoon.ui").nav_file(5)<CR>')
 
 -- Telescope
-map('n', '<leader>ff', ':lua require("telescope.builtin").git_files()<CR>')
+map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untracked = true })<CR>')
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
+
+-- Copilot client
+map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
+map('i', '<C-a>', '<cmd>lua require("copilot-client").accept()<CR>')
