@@ -35,13 +35,13 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
 
-for_window [class="Chromium"] move container to workspace $ws1
+for_window [class="Brave"] move container to workspace $ws1
 for_window [class="Alacritty"] move container to workspace $ws2
 for_window [class="Thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
 
-exec chromium
+exec brave
 exec alacritty
 exec thunderbird
 exec ticktick
@@ -70,7 +70,7 @@ bindsym $win+Shift+l move right
 bindsym $mod+e exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+t exec alacritty
-bindsym $mod+c exec chromium
+bindsym $mod+c exec brave
 
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
