@@ -5,11 +5,15 @@ return function()
 	end
 
 	treesitter.setup {
+		ensure_installed = 'all',
 		highlight = {
 			enable = true,
 		},
 		context_commentstring = {
 			enable = true,
 		},
+		autotag = {
+			enable = true,
+		}
 	}
 end

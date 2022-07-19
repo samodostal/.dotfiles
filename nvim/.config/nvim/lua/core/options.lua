@@ -50,6 +50,10 @@ o.shortmess = o.shortmess + {
 	W = true,
 }
 
+o.fillchars = o.fillchars + {
+	eob = ' '
+}
+
 -- formatoptions overriden by ftplugin
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function()

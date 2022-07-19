@@ -7,3 +7,5 @@ plugins.init()
 plugins.load('common', 'note')
 
 require 'core.theme'
+
+-- gramarly language server?

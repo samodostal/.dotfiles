@@ -42,6 +42,9 @@ map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
 map('n', '<leader>d<leader>', ':lua require("dap").continue()<CR>')
 map('n', '<leader>db', ':lua require("dap").toggle_breakpoint()<CR>')
 
+-- Tree
+map('n', '<leader>b', ':lua require("nvim-tree").toggle(false, true)<CR>')
+map('n', '<leader>ft', ':NvimTreeFindFile<CR>')
+
 -- Copilot client
 map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
-map('i', '<C-a>', '<cmd>lua require("copilot-client").accept()<CR>')

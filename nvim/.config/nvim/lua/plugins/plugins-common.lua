@@ -6,11 +6,16 @@ return {
 	-----]]------------[[-----
 
 	{ 'nvim-lua/plenary.nvim' },
+
+	-----[[------------]]-----
+	---     TreeSitter     ---
+	-----]]------------[[-----
+
 	{
 		'nvim-treesitter/nvim-treesitter',
 		config = conf 'nvim-treesitter',
-		run = ':TSUpdate',
 	},
+	{ 'windwp/nvim-ts-autotag' },
 	{ 'JoosepAlviste/nvim-ts-context-commentstring' },
 
 	-----[[------------]]-----
@@ -33,7 +38,6 @@ return {
 	{ 'tpope/vim-repeat' },
 	{ 'tpope/vim-abolish' },
 	{ 'tpope/vim-sleuth' },
-	{ 'tpope/vim-vinegar' },
 	{ 'tpope/vim-eunuch' },
 
 	-----[[------------]]-----
