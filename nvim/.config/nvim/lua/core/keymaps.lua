@@ -38,6 +38,10 @@ map('n', '<leader>az', ':lua require("harpoon.ui").nav_file(5)<CR>')
 map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untracked = true })<CR>')
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
 
+-- Debugging
+map('n', '<leader>d<leader>', ':lua require("dap").continue()<CR>')
+map('n', '<leader>db', ':lua require("dap").toggle_breakpoint()<CR>')
+
 -- Copilot client
 map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 map('i', '<C-a>', '<cmd>lua require("copilot-client").accept()<CR>')

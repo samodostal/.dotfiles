@@ -58,4 +58,6 @@ return {
 	-----[[------------]]-----
 	---     Debugging      ---
 	-----]]------------[[-----
+
+	{ "mfussenegger/nvim-dap", config = conf("dap") },
 }
