@@ -75,6 +75,9 @@ return {
 		'windwp/nvim-autopairs',
 		config = conf 'autopairs',
 	},
+	{
+		'nvim-treesitter/nvim-treesitter-context',
+	},
 
 	-----[[------------]]-----
 	---     Debugging      ---
