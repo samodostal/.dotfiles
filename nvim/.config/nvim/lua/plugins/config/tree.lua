@@ -13,6 +13,4 @@ return function()
 			signcolumn = 'no',
 		},
 	}
-
-	tree.toggle(false, true)
 end

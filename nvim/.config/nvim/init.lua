@@ -7,3 +7,4 @@ plugins.init()
 plugins.load('common', 'code', 'note')
 
 require 'core.theme'
+require 'startup'
