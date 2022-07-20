@@ -12,6 +12,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 	callback = function()
 		vim.cmd 'highlight CursorLineNr guifg=#d79921'
 		vim.cmd 'highlight CursorLine guibg=none'
+		vim.cmd 'highlight NvimTreeCursorLine guibg=#262626'
 		vim.cmd 'highlight VirtualTextError guifg=#db4b4b'
 		vim.cmd 'highlight VirtualTextWarning guifg=#e0af68'
 		vim.cmd 'highlight VirtualTextInfo guifg=#0db9d7'
