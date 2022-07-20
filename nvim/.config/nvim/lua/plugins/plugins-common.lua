@@ -13,7 +13,7 @@ return {
 
 	{
 		'nvim-treesitter/nvim-treesitter',
-		config = conf 'nvim-treesitter',
+		config = conf 'treesitter',
 	},
 	{ 'windwp/nvim-ts-autotag' },
 	{ 'JoosepAlviste/nvim-ts-context-commentstring' },
@@ -27,7 +27,7 @@ return {
 		'glepnir/galaxyline.nvim',
 		config = conf 'galaxyline',
 	},
-	{ 'norcalli/nvim-colorizer.lua', config = conf 'nvim-colorizer' },
+	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
 
 	-----[[------------]]-----
 	---      TPope <3      ---
