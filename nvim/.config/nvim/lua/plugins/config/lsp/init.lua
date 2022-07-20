@@ -20,7 +20,7 @@ return function()
 		'dockerls',
 		'gopls',
 		'golangci_lint_ls',
-		'diagnosticls',
+		'eslint',
 		'hls',
 		'html',
 		'jsonls',
