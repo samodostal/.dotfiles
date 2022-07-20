@@ -50,7 +50,7 @@ return {
 	---   File switching   ---
 	-----]]------------[[-----
 
-	{ "ThePrimeagen/harpoon", config = conf("harpoon") },
+	{ "ThePrimeagen/harpoon" },
 	{
 		"nvim-telescope/telescope.nvim",
 		config = conf("telescope"),
