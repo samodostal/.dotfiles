@@ -1,5 +1,5 @@
-local prettier_eslint_d = { formatCommand = "prettier-eslint_d --write ${INPUT}", formatStdin = true }
-local stylua = { formatCommand = "stylua -s -", formatStdin = true }
+local prettier_eslint_d = { formatCommand = 'prettier-eslint_d --write ${INPUT}', formatStdin = true }
+local stylua = { formatCommand = 'stylua -s -', formatStdin = true }
 
 return {
 	lua = { stylua },

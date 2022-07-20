@@ -51,7 +51,7 @@ o.shortmess = o.shortmess + {
 }
 
 o.fillchars = o.fillchars + {
-	eob = ' '
+	eob = ' ',
 }
 
 -- formatoptions overriden by ftplugin

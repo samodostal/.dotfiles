@@ -1,5 +1,5 @@
 return function()
-	local dap = safe_require("dap")
+	local dap = safe_require 'dap'
 	if not dap then
 		return
 	end

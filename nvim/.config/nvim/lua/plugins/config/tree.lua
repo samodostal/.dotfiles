@@ -1,18 +1,18 @@
 return function()
-	local tree = safe_require("nvim-tree")
+	local tree = safe_require 'nvim-tree'
 	if not tree then
 		return
 	end
 
-	tree.setup({
+	tree.setup {
 		disable_netrw = true,
 		view = {
 			adaptive_size = true,
 			number = false,
 			relativenumber = false,
-			signcolumn = "no",
+			signcolumn = 'no',
 		},
-	})
+	}
 
 	tree.toggle(false, true)
 end

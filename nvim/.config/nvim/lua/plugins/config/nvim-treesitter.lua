@@ -14,6 +14,6 @@ return function()
 		},
 		autotag = {
 			enable = true,
-		}
+		},
 	}
 end

@@ -1,14 +1,14 @@
-return function ()
-	local gitsigns = safe_require("gitsigns")
+return function()
+	local gitsigns = safe_require 'gitsigns'
 	if not gitsigns then
 		return
 	end
 
-	gitsigns.setup({
+	gitsigns.setup {
 		signs = {
 			add = { text = '+' },
 			change = { text = '~' },
 			delete = { text = '-' },
-		}
-	})
+		},
+	}
 end
