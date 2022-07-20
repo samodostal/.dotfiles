@@ -20,7 +20,7 @@ return function()
 		'dockerls',
 		'gopls',
 		'golangci_lint_ls',
-		'graphql',
+		'diagnosticls',
 		'hls',
 		'html',
 		'jsonls',
@@ -35,6 +35,7 @@ return function()
 		efm = {
 			init_options = { documentFormatting = true },
 			filetypes = vim.tbl_keys(format_config),
+			root_dir = lspconfig.util.root_pattern { '.git/', '.stylua.toml' },
 			settings = { languages = format_config },
 		},
 		sumneko_lua = {
