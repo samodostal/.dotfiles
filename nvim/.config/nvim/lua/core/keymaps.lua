@@ -23,6 +23,7 @@ map('n', 'gy', ':lua vim.lsp.buf.type_definition()<CR>')
 map('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
 map('n', '<leader>fp', ':lua vim.lsp.buf.format({ async = true })<CR>')
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
 map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 
 -- Harpoon
