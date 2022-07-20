@@ -17,6 +17,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		vim.cmd 'highlight VirtualTextWarning guifg=#e0af68'
 		vim.cmd 'highlight VirtualTextInfo guifg=#0db9d7'
 		vim.cmd 'highlight VirtualTextHint guifg=#10B981'
+		vim.cmd 'highlight TreesitterContext guibg=#262626'
 	end,
 })
 
