@@ -7,7 +7,6 @@ return {
 
 	{
 		'williamboman/mason.nvim',
-		branch = 'alpha',
 		config = conf 'mason',
 	},
 
