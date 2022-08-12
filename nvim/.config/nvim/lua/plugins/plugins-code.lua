@@ -18,6 +18,7 @@ return {
 	{ 'neovim/nvim-lspconfig', config = conf 'lsp.init' },
 	{ 'williamboman/nvim-lsp-installer' },
 	{ 'onsails/lspkind.nvim' },
+	{ 'ray-x/lsp_signature.nvim' },
 	{ 'j-hui/fidget.nvim', config = conf 'fidget' },
 	{ 'petertriho/nvim-scrollbar', config = conf 'scrollbar' },
 	{

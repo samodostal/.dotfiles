@@ -1,8 +1,9 @@
 return function()
 	local lspconfig = safe_require 'lspconfig'
 	local lsp_installer = safe_require 'nvim-lsp-installer'
+	local lsp_signature = safe_require 'lsp_signature'
 
-	if not lspconfig or not lsp_installer then
+	if not lspconfig or not lsp_installer or not lsp_signature then
 		return
 	end
 
@@ -63,4 +64,8 @@ return function()
 		config.capabilities = capabilities
 		lspconfig[server].setup(config)
 	end
+
+	lsp_signature.setup({
+		transparency = 50
+	})
 end
