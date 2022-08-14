@@ -38,13 +38,13 @@ return {
 			'saadparwaiz1/cmp_luasnip',
 		},
 	},
-	-- {
-	-- 	"~/Projects/nvim_plugins/copilot-client.lua",
-	-- 	config = conf("copilot"),
-	-- 	requires = {
-	-- 		"zbirenbaum/copilot.lua",
-	-- 	},
-	-- },
+	{
+		'~/Projects/nvim_plugins/copilot-client.lua',
+		config = conf 'copilot',
+		requires = {
+			'zbirenbaum/copilot.lua',
+		},
+	},
 
 	-----[[------------]]-----
 	---   File switching   ---

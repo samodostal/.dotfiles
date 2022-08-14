@@ -12,5 +12,11 @@ return function()
 		},
 	}
 
-	copilot_client.setup()
+	copilot_client.setup {
+		mapping = {
+			accept = '<CR>',
+			-- suggest_next = '<C-n>',
+			-- suggest_prev = '<C-p>',
+		},
+	}
 end
