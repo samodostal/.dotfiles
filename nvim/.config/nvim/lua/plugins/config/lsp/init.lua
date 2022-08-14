@@ -65,7 +65,7 @@ return function()
 		lspconfig[server].setup(config)
 	end
 
-	lsp_signature.setup({
-		transparency = 50
-	})
+	lsp_signature.setup {
+		hint_enable = false
+	}
 end
