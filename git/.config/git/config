@@ -1,16 +1,21 @@
 [user]
 	name = samodostal
 	email = samuel.dostal.sk@gmail.com
+	signingkey = samuel.dostal.sk@gmail.com
 [init]
 	defaultBranch = main
-[pull]
-	rebase = false
-[push]
-	default = current
 [core]
 	editor = nvim
 	excludesfile = ~/.config/git/.gitignore_global
 	pager = diff-so-fancy | less --tabs=2 -RFX
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[push]
+	default = current
+[tag]
+	gpgSign = true
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [color]
