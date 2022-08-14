@@ -1,4 +1,4 @@
-local prettier = { formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true }
+local prettier = { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true }
 local stylua = { formatCommand = 'stylua -s -', formatStdin = true }
 
 return {
@@ -7,4 +7,5 @@ return {
 	typescript = { prettier },
 	javascriptreact = { prettier },
 	typescriptreact = { prettier },
+	yaml = { prettier },
 }
