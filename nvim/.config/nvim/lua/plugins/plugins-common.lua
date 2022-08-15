@@ -23,6 +23,7 @@ return {
 	-----]]------------[[-----
 
 	{ 'sainnhe/gruvbox-material' },
+	{ '~/Projects/nvim_plugins/image.nvim', config = conf 'image' },
 	{
 		'glepnir/galaxyline.nvim',
 		config = conf 'galaxyline',
