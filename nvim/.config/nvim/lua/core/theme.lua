@@ -18,6 +18,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		vim.cmd 'highlight VirtualTextInfo guifg=#0db9d7'
 		vim.cmd 'highlight VirtualTextHint guifg=#10B981'
 		vim.cmd 'highlight TreesitterContext guibg=#262626'
+		vim.cmd 'highlight IndentBlankline guifg=#363636 gui=nocombine'
 	end,
 })
 

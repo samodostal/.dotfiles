@@ -28,6 +28,7 @@ return {
 		config = conf 'galaxyline',
 	},
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
+	{ 'lukas-reineke/indent-blankline.nvim', config = conf 'indent-blankline' },
 
 	-----[[------------]]-----
 	---      TPope <3      ---
