@@ -38,6 +38,7 @@ map('n', '<leader>az', ':lua require("harpoon.ui").nav_file(5)<CR>')
 -- Telescope
 map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untracked = true })<CR>')
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
+map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
 
 -- Debugging
 map('n', '<leader>d<leader>', ':lua require("dap").continue()<CR>')
