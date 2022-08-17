@@ -9,10 +9,10 @@ return function()
 
 	indent_blankline.setup {
 		show_end_of_line = true,
-		space_char_blankline = " ",
+		space_char_blankline = ' ',
 		show_current_context = true,
 		char_highlight_list = {
-			'IndentBlankline'
-		}
+			'IndentBlankline',
+		},
 	}
 end

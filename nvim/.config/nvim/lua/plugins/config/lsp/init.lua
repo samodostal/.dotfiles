@@ -66,6 +66,6 @@ return function()
 	end
 
 	lsp_signature.setup {
-		hint_enable = false
+		hint_enable = false,
 	}
 end
