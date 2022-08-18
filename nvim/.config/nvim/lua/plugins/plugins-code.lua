@@ -66,6 +66,7 @@ return {
 	-----]]------------[[-----
 
 	{ 'lewis6991/gitsigns.nvim', config = conf 'gitsigns' },
+	{ 'pwntester/octo.nvim', config = conf 'octo' },
 
 	-----[[------------]]-----
 	---      Editing       ---
