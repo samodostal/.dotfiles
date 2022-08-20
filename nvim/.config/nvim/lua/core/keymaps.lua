@@ -51,3 +51,6 @@ map('n', '<leader>ft', ':NvimTreeFindFile<CR>')
 -- Copilot client
 map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 map('n', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
+
+-- TrevJ
+map('n', '<leader>j', ':lua require("trevj").format_at_cursor()<CR>')
