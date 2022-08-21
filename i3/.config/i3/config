@@ -17,7 +17,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws0 "0"
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #333333 #333333 #ffffff #333333   #333333
@@ -27,6 +27,7 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 
 # --- Execs ----------------------------------------------------------
 
+exec --no-starutp-id xrandr --output HDMI-A-0 --auto --right-of eDP &
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
@@ -110,7 +111,7 @@ bindsym $mod+Shift+colon workspace $ws6
 bindsym $mod+q workspace $ws7
 bindsym $mod+j workspace $ws8
 bindsym $mod+k workspace $ws9
-bindsym $mod+u workspace $ws10
+bindsym $mod+u workspace $ws0
 
 bindsym $mod+Shift+h move container to workspace $ws1
 bindsym $mod+Shift+m move container to workspace $ws2
@@ -121,7 +122,9 @@ bindsym $mod+Shift+z move container to workspace $ws5
 bindsym $mod+Shift+q move container to workspace $ws7
 bindsym $mod+Shift+j move container to workspace $ws8
 bindsym $mod+Shift+k move container to workspace $ws9
-bindsym $mod+Shift+u move container to workspace $ws10
+bindsym $mod+Shift+u move container to workspace $ws0
+
+workspace 0 output HDMI-A-0
 
 # --- i3bar ----------------------------------------------------------
 
