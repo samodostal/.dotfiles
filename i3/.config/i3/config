@@ -124,7 +124,16 @@ bindsym $mod+Shift+j move container to workspace $ws8
 bindsym $mod+Shift+k move container to workspace $ws9
 bindsym $mod+Shift+u move container to workspace $ws0
 
-workspace 0 output HDMI-A-0
+workspace $ws1 output eDP
+workspace $ws2 output eDP
+workspace $ws3 output eDP
+workspace $ws4 output eDP
+workspace $ws5 output eDP
+workspace $ws6 output eDP
+workspace $ws7 output eDP
+workspace $ws8 output eDP
+workspace $ws9 output eDP
+workspace $ws0 output HDMI-A-0
 
 # --- i3bar ----------------------------------------------------------
 
