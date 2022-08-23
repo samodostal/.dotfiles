@@ -11,7 +11,7 @@
 [commit]
 	gpgsign = true
 [pull]
-	rebase = false
+	rebase = true
 [push]
 	default = current
 [tag]
