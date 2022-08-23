@@ -68,9 +68,10 @@ bindsym $win+Shift+j move down
 bindsym $win+Shift+k move up
 bindsym $win+Shift+l move right
 
+bindsym $mod+t move workspace to output left
+
 bindsym $mod+e exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+t exec alacritty
 bindsym $mod+c exec brave
 
 mode "resize" {
