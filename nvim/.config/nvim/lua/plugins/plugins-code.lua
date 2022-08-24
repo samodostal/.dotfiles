@@ -5,17 +5,15 @@ return {
 	---       Install      ---
 	-----]]------------[[-----
 
-	{
-		'williamboman/mason.nvim',
-		config = conf 'mason',
-	},
+	{ 'williamboman/mason.nvim', config = conf 'mason.init' },
+	{ 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+	{ 'williamboman/mason-lspconfig.nvim' },
 
 	-----[[------------]]-----
 	---         LSP        ---
 	-----]]------------[[-----
 
 	{ 'neovim/nvim-lspconfig', config = conf 'lsp.init' },
-	{ 'williamboman/nvim-lsp-installer' },
 	{ 'onsails/lspkind.nvim' },
 	{ 'ray-x/lsp_signature.nvim' },
 	{ 'j-hui/fidget.nvim', config = conf 'fidget' },

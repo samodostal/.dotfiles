@@ -24,4 +24,16 @@ function M.table_size(t)
 	return s
 end
 
+function M.merge_tables(...)
+	local result = {}
+
+	for _, t in ipairs { ... } do
+		for _, v in ipairs(t) do
+			table.insert(result, v)
+		end
+	end
+
+	return result
+end
+
 return M
