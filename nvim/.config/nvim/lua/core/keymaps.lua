@@ -40,9 +40,21 @@ map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untra
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
 map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
 
--- Debugging
-map('n', '<leader>d<leader>', ':lua require("dap").continue()<CR>')
+-- DAP
+map('n', '<leader>ds', '<cmd>lua require("dapui").open()<CR><cmd>NvimTreeClose<CR>')
+map(
+	'n',
+	'<leader>de',
+	'<cmd>lua require("dapui").close()<CR><cmd>lua require("dap").clear_breakpoints()<CR><cmd>NvimTreeOpen<CR>'
+)
+
+map('n', '<leader>dd', ':lua require("dap").continue()<CR>')
 map('n', '<leader>db', ':lua require("dap").toggle_breakpoint()<CR>')
+map('n', '<leader>dl', ':lua require("dap").step_over()<CR>')
+map('n', '<leader>dj', ':lua require("dap").step_into()<CR>')
+map('n', '<leader>dk', ':lua require("dap").step_out()<CR>')
+map('n', '<leader>dh', ':lua require("dap").step_out()<CR>')
+map('n', '<leader>dc', ':lua require("dap").run_to_cursor()<CR>')
 
 -- Tree
 map('n', '<leader>b', ':lua require("nvim-tree").toggle(false, true)<CR>')

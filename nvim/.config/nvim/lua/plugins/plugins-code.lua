@@ -45,6 +45,18 @@ return {
 	},
 
 	-----[[------------]]-----
+	---     Debugging      ---
+	-----]]------------[[-----
+
+	{
+		'rcarriga/nvim-dap-ui',
+		config = conf 'dap',
+		requires = {
+			'mfussenegger/nvim-dap',
+		},
+	},
+
+	-----[[------------]]-----
 	---   File switching   ---
 	-----]]------------[[-----
 
@@ -78,10 +90,4 @@ return {
 		'nvim-treesitter/nvim-treesitter-context',
 	},
 	{ 'AckslD/nvim-trevJ.lua', config = conf 'trevj' },
-
-	-----[[------------]]-----
-	---     Debugging      ---
-	-----]]------------[[-----
-
-	{ 'mfussenegger/nvim-dap', config = conf 'dap' },
 }
