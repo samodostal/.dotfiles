@@ -27,7 +27,7 @@ return function()
 		return
 	end
 
-	lsp_signature.setup {
-		hint_enable = false,
-	}
+	-- lsp_signature.setup {
+	-- 	hint_enable = false,
+	-- }
 end
