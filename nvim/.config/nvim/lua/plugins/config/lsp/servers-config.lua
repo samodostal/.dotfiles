@@ -17,4 +17,15 @@ return {
 			},
 		},
 	},
+	clangd = {
+		cmd = {
+			'clangd',
+			'--background-index',
+			'--clang-tidy',
+			'--offset-encoding=utf-16',
+		},
+	},
+	eslint = {
+		root_dir = lspconfig.util.root_pattern { '.eslintrc.js', '.git/' },
+	},
 }
