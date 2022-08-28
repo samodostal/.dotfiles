@@ -31,7 +31,8 @@ M.lsp = {
 }
 
 M.dap = {
-	'go-debug-adapter'
+	'go-debug-adapter',
+	'node-debug2-adapter',
 }
 
 return M
