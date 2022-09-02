@@ -17,6 +17,7 @@ return {
 	},
 	{ 'windwp/nvim-ts-autotag' },
 	{ 'JoosepAlviste/nvim-ts-context-commentstring' },
+	{ 'nvim-treesitter/nvim-treesitter-textobjects', config = conf 'treesitter-textobjects' },
 
 	-----[[------------]]-----
 	---       Theme        ---
