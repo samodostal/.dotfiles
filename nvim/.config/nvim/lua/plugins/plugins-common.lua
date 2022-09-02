@@ -46,7 +46,7 @@ return {
 	---      Movement      ---
 	-----]]------------[[-----
 
-	{ 'ggandor/leap.nvim', config = conf 'leap' },
+	{ 'unblevable/quick-scope' },
 
 	-----[[------------]]-----
 	---        Other       ---
