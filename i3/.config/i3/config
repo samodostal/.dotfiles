@@ -27,6 +27,7 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 
 # --- Execs ----------------------------------------------------------
 
+exec --no-startup-id setxkbmap us -variant altgr-intl
 exec --no-starutp-id xrandr --output HDMI-A-0 --auto --right-of eDP &
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id blueman-applet
@@ -38,7 +39,7 @@ exec --no-startup-id dunst
 
 for_window [class="Brave"] move container to workspace $ws1
 for_window [class="Alacritty"] move container to workspace $ws2
-for_window [class="Thunderbird"] move container to workspace $ws7
+for_window [class="thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
 
