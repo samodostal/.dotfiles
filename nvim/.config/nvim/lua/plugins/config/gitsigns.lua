@@ -9,6 +9,7 @@ return function()
 			add = { text = '+' },
 			change = { text = '~' },
 			delete = { text = '-' },
+			topdelete = { text = '-' },
 		},
 	}
 end
