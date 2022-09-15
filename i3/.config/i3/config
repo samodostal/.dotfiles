@@ -43,6 +43,8 @@ for_window [class="thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
 
+for_window [class="Tk"] floating enable resize set 640 480
+
 exec brave
 exec alacritty
 exec thunderbird
