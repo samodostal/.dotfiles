@@ -15,6 +15,7 @@ return {
 		'nvim-treesitter/nvim-treesitter',
 		config = conf 'treesitter',
 	},
+	{ 'nvim-treesitter/playground' },
 	{ 'windwp/nvim-ts-autotag' },
 	{ 'JoosepAlviste/nvim-ts-context-commentstring' },
 	{ 'nvim-treesitter/nvim-treesitter-textobjects', config = conf 'treesitter-textobjects' },

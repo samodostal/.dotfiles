@@ -40,6 +40,7 @@ return function()
 		},
 		sources = cmp.config.sources {
 			{ name = 'nvim_lsp' },
+			{ name = 'neorg' },
 			{ name = 'nvim_lua' },
 			{ name = 'luasnip' },
 			{ name = 'path' },

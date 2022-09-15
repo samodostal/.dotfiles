@@ -14,6 +14,7 @@ return {
 	-----]]------------[[-----
 
 	{ 'neovim/nvim-lspconfig', config = conf 'lsp.init' },
+	{ 'lvimuser/lsp-inlayhints.nvim', config = conf 'lsp.inlayhints' },
 	{ 'onsails/lspkind.nvim' },
 	{ 'ray-x/lsp_signature.nvim' },
 	{ 'j-hui/fidget.nvim', config = conf 'fidget' },

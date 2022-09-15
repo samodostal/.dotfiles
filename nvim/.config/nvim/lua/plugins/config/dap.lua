@@ -43,6 +43,16 @@ return function()
 		command = 'node',
 		args = { vim.fn.stdpath 'data' .. '/mason/packages/node-debug2-adapter/out/src/nodeDebug.js' },
 	}
+	dap.adapters.chrome = {
+		type = 'executable',
+		command = 'node',
+		args = { vim.fn.stdpath 'data' .. '/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js' },
+	}
+	dap.adapters.python = {
+		type = 'executable',
+		command = vim.fn.stdpath 'data' .. '/mason/packages/debugpy/venv/bin/python',
+		args = { '-m', 'debugpy.adapter' },
+	}
 
 	-- Configurations --
 
@@ -56,6 +66,18 @@ return function()
 			dlvToolPath = vim.fn.exepath 'dlv',
 		},
 	}
+	dap.configurations.typescriptreact = {
+		{
+			type = 'chrome', --remote-debugging-port=9222
+			request = 'attach',
+			program = '${file}',
+			cwd = vim.fn.getcwd(),
+			sourceMaps = true,
+			protocol = 'inspector',
+			port = 9222,
+			webRoot = '${workspaceFolder}',
+		},
+	}
 	dap.configurations.typescript = {
 		{
 			name = 'Attach to process', -- Start process with `--inspect` flag
@@ -63,6 +85,18 @@ return function()
 			request = 'attach',
 			processId = function()
 				pick_process_filter 'node'
+			end,
+		},
+		dap.configurations.typescriptreact[1],
+	}
+	dap.configurations.python = {
+		{
+			type = 'python',
+			request = 'launch',
+			name = 'Launch file',
+			program = '${file}',
+			pythonPath = function()
+				return vim.fn.stdpath 'data' .. '/mason/packages/debugpy/venv/bin/python'
 			end,
 		},
 	}

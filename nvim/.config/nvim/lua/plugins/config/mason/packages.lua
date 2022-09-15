@@ -33,6 +33,8 @@ M.lsp = {
 M.dap = {
 	'go-debug-adapter',
 	'node-debug2-adapter',
+	'chrome-debug-adapter',
+	'debugpy',
 }
 
 return M

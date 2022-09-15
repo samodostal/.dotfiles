@@ -11,6 +11,8 @@ map('n', '<leader>t', ':b#<CR>')
 map('x', '<', '<gv')
 map('x', '>', '>gv')
 
+map('n', '<leader>cc', ':lua require("core.compiler").compile_and_run()<CR>')
+
 -- Packer
 map('n', '<leader>pc', ':PackerCompile<CR>')
 map('n', '<leader>ps', ':PackerSync<CR>')
@@ -66,3 +68,6 @@ map('n', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 
 -- TrevJ
 map('n', '<leader>j', ':lua require("trevj").format_at_cursor()<CR>')
+
+-- Cmp
+-- map('i', '<C-m>', '<cmd> lua require("cmp").complete()<CR>')

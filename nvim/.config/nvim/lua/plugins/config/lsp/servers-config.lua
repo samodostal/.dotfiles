@@ -28,4 +28,19 @@ return {
 	eslint = {
 		root_dir = lspconfig.util.root_pattern { '.eslintrc.js', '.git/' },
 	},
+	tsserver = {
+		settings = {
+			typescript = {
+				inlayHints = {
+					includeInlayParameterNameHints = 'literals',
+					includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+					includeInlayFunctionParameterTypeHints = false,
+					includeInlayVariableTypeHints = true,
+					includeInlayPropertyDeclarationTypeHints = false,
+					includeInlayFunctionLikeReturnTypeHints = false,
+					includeInlayEnumMemberValueHints = false,
+				}
+			},
+		}
+	}
 }

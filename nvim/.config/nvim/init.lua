@@ -8,3 +8,6 @@ plugins.load('common', 'code', 'note')
 
 require 'core.theme'
 require 'startup'
+
+-- local code_block_query = vim.treesitter.parse_query(
+-- )

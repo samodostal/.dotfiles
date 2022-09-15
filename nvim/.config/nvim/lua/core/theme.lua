@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		vim.cmd 'highlight NonText guifg=#464646 gui=nocombine'
 		vim.cmd 'highlight QuickScopePrimary guifg=#afff5f gui=underline ctermfg=155 cterm=underline'
 		vim.cmd 'highlight QuickScopeSecondary guifg=#5fffff gui=underline ctermfg=155 cterm=underline'
+		vim.cmd 'highlight LspInlayHint guifg=#606060 guibg=none'
 	end,
 })
 
