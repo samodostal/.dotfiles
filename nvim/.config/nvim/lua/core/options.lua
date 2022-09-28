@@ -17,7 +17,7 @@ o.autoindent = true
 o.smartindent = true
 o.autoread = true
 
-o.colorcolumn = '80'
+-- o.colorcolumn = '80'
 o.guicursor = 'i:block'
 
 o.hidden = true
