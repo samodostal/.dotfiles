@@ -1,6 +1,6 @@
 window:
   title: Alacritty
-  opacity: 0.95
+  opacity: 0.97
   class:
     instance: Alacritty
     general: Alacritty
@@ -27,7 +27,7 @@ font:
     y: 0
 
 key_bindings:
-  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: V, mods: Control, action: Paste }
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: Insert, mods: Shift, action: PasteSelection }
   - { key: Key0, mods: Control, action: ResetFontSize }

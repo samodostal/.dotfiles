@@ -25,6 +25,9 @@ return {
 	-----]]------------[[-----
 
 	{ 'sainnhe/gruvbox-material' },
+	-- { 'shaunsingh/oxocarbon.nvim', run = './install.sh' },
+	-- { 'shaunsingh/oxocarbon.nvim', branch = 'fennel' },
+	-- { '~/Projects/nvim_plugins/oxocarbon.nvim' },
 	{ '~/Projects/nvim_plugins/image.nvim', config = conf 'image' },
 	{
 		'glepnir/galaxyline.nvim',

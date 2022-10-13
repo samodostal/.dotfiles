@@ -36,4 +36,12 @@ function M.merge_tables(...)
 	return result
 end
 
+function M.log(message)
+	local log_file_path = '/home/samodostal/test.log'
+	local log_file = io.open(log_file_path, 'a')
+	io.output(log_file)
+	io.write(message .. '\n')
+	io.close(log_file)
+end
+
 return M

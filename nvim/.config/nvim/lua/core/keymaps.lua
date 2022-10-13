@@ -4,6 +4,11 @@ end
 
 vim.g.mapleader = ' '
 
+map('n', '<C-o>', '<C-o>zz')
+map('n', '<C-e>', '<C-i>zz')
+map('n', '<C-i>', '<C-u>zz')
+map('n', '<C-d>', '<C-d>zz')
+
 map('n', '<leader>', '<Nop>')
 map('n', 'q:', '<Nop>')
 

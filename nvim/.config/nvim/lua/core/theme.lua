@@ -1,4 +1,5 @@
 local colorscheme = 'gruvbox-material'
+-- local colorscheme = 'oxocarbon'
 
 vim.g.gruvbox_material_better_performance = 1
 vim.g.gruvbox_material_transparent_background = 1
@@ -7,6 +8,10 @@ vim.g.gruvbox_material_foreground = 'mix'
 vim.g.gruvbox_material_enable_bold = 1
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_ui_contrast = 'high'
+
+vim.g.oxocarbon_lua_transparent = true
+vim.g.oxocarbon_lua_alternative_telescope = true
+vim.g.oxocarbon_lua_keep_terminal = true
 
 vim.api.nvim_create_autocmd('ColorScheme', {
 	callback = function()
@@ -23,6 +28,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		vim.cmd 'highlight QuickScopePrimary guifg=#afff5f gui=underline ctermfg=155 cterm=underline'
 		vim.cmd 'highlight QuickScopeSecondary guifg=#5fffff gui=underline ctermfg=155 cterm=underline'
 		vim.cmd 'highlight LspInlayHint guifg=#606060 guibg=none'
+		vim.cmd 'highlight WinBar guifg=#808080 cterm=none gui=none'
+		vim.cmd 'highlight WinBarNC guifg=#464646'
 	end,
 })
 
