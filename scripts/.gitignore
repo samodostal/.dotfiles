@@ -1,1 +1,3 @@
 .local/bin/tmux-project-dirs
+.local/bin/black
+.local/bin/blackd
