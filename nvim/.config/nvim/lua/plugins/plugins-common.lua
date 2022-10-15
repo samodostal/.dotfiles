@@ -58,4 +58,5 @@ return {
 	-----]]------------[[-----
 
 	{ 'christoomey/vim-tmux-navigator' },
+	{ 'lewis6991/impatient.nvim', config = conf 'impatient' },
 }

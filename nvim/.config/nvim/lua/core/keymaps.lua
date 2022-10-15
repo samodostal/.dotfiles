@@ -32,6 +32,8 @@ map('n', '<leader>fp', ':lua vim.lsp.buf.format({ async = true })<CR>')
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
 map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+-- map('n', 'K', ':lua require("hover").hover()<CR>')
+-- map('n', 'gK', ':lua require("hover").hover_select()<CR>')
 
 -- Harpoon
 map('n', '<leader>af', ':lua require("harpoon.mark").add_file()<CR>')
@@ -75,4 +77,4 @@ map('n', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 map('n', '<leader>j', ':lua require("trevj").format_at_cursor()<CR>')
 
 -- Cmp
--- map('i', '<C-m>', '<cmd> lua require("cmp").complete()<CR>')
+map('i', '<C-x>', '<cmd>lua require("cmp").complete()<CR>')

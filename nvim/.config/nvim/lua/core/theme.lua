@@ -30,6 +30,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		vim.cmd 'highlight LspInlayHint guifg=#606060 guibg=none'
 		vim.cmd 'highlight WinBar guifg=#808080 cterm=none gui=none'
 		vim.cmd 'highlight WinBarNC guifg=#464646'
+		vim.cmd 'highlight Pmenu guibg=none'
+		vim.cmd 'highlight NormalFloat guibg=none'
+		vim.cmd 'highlight FloatBorder guibg=none'
 	end,
 })
 
@@ -42,6 +45,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	signs = false,
 	update_in_insert = true,
+})
+
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = 'single',
+})
+
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+	border = 'single',
 })
 
 pcall(function()
