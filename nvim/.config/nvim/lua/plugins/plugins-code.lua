@@ -89,5 +89,5 @@ return {
 	{
 		'nvim-treesitter/nvim-treesitter-context',
 	},
-	{ 'AckslD/nvim-trevJ.lua', config = conf 'trevj' },
+	{ 'aarondiel/spread.nvim' },
 }

@@ -74,7 +74,8 @@ map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 map('n', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 
 -- TrevJ
-map('n', '<leader>j', ':lua require("trevj").format_at_cursor()<CR>')
+map('n', '<leader>j', ':lua require("spread").out()<CR>')
+map('n', '<leader>k', ':lua require("spread").combine()<CR>')
 
 -- Cmp
 map('i', '<C-x>', '<cmd>lua require("cmp").complete()<CR>')

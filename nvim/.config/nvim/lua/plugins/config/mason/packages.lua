@@ -7,7 +7,7 @@ M.lsp = {
 	'typescript-language-server',
 	'tailwindcss-language-server',
 	'rust-analyzer',
-	'pyright',
+	'python-lsp-server',
 	'lua-language-server',
 	'lemminx',
 	'haskell-language-server',
