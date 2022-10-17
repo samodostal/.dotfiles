@@ -9,10 +9,6 @@ vim.g.gruvbox_material_enable_bold = 1
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_ui_contrast = 'high'
 
-vim.g.oxocarbon_lua_transparent = true
-vim.g.oxocarbon_lua_alternative_telescope = true
-vim.g.oxocarbon_lua_keep_terminal = true
-
 vim.api.nvim_create_autocmd('ColorScheme', {
 	callback = function()
 		vim.cmd 'highlight CursorLineNr guifg=#d79921'

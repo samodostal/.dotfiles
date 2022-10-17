@@ -48,6 +48,7 @@ map('n', '<leader>az', ':lua require("harpoon.ui").nav_file(5)<CR>')
 map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untracked = true })<CR>')
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
 map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
+map('n', '<leader>fy', ':Telescope yank_history<CR>')
 
 -- DAP
 map('n', '<leader>ds', '<cmd>lua require("dapui").open()<CR><cmd>NvimTreeClose<CR>')
@@ -73,9 +74,19 @@ map('n', '<leader>ft', ':NvimTreeFindFile<CR>')
 map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 map('n', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
 
--- TrevJ
+-- Spread
 map('n', '<leader>j', ':lua require("spread").out()<CR>')
 map('n', '<leader>k', ':lua require("spread").combine()<CR>')
 
 -- Cmp
 map('i', '<C-x>', '<cmd>lua require("cmp").complete()<CR>')
+
+map('n', '<C-)', '<Plug>(YankyCycleBackward)')
+
+-- Yanky
+map('n', 'p', '<Plug>(YankyPutAfter)')
+map('n', 'P', '<Plug>(YankyPutBefore)')
+map('n', 'gp', '<Plug>(YankyGPutAfter)')
+map('n', 'gP', '<Plug>(YankyGPutBefore)')
+map('n', '<C-f>', '<Plug>(YankyCycleForward)')
+map('n', '<C-g>', '<Plug>(YankyCycleBackward)')

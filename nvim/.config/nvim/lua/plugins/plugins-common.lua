@@ -6,6 +6,8 @@ return {
 	-----]]------------[[-----
 
 	{ 'nvim-lua/plenary.nvim' },
+	{ 'lewis6991/impatient.nvim', config = conf 'impatient' },
+	{ 'christoomey/vim-tmux-navigator' },
 
 	-----[[------------]]-----
 	---     TreeSitter     ---
@@ -25,10 +27,11 @@ return {
 	-----]]------------[[-----
 
 	{ 'sainnhe/gruvbox-material' },
-	-- { 'shaunsingh/oxocarbon.nvim', run = './install.sh' },
-	-- { 'shaunsingh/oxocarbon.nvim', branch = 'fennel' },
-	-- { '~/Projects/nvim_plugins/oxocarbon.nvim' },
-	{ '~/Projects/nvim_plugins/image.nvim', config = conf 'image' },
+	{ 'shaunsingh/oxocarbon.nvim', run = './install.sh' },
+	{ 'xiyaowong/nvim-transparent' },
+	{ '~/Projects/nvim_plugins/image.nvim', requires = {
+		{ 'm00qek/baleia.nvim' },
+	}, config = conf 'image' },
 	{
 		'glepnir/galaxyline.nvim',
 		config = conf 'galaxyline',
@@ -57,6 +60,5 @@ return {
 	---        Other       ---
 	-----]]------------[[-----
 
-	{ 'christoomey/vim-tmux-navigator' },
-	{ 'lewis6991/impatient.nvim', config = conf 'impatient' },
+	{ 'gbprod/yanky.nvim', config = conf 'yanky' }
 }

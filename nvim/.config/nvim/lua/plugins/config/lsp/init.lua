@@ -27,6 +27,18 @@ return function()
 		return
 	end
 
+	vim.diagnostic.config({
+		underline = true,
+    virtual_text = true,
+    float = {
+        show_header = true,
+        source = 'if_many',
+        border = 'rounded',
+        focusable = false,
+    },
+    severity_sort = true,
+	})
+
 	-- lsp_signature.setup {
 	-- 	hint_enable = false,
 	-- }
