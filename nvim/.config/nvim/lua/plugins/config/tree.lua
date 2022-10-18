@@ -7,7 +7,7 @@ return function()
 	tree.setup {
 		disable_netrw = true,
 		open_on_setup = true,
-		focus_empty_on_setup = true,
+		-- focus_empty_on_setup = true,
 		view = {
 			adaptive_size = false,
 			number = false,

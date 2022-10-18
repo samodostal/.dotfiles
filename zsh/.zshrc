@@ -8,6 +8,9 @@ ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 
 source $ZSH/oh-my-zsh.sh
 
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+
 alias nf="clear && neofetch"
 alias c="clear"
 alias lg="lazygit"
