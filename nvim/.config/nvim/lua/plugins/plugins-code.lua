@@ -69,13 +69,14 @@ return {
 		},
 	},
 	{ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-	{ 'kyazdani42/nvim-tree.lua', config = conf 'tree' },
+	{ 'kyazdani42/nvim-tree.lua', config = conf 'tree', commit = '4e24505e2b30c4a8c35a3dfb4f564f14f6d9bfd4' },
 
 	-----[[------------]]-----
 	---        Git         ---
 	-----]]------------[[-----
 
 	{ 'lewis6991/gitsigns.nvim', config = conf 'gitsigns' },
+	{ 'kdheepak/lazygit.nvim' },
 	{ 'pwntester/octo.nvim', config = conf 'octo' },
 
 	-----[[------------]]-----
