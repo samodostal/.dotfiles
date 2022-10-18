@@ -32,8 +32,6 @@ map('n', '<leader>fp', ':lua vim.lsp.buf.format({ async = true })<CR>')
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
 map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
--- map('n', 'K', ':lua require("hover").hover()<CR>')
--- map('n', 'gK', ':lua require("hover").hover_select()<CR>')
 
 -- Harpoon
 map('n', '<leader>af', ':lua require("harpoon.mark").add_file()<CR>')
@@ -80,7 +78,6 @@ map('n', '<leader>k', ':lua require("spread").combine()<CR>')
 
 -- Cmp
 map('i', '<C-x>', '<cmd>lua require("cmp").complete()<CR>')
-
 map('n', '<C-)', '<Plug>(YankyCycleBackward)')
 
 -- Yanky
@@ -90,3 +87,8 @@ map('n', 'gp', '<Plug>(YankyGPutAfter)')
 map('n', 'gP', '<Plug>(YankyGPutBefore)')
 map('n', '<C-f>', '<Plug>(YankyCycleForward)')
 map('n', '<C-g>', '<Plug>(YankyCycleBackward)')
+
+-- Lazygit
+map('n', '<leader>gs', ':LazyGit<CR>')
+map('n', '<leader>gc', ':LazyGitFilter<CR>')
+map('n', '<leader>gh', ':LazyGitFilterCurrentFile<CR>')
