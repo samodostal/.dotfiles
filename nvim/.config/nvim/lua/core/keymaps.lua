@@ -103,3 +103,6 @@ map('n', '<leader>gh', ':LazyGitFilterCurrentFile<CR>')
 vim.g.tmux_navigator_no_mappings = 1
 map('n', '<C-l>', ':TmuxNavigateRight<CR>')
 map('n', '<C-h>', ':TmuxNavigateLeft<CR>')
+
+-- Aerial
+map('n', '<leader>cs', ':AerialToggle<CR>')

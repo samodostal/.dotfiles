@@ -83,6 +83,7 @@ return {
 	---      Editing       ---
 	-----]]------------[[-----
 
+	{ 'stevearc/aerial.nvim', config = conf 'aerial' },
 	{
 		'windwp/nvim-autopairs',
 		config = conf 'autopairs',
@@ -91,4 +92,5 @@ return {
 		'nvim-treesitter/nvim-treesitter-context',
 	},
 	{ 'aarondiel/spread.nvim' },
+	
 }
