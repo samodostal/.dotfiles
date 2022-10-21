@@ -16,6 +16,11 @@ map('n', '<leader>t', ':b#<CR>')
 map('x', '<', '<gv')
 map('x', '>', '>gv')
 
+map('n', '<C-j>', ':cnext<CR>')
+map('n', '<C-k>', ':cprev<CR>')
+map('n', '<leader>co', ':copen<CR>')
+map('n', '<leader>ce', ':cclose<CR>')
+
 map('n', '<leader>cc', ':lua require("core.compiler").compile_and_run()<CR>')
 
 -- Packer
@@ -24,6 +29,7 @@ map('n', '<leader>ps', ':PackerSync<CR>')
 
 -- LSP
 map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
+map('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
 map('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
 map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
 map('n', 'gy', ':lua vim.lsp.buf.type_definition()<CR>')
@@ -92,3 +98,8 @@ map('n', '<C-g>', '<Plug>(YankyCycleBackward)')
 map('n', '<leader>gs', ':LazyGit<CR>')
 map('n', '<leader>gc', ':LazyGitFilter<CR>')
 map('n', '<leader>gh', ':LazyGitFilterCurrentFile<CR>')
+
+-- Tmux Navigator
+vim.g.tmux_navigator_no_mappings = 1
+map('n', '<C-l>', ':TmuxNavigateRight<CR>')
+map('n', '<C-h>', ':TmuxNavigateLeft<CR>')

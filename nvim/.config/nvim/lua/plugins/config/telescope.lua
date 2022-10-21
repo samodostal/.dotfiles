@@ -4,6 +4,8 @@ return function()
 		return
 	end
 
+	local actions = require 'telescope.actions'
+
 	telescope.setup {
 		defaults = {
 			vimgrep_arguments = {
@@ -30,6 +32,12 @@ return function()
 				'%.idea/.*',
 				'%.vscode/.*',
 				'%.history/.*',
+			},
+			mappings = {
+				i = {
+					['<C-a>'] = actions.select_all,
+					['<C-q>'] = actions.send_selected_to_qflist,
+				},
 			},
 		},
 	}
