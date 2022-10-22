@@ -76,7 +76,7 @@ return {
 	-----]]------------[[-----
 
 	{ 'lewis6991/gitsigns.nvim', config = conf 'gitsigns' },
-	{ 'kdheepak/lazygit.nvim' },
+	{ 'kdheepak/lazygit.nvim', config = conf 'lazygit' },
 	{ 'pwntester/octo.nvim', config = conf 'octo' },
 
 	-----[[------------]]-----

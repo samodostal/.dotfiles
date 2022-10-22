@@ -24,3 +24,4 @@
 .local/bin/undill
 .local/bin/yapf
 .local/bin/yapf-diff
+.local/bin/nvr
