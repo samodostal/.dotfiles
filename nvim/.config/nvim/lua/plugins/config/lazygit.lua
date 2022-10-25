@@ -1,7 +1,5 @@
 return function()
-	vim.cmd [[
-		if has('nvim') && executable('nvr')
-			let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
-		endif
-	]]
+	if vim.fn.executable 'nvr' == 1 then
+		vim.env.GIT_EDITOR = "nvr --remote-tab-wait +'set bufhidden=delete'"
+	end
 end
