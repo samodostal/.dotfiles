@@ -4,6 +4,19 @@ return function()
 		return
 	end
 
+	vim.g.clipboard = {
+		name = 'xsel_override',
+		copy = {
+			['+'] = 'xsel --input --clipboard',
+			['*'] = 'xsel --input --primary',
+		},
+		paste = {
+			['+'] = 'xsel --output --clipboard',
+			['*'] = 'xsel --output --primary',
+		},
+		cache_enabled = 1,
+	}
+
 	yanky.setup {
 		preserve_cursor_position = {
 			enabled = true,
