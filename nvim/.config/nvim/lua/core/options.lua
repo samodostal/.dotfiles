@@ -12,6 +12,7 @@ o.termguicolors = true
 
 o.scrolloff = 8
 o.sidescrolloff = 8
+o.splitkeep = 'screen'
 
 o.autoindent = true
 o.smartindent = true
