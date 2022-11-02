@@ -6,8 +6,11 @@ vim.g.mapleader = ' '
 
 map('n', '<C-o>', '<C-o>zz')
 map('n', '<C-e>', '<C-i>zz')
+
 map('n', '<C-i>', '<C-u>zz')
 map('n', '<C-d>', '<C-d>zz')
+map('v', '<C-i>', '<C-u>zz')
+map('v', '<C-d>', '<C-d>zz')
 
 map('n', '<leader>', '<Nop>')
 map('n', 'q:', '<Nop>')
@@ -106,3 +109,6 @@ map('n', '<C-h>', ':TmuxNavigateLeft<CR>')
 
 -- Aerial
 map('n', '<leader>cs', ':AerialToggle<CR>')
+
+-- Leap
+map('n', 's', ':lua require("leap").leap({target_windows={vim.fn.win_getid()}})<CR>')
