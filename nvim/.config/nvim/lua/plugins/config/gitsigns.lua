@@ -10,6 +10,7 @@ return function()
 			change = { text = '~' },
 			delete = { text = '-' },
 			topdelete = { text = '-' },
+			untracked = { text = '' }
 		},
 	}
 end

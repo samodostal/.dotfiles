@@ -56,10 +56,11 @@ return {
 
 	-- { 'unblevable/quick-scope' },
 	{ 'ggandor/leap.nvim', config = conf 'leap' },
+	{ 'abecodes/tabout.nvim', config = conf 'tabout' },
 
 	-----[[------------]]-----
 	---        Other       ---
 	-----]]------------[[-----
 
-	{ 'gbprod/yanky.nvim', config = conf 'yanky' }
+	{ 'gbprod/yanky.nvim', config = conf 'yanky' },
 }
