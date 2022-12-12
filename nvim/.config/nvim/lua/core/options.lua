@@ -2,7 +2,7 @@ local o = vim.opt
 
 o.wrap = false
 
-o.number = true
+o.number = false
 o.relativenumber = true
 o.numberwidth = 1
 
@@ -18,7 +18,6 @@ o.autoindent = true
 o.smartindent = true
 o.autoread = true
 
--- o.colorcolumn = '80'
 o.guicursor = 'i:block'
 
 o.hidden = true

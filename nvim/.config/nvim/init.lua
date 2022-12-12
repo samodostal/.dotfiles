@@ -9,4 +9,4 @@ plugins.load('common', 'code', 'note')
 require 'core.theme'
 
 require 'core.scripts.startup'
-require 'core.scripts.filename'
+require 'core.scripts.bufenter'

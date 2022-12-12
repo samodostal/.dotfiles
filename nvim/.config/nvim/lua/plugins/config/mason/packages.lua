@@ -1,5 +1,9 @@
 local M = {}
 
+M.managed_separately = {
+	'typescript-language-server',
+}
+
 M.lsp = {
 	'sqls',
 	'yaml-language-server',

@@ -4,5 +4,9 @@ return function()
 		return
 	end
 
-	scrollbar.setup()
+	scrollbar.setup {
+		handlers = {
+			cursor = false,
+		},
+	}
 end

@@ -1,6 +1,6 @@
 window:
   title: Alacritty
-  opacity: 0.98
+  opacity: 0.97
   class:
     instance: Alacritty
     general: Alacritty
@@ -21,7 +21,7 @@ font:
   normal:
     family: SauceCodePro Nerd Font
     style: Regular
-  size: 8.0
+  size: 7.0
   offset:
     x: 0
     y: 0
@@ -37,3 +37,7 @@ key_bindings:
 
   - { key: Paste, action: Paste }
   - { key: Copy, action: Copy }
+
+colors:
+  primary:
+    background: '#0A0E14'

@@ -6,4 +6,4 @@ git:
     pager: delta --dark --paging=never
 os:
   editCommand: 'nvim'
-  editCommandTemplate: '{{editor}} --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
+  # editCommandTemplate: '{{editor}} --server /tmp/nvim-server-$(dirname.sh).pipe --remote-tab "$(pwd)/{{filename}}"'

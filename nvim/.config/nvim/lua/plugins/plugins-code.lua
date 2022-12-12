@@ -14,11 +14,11 @@ return {
 	-----]]------------[[-----
 
 	{ 'neovim/nvim-lspconfig', config = conf 'lsp.init' },
-	{ 'lvimuser/lsp-inlayhints.nvim', config = conf 'lsp.inlayhints' },
 	{ 'onsails/lspkind.nvim' },
 	{ 'ray-x/lsp_signature.nvim' },
-	{ 'j-hui/fidget.nvim', config = conf 'fidget' },
 	{ 'petertriho/nvim-scrollbar', config = conf 'scrollbar' },
+	{ 'SmiteshP/nvim-navic', config = conf 'navic' },
+	{ 'lvimuser/lsp-inlayhints.nvim', config = conf 'lsp.inlayhints' },
 	{
 		'L3MON4D3/LuaSnip',
 		requires = {
@@ -38,12 +38,16 @@ return {
 		},
 	},
 	{
-		'~/Projects/nvim_plugins/copilot-client.lua',
+		'zbirenbaum/copilot.lua',
+		event = "VimEnter",
 		config = conf 'copilot',
-		requires = {
-			'zbirenbaum/copilot.lua',
-		},
 	},
+	
+	-----[[------------]]-----
+	---  Language specific  ---
+	-----]]------------[[-----
+
+	{ 'jose-elias-alvarez/typescript.nvim', config = conf 'typescript' },
 
 	-----[[------------]]-----
 	---     Debugging      ---
@@ -78,7 +82,6 @@ return {
 
 	{ 'lewis6991/gitsigns.nvim', config = conf 'gitsigns' },
 	{ 'kdheepak/lazygit.nvim', config = conf 'lazygit' },
-	{ 'pwntester/octo.nvim', config = conf 'octo' },
 
 	-----[[------------]]-----
 	---      Editing       ---
@@ -89,8 +92,5 @@ return {
 		'windwp/nvim-autopairs',
 		config = conf 'autopairs',
 	},
-	{
-		'nvim-treesitter/nvim-treesitter-context',
-	},
-	{ 'aarondiel/spread.nvim' },
+	{ 'Wansmer/treesj', config = conf 'treesj' },
 }

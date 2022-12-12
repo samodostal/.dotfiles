@@ -2,10 +2,13 @@ return function()
 	local cmp = safe_require 'cmp'
 	local lspkind = safe_require 'lspkind'
 	local luasnip = safe_require 'luasnip'
+	local cmp_autopairs = safe_require 'nvim-autopairs.completion.cmp'
 
-	if not cmp or not lspkind or not luasnip then
+	if not cmp or not lspkind or not luasnip or not cmp_autopairs then
 		return
 	end
+
+	cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 	require('luasnip.loaders.from_vscode').lazy_load()
 

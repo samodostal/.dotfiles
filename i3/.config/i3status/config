@@ -1,5 +1,5 @@
 general {
-        colors = false
+        colors = true
         interval = 1
         markup = "pango"
 }

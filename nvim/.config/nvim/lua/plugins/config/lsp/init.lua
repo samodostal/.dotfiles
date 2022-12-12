@@ -1,6 +1,7 @@
 return function()
 	local lspconfig = safe_require 'lspconfig'
 	local mason_lspconfig = safe_require 'mason-lspconfig'
+	local packages = require 'plugins.config.mason.packages'
 
 	if not lspconfig or not mason_lspconfig then
 		return
@@ -18,7 +19,10 @@ return function()
 			local config = servers_config[server] or {}
 			config.on_attach = on_attach
 			config.capabilities = capabilities
-			lspconfig[server].setup(config)
+
+			if not vim.tbl_contains(packages.managed_separately, server) then
+				lspconfig[server].setup(config)
+			end
 		end,
 	}
 
@@ -26,6 +30,11 @@ return function()
 	if not lsp_signature then
 		return
 	end
+
+	lsp_signature.setup {
+		floating_window = false,
+		hint_prefix = '',
+	}
 
 	vim.diagnostic.config {
 		underline = true,

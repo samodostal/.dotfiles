@@ -4,20 +4,20 @@ set $mod Mod1
 set $win Mod4
 floating_modifier $mod
 font pango:Hack Regular Nerd Font Complete 10
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws0 "0"
+set $ws1 "1:web"
+set $ws2 "2:dev"
+set $ws3 "3:cls"
+set $ws4 "4:ext"
+set $ws5 "5:vbx"
+set $ws6 "6:img"
+set $ws7 "7:mail"
+set $ws8 "8:task"
+set $ws9 "9:mus"
+set $ws0"10:ext"
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #333333 #333333 #ffffff #333333   #333333
@@ -99,8 +99,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
 
 bindsym XF86AudioPlay exec "media-keys-handle.sh play-pause";
-bindsym XF86AudioPrev exec "media-keys-handle.sh previous";
+bindsym XF86Messenger exec "media-keys-handle.sh play-pause";
 bindsym XF86AudioNext exec "media-keys-handle.sh next";
+bindsym Cancel exec "media-keys-handle.sh next"
+bindsym XF86AudioPrev exec "media-keys-handle.sh previous";
+bindsym XF86Go exec "media-keys-handle.sh previous";
 
 bindsym XF86Favorites exec toggle-keyboard.sh
 
@@ -112,6 +115,7 @@ bindsym $mod+w workspace $ws3
 bindsym $mod+v workspace $ws4
 bindsym $mod+z workspace $ws5
 bindsym $mod+Shift+colon workspace $ws6
+bindsym $mod+colon workspace $ws6
 bindsym $mod+q workspace $ws7
 bindsym $mod+j workspace $ws8
 bindsym $mod+k workspace $ws9
@@ -144,4 +148,5 @@ workspace $ws0 output HDMI-A-0
 bar {
 	position top
         status_command ~/.config/i3status/custom.sh
+        strip_workspace_numbers yes
 }

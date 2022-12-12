@@ -1,22 +1,23 @@
 return function()
-	local copilot = safe_require 'copilot'
-	local copilot_client = safe_require 'copilot-client'
+	vim.defer_fn(function()
+		local copilot = safe_require 'copilot'
 
-	if not copilot or not copilot_client then
-		return
-	end
+		if not copilot then
+			return
+		end
 
-	copilot.setup {
-		cmp = {
-			enabled = false,
-		},
-	}
-
-	copilot_client.setup {
-		mapping = {
-			accept = '<CR>',
-			-- suggest_next = '<C-n>',
-			-- suggest_prev = '<C-p>',
-		},
-	}
+		copilot.setup {
+			settings = {
+				advanced = {
+					inlineSuggestCount = 3,
+				},
+			},
+			suggestion = {
+				keymap = {
+					accept = '<C-r>',
+					next = '<C-c>',
+				},
+			},
+		}
+	end, 100)
 end

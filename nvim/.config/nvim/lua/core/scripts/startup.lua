@@ -1,10 +1,17 @@
 vim.api.nvim_create_autocmd('VimEnter', {
 	callback = function()
-		-- local harpoon = safe_require 'harpoon.ui'
-		-- if not harpoon then
-		-- 	return
-		-- end
+		local harpoon = safe_require 'harpoon'
+		if not harpoon then
+			return
+		end
 
-		-- harpoon.nav_file(1)
+		local marks = harpoon.get_mark_config().marks
+
+		for _, mark in ipairs(marks) do
+			local filename = mark.filename
+			vim.cmd('bad ' .. filename)
+		end
 	end,
 })
+
+vim.opt.statusline = "%!v:lua.require('core.statusline').setup()"

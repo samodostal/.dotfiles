@@ -31,8 +31,8 @@ map('n', '<leader>pc', ':PackerCompile<CR>')
 map('n', '<leader>ps', ':PackerSync<CR>')
 
 -- LSP
-map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
-map('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
+map('n', 'gd', ':lua require("telescope.builtin").lsp_definitions()<CR>')
+map('n', 'gr', ':lua require("telescope.builtin").lsp_references()<CR>')
 map('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
 map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
 map('n', 'gy', ':lua vim.lsp.buf.type_definition()<CR>')
@@ -43,7 +43,7 @@ map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
 map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 
 -- Harpoon
-map('n', '<leader>af', ':lua require("harpoon.mark").add_file()<CR>')
+map('n', '<leader>af', ':lua require("harpoon.mark").add_file()<CR>:e<CR>') -- e to register bufferline
 map('n', '<leader>ac', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
 map('n', '<leader>ah', ':lua require("harpoon.ui").nav_file(1)<CR>')
 map('n', '<leader>am', ':lua require("harpoon.ui").nav_file(2)<CR>')
@@ -77,13 +77,8 @@ map('n', '<leader>dc', ':lua require("dap").run_to_cursor()<CR>')
 map('n', '<leader>b', ':lua require("nvim-tree").toggle(false, true)<CR>')
 map('n', '<leader>ft', ':NvimTreeFindFile<CR>')
 
--- Copilot client
-map('i', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
-map('n', '<C-c>', '<cmd>lua require("copilot-client").suggest()<CR>')
-
 -- Spread
-map('n', '<leader>j', ':lua require("spread").out()<CR>')
-map('n', '<leader>k', ':lua require("spread").combine()<CR>')
+map('n', '<leader>m', ':TSJToggle<CR>')
 
 -- Cmp
 map('i', '<C-x>', '<cmd>lua require("cmp").complete()<CR>')
@@ -102,13 +97,14 @@ map('n', '<leader>gs', ':LazyGit<CR>')
 map('n', '<leader>gc', ':LazyGitFilter<CR>')
 map('n', '<leader>gh', ':LazyGitFilterCurrentFile<CR>')
 
--- Tmux Navigator
-vim.g.tmux_navigator_no_mappings = 1
-map('n', '<C-l>', ':TmuxNavigateRight<CR>')
-map('n', '<C-h>', ':TmuxNavigateLeft<CR>')
-
 -- Aerial
 map('n', '<leader>cs', ':AerialToggle<CR>')
 
 -- Leap
 map('n', 's', ':lua require("leap").leap({target_windows={vim.fn.win_getid()}})<CR>')
+
+-- Nvim Tmux Navigator
+map('n', '<C-h>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateLeft()<CR>')
+map('n', '<C-j>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateDown()<CR>')
+map('n', '<C-k>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateUp()<CR>')
+map('n', '<C-l>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateRight()<CR>')

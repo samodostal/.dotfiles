@@ -11,7 +11,7 @@ return function()
 		view = {
 			adaptive_size = false,
 			number = false,
-			relativenumber = true,
+			relativenumber = false,
 			signcolumn = 'no',
 		},
 	}

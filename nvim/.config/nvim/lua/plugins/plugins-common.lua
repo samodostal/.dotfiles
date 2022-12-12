@@ -7,7 +7,8 @@ return {
 
 	{ 'nvim-lua/plenary.nvim' },
 	{ 'lewis6991/impatient.nvim', config = conf 'impatient' },
-	{ 'christoomey/vim-tmux-navigator' },
+	{ 'alexghergh/nvim-tmux-navigation' },
+	{ 'MunifTanjim/nui.nvim' },
 
 	-----[[------------]]-----
 	---     TreeSitter     ---
@@ -27,17 +28,14 @@ return {
 	-----]]------------[[-----
 
 	{ 'sainnhe/gruvbox-material' },
-	{ 'shaunsingh/oxocarbon.nvim', run = './install.sh' },
-	{ 'xiyaowong/nvim-transparent' },
+	{ 'shaunsingh/oxocarbon.nvim' },
+	{ 'xiyaowong/nvim-transparent', config = conf 'transparent' },
 	{ '~/Projects/nvim_plugins/image.nvim', requires = {
 		{ 'm00qek/baleia.nvim' },
 	}, config = conf 'image' },
-	{
-		'glepnir/galaxyline.nvim',
-		config = conf 'galaxyline',
-	},
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
 	{ 'lukas-reineke/indent-blankline.nvim', config = conf 'indent-blankline' },
+	{ 'akinsho/bufferline.nvim', config = conf 'bufferline' },
 
 	-----[[------------]]-----
 	---      TPope <3      ---
@@ -54,7 +52,6 @@ return {
 	---      Movement      ---
 	-----]]------------[[-----
 
-	-- { 'unblevable/quick-scope' },
 	{ 'ggandor/leap.nvim', config = conf 'leap' },
 	{ 'abecodes/tabout.nvim', config = conf 'tabout' },
 
