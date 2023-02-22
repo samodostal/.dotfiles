@@ -1,8 +1,9 @@
 return function()
 	local mason = safe_require 'mason'
-	local mason_tool_installer = safe_require 'mason-tool-installer'
+	local mason_settings = safe_require 'mason.settings'
+	local mason_installer = safe_require 'mason-tool-installer'
 
-	if not mason or not mason_tool_installer then
+	if not mason or not mason_settings or not mason_installer then
 		return
 	end
 
@@ -11,7 +12,15 @@ return function()
 
 	mason.setup()
 
-	mason_tool_installer.setup {
-		ensure_installed = utils.merge_tables(packages.lsp, packages.dap)
+	mason_installer.setup {
+		ensure_installed = utils.merge_tables(packages.lsp, packages.dap),
+	}
+
+	-- Settings
+
+	mason_settings.set {
+		ui = {
+			border = 'rounded',
+		},
 	}
 end

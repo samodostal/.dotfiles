@@ -1,16 +1,13 @@
 return function()
 	local cmp = safe_require 'cmp'
 	local lspkind = safe_require 'lspkind'
-	local luasnip = safe_require 'luasnip'
 	local cmp_autopairs = safe_require 'nvim-autopairs.completion.cmp'
 
-	if not cmp or not lspkind or not luasnip or not cmp_autopairs then
+	if not cmp or not lspkind or not cmp_autopairs then
 		return
 	end
 
 	cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
-
-	require('luasnip.loaders.from_vscode').lazy_load()
 
 	cmp.setup.cmdline(':', {
 		sources = {
@@ -25,11 +22,6 @@ return function()
 	})
 
 	cmp.setup {
-		snippet = {
-			expand = function(args)
-				luasnip.lsp_expand(args.body)
-			end,
-		},
 		window = {
 			completion = {
 				border = 'rounded',
@@ -60,12 +52,17 @@ return function()
 				select = true,
 			},
 		},
+		snippet = {
+			expand = function(args)
+				require('snippy').expand_snippet(args.body)
+			end,
+		},
 		sources = cmp.config.sources {
 			{ name = 'nvim_lua' },
 			{ name = 'nvim_lsp' },
 			{ name = 'neorg' },
 			{ name = 'path' },
-			{ name = 'luasnip' },
+			{ name = 'snippy' },
 			{ name = 'buffer', keyword_length = 5 },
 		},
 		sorting = {
@@ -100,7 +97,7 @@ return function()
 					nvim_lsp = '[LSP]',
 					nvim_lua = '[api]',
 					path = '[path]',
-					luasnip = '[snip]',
+					snippy = '[snip]',
 				},
 			},
 		},

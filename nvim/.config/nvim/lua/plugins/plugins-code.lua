@@ -5,44 +5,58 @@ return {
 	---       Install      ---
 	-----]]------------[[-----
 
-	{ 'williamboman/mason.nvim', config = conf 'mason.init' },
-	{ 'WhoIsSethDaniel/mason-tool-installer.nvim' },
-	{ 'williamboman/mason-lspconfig.nvim' },
+	{
+		'williamboman/mason.nvim',
+		dependencies = {
+			'WhoIsSethDaniel/mason-tool-installer.nvim',
+		},
+		config = conf 'mason.init',
+	},
 
 	-----[[------------]]-----
 	---         LSP        ---
 	-----]]------------[[-----
 
-	{ 'neovim/nvim-lspconfig', config = conf 'lsp.init' },
-	{ 'onsails/lspkind.nvim' },
-	{ 'ray-x/lsp_signature.nvim' },
+	{
+		'neovim/nvim-lspconfig',
+		config = conf 'lsp.init',
+		dependencies = {
+			{ 'williamboman/mason-lspconfig.nvim' },
+
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'hrsh7th/cmp-buffer' },
+			{ 'hrsh7th/cmp-path' },
+			{ 'saadparwaiz1/cmp_luasnip' },
+			{ 'hrsh7th/cmp-nvim-lua' },
+
+			{ 'dcampos/nvim-snippy' },
+			{ 'dcampos/cmp-snippy' },
+			{ 'honza/vim-snippets' },
+
+			{ 'lvimuser/lsp-inlayhints.nvim' },
+			{ 'ray-x/lsp_signature.nvim' },
+			{ 'onsails/lspkind.nvim' },
+		},
+	},
+
+	{
+		'utilyre/barbecue.nvim',
+		config = conf 'barbecue',
+		dependencies = {
+			'SmiteshP/nvim-navic',
+		},
+	},
+
+	{ 'stevearc/aerial.nvim', config = conf 'aerial' },
 	{ 'petertriho/nvim-scrollbar', config = conf 'scrollbar' },
-	{ 'SmiteshP/nvim-navic', config = conf 'navic' },
-	{ 'lvimuser/lsp-inlayhints.nvim', config = conf 'lsp.inlayhints' },
-	{
-		'L3MON4D3/LuaSnip',
-		requires = {
-			'rafamadriz/friendly-snippets',
-		},
-	},
-	{
-		'hrsh7th/nvim-cmp',
-		config = conf 'cmp',
-		requires = {
-			'hrsh7th/cmp-nvim-lsp',
-			'hrsh7th/cmp-path',
-			'hrsh7th/cmp-buffer',
-			'hrsh7th/cmp-nvim-lua',
-			'saadparwaiz1/cmp_luasnip',
-			'hrsh7th/cmp-cmdline',
-		},
-	},
+
 	{
 		'zbirenbaum/copilot.lua',
-		event = "VimEnter",
+		event = 'VimEnter',
 		config = conf 'copilot',
 	},
-	
+
 	-----[[------------]]-----
 	---  Language specific  ---
 	-----]]------------[[-----
@@ -56,7 +70,7 @@ return {
 	{
 		'rcarriga/nvim-dap-ui',
 		config = conf 'dap',
-		requires = {
+		dependencies = {
 			'mfussenegger/nvim-dap',
 		},
 	},
@@ -69,12 +83,16 @@ return {
 	{
 		'nvim-telescope/telescope.nvim',
 		config = conf 'telescope',
-		requires = {
+		dependencies = {
 			'kyazdani42/nvim-web-devicons',
 		},
 	},
-	{ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-	{ 'kyazdani42/nvim-tree.lua', config = conf 'tree', commit = '4e24505e2b30c4a8c35a3dfb4f564f14f6d9bfd4' },
+	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+	{
+		'kyazdani42/nvim-tree.lua',
+		config = conf 'tree',
+		commit = '4e24505e2b30c4a8c35a3dfb4f564f14f6d9bfd4',
+	},
 
 	-----[[------------]]-----
 	---        Git         ---
@@ -87,7 +105,6 @@ return {
 	---      Editing       ---
 	-----]]------------[[-----
 
-	{ 'stevearc/aerial.nvim', config = conf 'aerial' },
 	{
 		'windwp/nvim-autopairs',
 		config = conf 'autopairs',

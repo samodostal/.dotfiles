@@ -6,7 +6,6 @@ return {
 	-----]]------------[[-----
 
 	{ 'nvim-lua/plenary.nvim' },
-	{ 'lewis6991/impatient.nvim', config = conf 'impatient' },
 	{ 'alexghergh/nvim-tmux-navigation' },
 	{ 'MunifTanjim/nui.nvim' },
 
@@ -16,23 +15,30 @@ return {
 
 	{
 		'nvim-treesitter/nvim-treesitter',
+		build = ':TSUpdate',
 		config = conf 'treesitter',
 	},
 	{ 'nvim-treesitter/playground' },
 	{ 'windwp/nvim-ts-autotag' },
 	{ 'JoosepAlviste/nvim-ts-context-commentstring' },
-	{ 'nvim-treesitter/nvim-treesitter-textobjects', config = conf 'treesitter-textobjects' },
+	{
+		'nvim-treesitter/nvim-treesitter-textobjects',
+		config = conf 'treesitter-textobjects',
+	},
 
 	-----[[------------]]-----
 	---       Theme        ---
 	-----]]------------[[-----
 
-	{ 'sainnhe/gruvbox-material' },
-	{ 'shaunsingh/oxocarbon.nvim' },
-	{ 'xiyaowong/nvim-transparent', config = conf 'transparent' },
-	{ '~/Projects/nvim_plugins/image.nvim', requires = {
-		{ 'm00qek/baleia.nvim' },
-	}, config = conf 'image' },
+	-- { 'sainnhe/gruvbox-material' },
+	{ 'ellisonleao/gruvbox.nvim' },
+	{
+		dir = '~/Projects/nvim_plugins/image.nvim',
+		dependencies = {
+			{ 'm00qek/baleia.nvim' },
+		},
+		config = conf 'image',
+	},
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
 	{ 'lukas-reineke/indent-blankline.nvim', config = conf 'indent-blankline' },
 	{ 'akinsho/bufferline.nvim', config = conf 'bufferline' },
@@ -60,4 +66,5 @@ return {
 	-----]]------------[[-----
 
 	{ 'gbprod/yanky.nvim', config = conf 'yanky' },
+	{ 'makerj/vim-pdf' },
 }

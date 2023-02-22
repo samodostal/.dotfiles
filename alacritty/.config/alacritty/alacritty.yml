@@ -1,5 +1,6 @@
 window:
   title: Alacritty
+  # opacity: 1
   opacity: 0.97
   class:
     instance: Alacritty
@@ -40,4 +41,4 @@ key_bindings:
 
 colors:
   primary:
-    background: '#0A0E14'
+    background: '#04070a'

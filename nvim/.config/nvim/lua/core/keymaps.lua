@@ -1,3 +1,5 @@
+local utils = require 'core.utils'
+
 local map = function(mode, key, cmd, opts)
 	vim.api.nvim_set_keymap(mode, key, cmd, opts or { noremap = true, silent = true })
 end
@@ -26,10 +28,6 @@ map('n', '<leader>ce', ':cclose<CR>')
 
 map('n', '<leader>cc', ':lua require("core.compiler").compile_and_run()<CR>')
 
--- Packer
-map('n', '<leader>pc', ':PackerCompile<CR>')
-map('n', '<leader>ps', ':PackerSync<CR>')
-
 -- LSP
 map('n', 'gd', ':lua require("telescope.builtin").lsp_definitions()<CR>')
 map('n', 'gr', ':lua require("telescope.builtin").lsp_references()<CR>')
@@ -52,7 +50,11 @@ map('n', '<leader>av', ':lua require("harpoon.ui").nav_file(4)<CR>')
 map('n', '<leader>az', ':lua require("harpoon.ui").nav_file(5)<CR>')
 
 -- Telescope
-map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untracked = true })<CR>')
+if utils.is_in_git_workspace() then
+	map('n', '<leader>ff', ':lua require("telescope.builtin").git_files({ show_untracked = true })<CR>')
+else
+	map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<CR>')
+end
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
 map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
 map('n', '<leader>fy', ':Telescope yank_history<CR>')

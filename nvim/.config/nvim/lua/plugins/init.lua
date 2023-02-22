@@ -4,12 +4,19 @@ local table_size = utils.table_size
 local M = {}
 
 function M.init()
-	local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-	if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-		vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
-		vim.cmd 'packadd packer.nvim'
-		print "Packer installed, call ':PackerSync' to install packages"
+	local install_path = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+	if not vim.loop.fs_stat(install_path) then
+		vim.fn.system {
+			'git',
+			'clone',
+			'--filter=blob:none',
+			'https://github.com/folke/lazy.nvim.git',
+			'--branch=stable',
+			install_path,
+		}
+		print "Lazy.nvim installed, call ':ABC' to install plugins"
 	end
+	vim.opt.rtp:prepend(install_path)
 end
 
 function M.load(...)
@@ -24,14 +31,9 @@ function M.load(...)
 		end
 	end
 
-	local packer = require 'packer'
+	local lazy = require 'lazy'
 
-	packer.init {}
-
-	packer.use 'wbthomason/packer.nvim'
-	for _, plugin in ipairs(plugins) do
-		packer.use(plugin)
-	end
+	lazy.setup(plugins, {})
 end
 
 return M

@@ -1,6 +1,6 @@
 return function()
 	vim.defer_fn(function()
-		local copilot = safe_require 'copilot'
+		local copilot = require 'copilot'
 
 		if not copilot then
 			return

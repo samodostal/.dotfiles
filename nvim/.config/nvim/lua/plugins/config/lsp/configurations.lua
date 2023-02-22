@@ -8,12 +8,10 @@ return {
 		root_dir = lspconfig.util.root_pattern { '.git/', '.stylua.toml' },
 		settings = { languages = format_config },
 	},
-	sumneko_lua = {
-		settings = {
-			Lua = {
-				diagnostics = {
-					globals = { 'vim' },
-				},
+	lua_ls = {
+		Lua = {
+			diagnostics = {
+				globals = { 'vim' },
 			},
 		},
 	},

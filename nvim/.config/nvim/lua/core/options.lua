@@ -54,9 +54,12 @@ o.fillchars = o.fillchars + {
 	eob = ' ',
 }
 
--- formatoptions overriden by ftplugin
+vim.g.loaded_ruby_provider = false
+vim.g.loaded_perl_provider = false
+
+-- formatoptions overriden by ftplugin (:verbose set formatoptions)
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function()
-		vim.opt.formatoptions:remove 'o'
+		o.formatoptions:remove 'o'
 	end,
 })

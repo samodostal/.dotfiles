@@ -104,7 +104,7 @@ M.LSP_Diagnostics = function()
 
 	errors = (errors and errors > 0) and ('%#StatusLSPError#' .. ' ' .. errors .. ' ') or ''
 	warnings = (warnings and warnings > 0) and ('%#StatusLSPWarn#' .. '  ' .. warnings .. ' ') or ''
-	hints = (hints and hints > 0) and ('%#StatusLSPHin#' .. 'ﯧ ' .. hints .. ' ') or ''
+	hints = (hints and hints > 0) and ('%#StatusLSPHint#' .. 'ﯧ ' .. hints .. ' ') or ''
 	info = (info and info > 0) and ('%#StatusLSPInfo#' .. ' ' .. info .. ' ') or ''
 
 	return errors .. warnings .. hints .. info
@@ -125,7 +125,7 @@ M.LSP_status = function()
 		end
 	end
 
-	return (vim.o.columns > 100 and '%#StatusLSPStatus#' .. '   LSP ~ ' .. client_names .. ' ') or '   LSP '
+	return (vim.o.columns > 100 and '%#StatusLSPStatus#' .. '   LSP - ' .. client_names .. ' ') or '   LSP ~'
 end
 
 M.cwd = function()
@@ -138,15 +138,9 @@ M.cursor_position = function()
 	local left_sep = '%#StatusCursor#' .. ' '
 
 	local position = fn.getpos '.'
-
 	local current_line = position[2]
-	local total_line = fn.line '$'
-	local column_percentage = math.modf((current_line / total_line) * 100) .. tostring '%%'
 
-	local current_column = tostring(position[3])
-	current_column = string.rep(' ', 3 - #current_column) .. current_column
-
-	return left_sep .. '%#StatusCursor#' .. current_column .. '. ' .. column_percentage .. ' '
+	return left_sep .. '%#StatusCursor# ' .. current_line
 end
 
 return M

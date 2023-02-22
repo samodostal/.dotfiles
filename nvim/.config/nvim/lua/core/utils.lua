@@ -36,6 +36,11 @@ function M.merge_tables(...)
 	return result
 end
 
+function M.is_in_git_workspace()
+	vim.fn.system 'git rev-parse --is-inside-work-tree'
+	return vim.v.shell_error == 0
+end
+
 function M.log(message)
 	local log_file_path = '/home/samodostal/test.log'
 	local log_file = io.open(log_file_path, 'a')
