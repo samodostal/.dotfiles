@@ -61,7 +61,15 @@ return {
 	---  Language specific  ---
 	-----]]------------[[-----
 
-	{ 'jose-elias-alvarez/typescript.nvim', config = conf 'typescript' },
+	{
+		'jose-elias-alvarez/typescript.nvim',
+		config = conf 'typescript',
+	},
+	{
+		'barrett-ruth/import-cost.nvim',
+		build = 'sh install.sh npm',
+		config = true
+	},
 
 	-----[[------------]]-----
 	---     Debugging      ---
