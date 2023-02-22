@@ -9,9 +9,11 @@ return {
 		settings = { languages = format_config },
 	},
 	lua_ls = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim' },
+		settings = {
+			Lua = {
+				diagnostics = {
+					globals = { 'vim' },
+				},
 			},
 		},
 	},
