@@ -8,6 +8,7 @@ return {
 	{ 'nvim-lua/plenary.nvim' },
 	{ 'alexghergh/nvim-tmux-navigation' },
 	{ 'MunifTanjim/nui.nvim' },
+	{ 'kyazdani42/nvim-web-devicons' },
 
 	-----[[------------]]-----
 	---     TreeSitter     ---
@@ -30,7 +31,6 @@ return {
 	---       Theme        ---
 	-----]]------------[[-----
 
-	-- { 'sainnhe/gruvbox-material' },
 	{ 'ellisonleao/gruvbox.nvim' },
 	{
 		dir = '~/Projects/nvim_plugins/image.nvim',

@@ -57,6 +57,7 @@ else
 end
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
 map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
+map('n', '<leader>fc', ':lua require("telescope").extensions.frecency.frecency()<CR>')
 map('n', '<leader>fy', ':Telescope yank_history<CR>')
 
 -- DAP

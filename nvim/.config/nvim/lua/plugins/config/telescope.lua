@@ -44,4 +44,5 @@ return function()
 
 	telescope.load_extension 'fzf'
 	telescope.load_extension 'yank_history'
+	telescope.load_extension 'frecency'
 end

@@ -84,10 +84,12 @@ return {
 		'nvim-telescope/telescope.nvim',
 		config = conf 'telescope',
 		dependencies = {
-			'kyazdani42/nvim-web-devicons',
+			{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+
+			{ 'nvim-telescope/telescope-frecency.nvim' },
+			{ 'kkharji/sqlite.lua' },
 		},
 	},
-	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	{
 		'kyazdani42/nvim-tree.lua',
 		config = conf 'tree',
