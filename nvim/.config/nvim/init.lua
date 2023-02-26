@@ -9,5 +9,3 @@ require 'core.theme'
 
 require 'core.scripts.startup'
 require 'core.scripts.bufenter'
-
--- format all files: 'stylua --config-path ./.stylua.toml  -g '*.lua' .'
