@@ -2,7 +2,7 @@ local prettier = { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatS
 local stylua = { formatCommand = 'stylua -s -', formatStdin = true } -- format all files: 'stylua --config-path ./.stylua.toml  -g '*.lua' .'
 local clang = { formatCommand = 'clang-format -style=LLVM ${INPUT}', formatStdin = true }
 local black = { formatCommand = 'black --quiet --line-length 78 -', formatStdin = true }
--- local haskell = { formatCommand = "ormolu --mode inplace ${INPUT}", formatStdin = true }
+local haskell = { formatCommand = 'ormolu --no-cabal --unsafe --mode stdout ${INPUT}', formatStdin = true }
 
 return {
 	lua = { stylua },
@@ -14,5 +14,5 @@ return {
 	cpp = { clang },
 	c = { clang },
 	python = { black },
-	-- haskell = { haskell }
+	haskell = { haskell },
 }
