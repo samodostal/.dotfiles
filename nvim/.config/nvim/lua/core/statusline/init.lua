@@ -8,7 +8,6 @@ return {
 			modules.git(),
 
 			'%=',
-			modules.LSP_progress(),
 			'%=',
 
 			modules.LSP_Diagnostics(),
