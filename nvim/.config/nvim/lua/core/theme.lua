@@ -1,5 +1,3 @@
-local colorscheme = 'gruvbox'
-
 local colors = require 'core.colors'
 
 require('gruvbox').setup {
@@ -10,6 +8,7 @@ require('gruvbox').setup {
 		NormalFloat = { bg = 'none' },
 		FloatBorder = { bg = 'none' },
 		Pmenu = { bg = 'none' },
+		WinBar = { bg = 'none' },
 		WinBarNC = { bg = 'none' },
 		VertSplit = { bg = 'none', fg = '#464646' },
 
