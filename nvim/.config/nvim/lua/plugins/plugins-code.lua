@@ -63,12 +63,17 @@ return {
 
 	{
 		'jose-elias-alvarez/typescript.nvim',
-		config = conf 'typescript',
+		config = conf 'language/typescript',
 	},
 	{
 		'barrett-ruth/import-cost.nvim',
 		build = 'sh install.sh npm',
 		config = true
+	},
+	{
+  	'mrcjkb/haskell-tools.nvim',
+  	branch = '1.x.x',
+		config = conf 'language/haskell'
 	},
 
 	-----[[------------]]-----

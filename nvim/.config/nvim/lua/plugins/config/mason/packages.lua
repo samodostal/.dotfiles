@@ -2,6 +2,7 @@ local M = {}
 
 M.managed_separately = {
 	'typescript-language-server',
+	'haskell-language-server'
 }
 
 M.lsp = {

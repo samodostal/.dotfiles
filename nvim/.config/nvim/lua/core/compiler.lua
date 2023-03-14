@@ -18,6 +18,7 @@ local commands = {
 	java = "cd src && find . -type f -name '*.class' -delete && javac gui/LoginScreen.java -Xlint:unchecked && java -cp . gui/LoginScreen",
 	go = 'go run %s',
 	python = 'python3 %',
+	haskell = 'runhaskell %s',
 }
 
 M.compile_and_run = function()
