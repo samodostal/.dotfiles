@@ -8,16 +8,16 @@ for_window [class="^.*"] border pixel 0
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-set $ws1 "1:web"
+set $ws1 "1:www"
 set $ws2 "2:dev"
-set $ws3 "3:cls"
-set $ws4 "4:ext"
-set $ws5 "5:vbx"
-set $ws6 "6:img"
+set $ws3 "3:disp"
+set $ws4 "4:extr"
+set $ws5 "5:virt"
+set $ws6 "6:edit"
 set $ws7 "7:mail"
 set $ws8 "8:task"
-set $ws9 "9:mus"
-set $ws0"10:ext"
+set $ws9 "9:spot"
+set $ws0 "10:noop"
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #333333 #333333 #ffffff #333333   #333333
@@ -44,6 +44,8 @@ for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
 
 for_window [class="Tk"] floating enable resize set 640 480
+for_window [class="Blueman-manager"] floating enable resize set 800 600, move position center
+for_window [class="Thunar"] floating enable resize set 1000 600, move position center
 
 exec brave
 exec alacritty
@@ -146,7 +148,12 @@ workspace $ws0 output HDMI-A-0
 # --- i3bar ----------------------------------------------------------
 
 bar {
-	position top
+        position top
         status_command ~/.config/i3status/custom.sh
         strip_workspace_numbers yes
+        colors {
+                focused_workspace #CECECE #CECECE #000000
+                inactive_workspace #333333 #333333 #CECECE
+                urgent_workspace #992412 #992412 #CECECE
+        }
 }
