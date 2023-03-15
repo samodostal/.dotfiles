@@ -41,13 +41,13 @@ map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
 map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 
 -- Harpoon
-map('n', '<leader>af', ':lua require("harpoon.mark").add_file()<CR>:e<CR>') -- e to register bufferline
-map('n', '<leader>ac', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
-map('n', '<leader>ah', ':lua require("harpoon.ui").nav_file(1)<CR>')
-map('n', '<leader>am', ':lua require("harpoon.ui").nav_file(2)<CR>')
-map('n', '<leader>aw', ':lua require("harpoon.ui").nav_file(3)<CR>')
-map('n', '<leader>av', ':lua require("harpoon.ui").nav_file(4)<CR>')
-map('n', '<leader>az', ':lua require("harpoon.ui").nav_file(5)<CR>')
+map('n', '<leader>uf', ':lua require("harpoon.mark").add_file()<CR>:e<CR>') -- e to register bufferline
+map('n', '<leader>uc', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
+map('n', '<leader>uh', ':lua require("harpoon.ui").nav_file(1)<CR>')
+map('n', '<leader>um', ':lua require("harpoon.ui").nav_file(2)<CR>')
+map('n', '<leader>uw', ':lua require("harpoon.ui").nav_file(3)<CR>')
+map('n', '<leader>uv', ':lua require("harpoon.ui").nav_file(4)<CR>')
+map('n', '<leader>uz', ':lua require("harpoon.ui").nav_file(5)<CR>')
 
 -- Telescope
 if utils.is_in_git_workspace() then

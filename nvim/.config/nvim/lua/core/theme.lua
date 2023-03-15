@@ -11,6 +11,7 @@ require('gruvbox').setup {
 		WinBar = { bg = 'none' },
 		WinBarNC = { bg = 'none' },
 		VertSplit = { bg = 'none', fg = '#464646' },
+		CursorLine = { bg = '#202020' },
 
 		-- Custom statusbar highlights
 		St_file_sep = { bg = colors.red },

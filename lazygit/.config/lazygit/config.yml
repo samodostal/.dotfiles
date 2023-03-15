@@ -1,9 +1,16 @@
 gui:
   showBottomLine: false
+  showIcons: true
+quitOnTopLevelReturn: true
+notARepository: 'quit'
+disableStartupPopups: true
+promptToReturnFromSubprocess: false
 git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
 os:
-  editCommand: 'nvim'
-  # editCommandTemplate: '{{editor}} --server /tmp/nvim-server-$(dirname.sh).pipe --remote-tab "$(pwd)/{{filename}}"'
+  # editCommand: 'nvim'
+  # editCommandTemplate: nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+  editCommand: nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+  openCommand: nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"

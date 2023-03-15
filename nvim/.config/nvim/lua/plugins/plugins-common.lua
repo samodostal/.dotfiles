@@ -43,6 +43,7 @@ return {
 	{ 'lukas-reineke/indent-blankline.nvim', config = conf 'indent-blankline' },
 	{ 'akinsho/bufferline.nvim', config = conf 'bufferline' },
 	{ 'xiyaowong/nvim-cursorword' },
+	{ 'https://gitlab.com/yorickpeterse/nvim-pqf', config = true },
 
 	-----[[------------]]-----
 	---      TPope <3      ---
