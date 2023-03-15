@@ -42,6 +42,7 @@ return {
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
 	{ 'lukas-reineke/indent-blankline.nvim', config = conf 'indent-blankline' },
 	{ 'akinsho/bufferline.nvim', config = conf 'bufferline' },
+	{ 'xiyaowong/nvim-cursorword' },
 
 	-----[[------------]]-----
 	---      TPope <3      ---

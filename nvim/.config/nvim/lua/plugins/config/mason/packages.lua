@@ -1,8 +1,9 @@
 local M = {}
 
+-- !IMPORTANT! - short names of packgaes
 M.managed_separately = {
-	'typescript-language-server',
-	'haskell-language-server'
+	'tsserver',
+	'hls'
 }
 
 M.lsp = {

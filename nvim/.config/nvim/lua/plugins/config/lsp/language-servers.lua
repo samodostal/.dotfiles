@@ -16,11 +16,11 @@ return function()
 	mason_lspconfig.setup()
 	mason_lspconfig.setup_handlers {
 		function(server)
-			local config = servers_config[server] or {}
-			config.on_attach = on_attach
-			config.capabilities = capabilities
-
 			if not vim.tbl_contains(packages.managed_separately, server) then
+				local config = servers_config[server] or {}
+				config.on_attach = on_attach
+				config.capabilities = capabilities
+
 				lspconfig[server].setup(config)
 			end
 		end,

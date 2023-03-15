@@ -68,12 +68,12 @@ return {
 	{
 		'barrett-ruth/import-cost.nvim',
 		build = 'sh install.sh npm',
-		config = true
+		config = true,
 	},
 	{
-  	'mrcjkb/haskell-tools.nvim',
-  	branch = '1.x.x',
-		config = conf 'language/haskell'
+		'mrcjkb/haskell-tools.nvim',
+		branch = '1.x.x',
+		config = conf 'language/haskell',
 	},
 
 	-----[[------------]]-----
@@ -98,6 +98,8 @@ return {
 		config = conf 'telescope',
 		dependencies = {
 			{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+
+			{ 'luc-tielen/telescope_hoogle' },
 
 			{ 'nvim-telescope/telescope-frecency.nvim' },
 			{ 'kkharji/sqlite.lua' },

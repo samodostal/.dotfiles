@@ -111,3 +111,7 @@ map('n', '<C-h>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateLeft()<C
 map('n', '<C-j>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateDown()<CR>')
 map('n', '<C-k>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateUp()<CR>')
 map('n', '<C-l>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateRight()<CR>')
+
+-- Haskell tools
+map('n', '<leader>hc', ':lua require("haskell-tools").hoogle.hoogle_signature()<CR>')
+map('n', '<leader>hg', ':lua require("telescope").extensions.hoogle.hoogle()<CR>')
