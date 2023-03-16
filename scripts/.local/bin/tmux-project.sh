@@ -16,6 +16,8 @@ if [[ -z $selected ]]; then
     exit 0
 fi
 
+selected=$(echo $selected | sed 's/\//./g' | sed 's/\.$//g')
+
 if ! tmux has-session -t $selected 2> /dev/null; then
     prefix_path="$HOME/Projects/"
     full_path="${prefix_path}${selected}"

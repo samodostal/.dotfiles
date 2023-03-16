@@ -10,7 +10,6 @@ git:
     colorArg: always
     pager: delta --dark --paging=never
 os:
-  # editCommand: 'nvim'
   editCommandTemplate: '{{editor}}'
-  editCommand: nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
-  openCommand: nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+  editCommand: nvim --server /tmp/nvim-server-$(tmux display-message -p '#S').pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+  openCommand: nvim --server /tmp/nvim-server-$(tmux display-message -p '#S').pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
