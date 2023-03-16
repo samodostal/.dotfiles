@@ -14,7 +14,6 @@ return function()
 		show_guides = true,
 		highlight_on_hover = true,
 		filter_kind = false,
-		-- open_automatic = true,
 		ignore = {
 			unlisted = true,
 		},
