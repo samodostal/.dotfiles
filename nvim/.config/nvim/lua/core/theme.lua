@@ -12,6 +12,8 @@ require('gruvbox').setup {
 		WinBarNC = { bg = 'none' },
 		VertSplit = { bg = 'none', fg = '#464646' },
 		CursorLine = { bg = '#202020' },
+		CursorLineNr = { bg = '#202020' },
+		NvimTreeRootFolder = { fg = colors.neutral_yellow },
 
 		-- Custom statusbar highlights
 		St_file_sep = { bg = colors.red },
