@@ -1,10 +1,9 @@
 local M = {}
-local fmt = string.format
 
 local term_wrapper = function(command, file)
 	vim.cmd 'vnew'
 	vim.cmd 'vertical resize 70'
-	vim.cmd('term ' .. fmt(command, file))
+	vim.cmd('term ' .. string.format(command, file))
 	vim.cmd 'silent! file CompileAndRun'
 	vim.cmd 'set nobuflisted'
 	vim.cmd 'setl nornu nonu nocul so=0 scl=no'
@@ -30,7 +29,7 @@ M.compile_and_run = function()
 			term_wrapper(commands[filetype], vim.fn.expand '%')
 		end
 	else
-		print(fmt('Filetype "%s" is not yet supported.', filetype))
+		print(string.format('Filetype "%s" is not yet supported.', filetype))
 	end
 end
 

@@ -4,6 +4,7 @@ require('gruvbox').setup {
 	transparent_mode = true,
 	overrides = {
 		IndentBlankline = { fg = '#363636' },
+		IndentBlanklineSpaceChar = { bg = 'none' },
 		IndentBlanklineContextChar = { fg = '#363636' },
 		NormalFloat = { bg = 'none' },
 		FloatBorder = { bg = 'none' },
