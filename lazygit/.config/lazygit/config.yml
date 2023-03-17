@@ -2,7 +2,6 @@ gui:
   showBottomLine: false
   showIcons: true
 quitOnTopLevelReturn: true
-notARepository: "quit"
 disableStartupPopups: true
 promptToReturnFromSubprocess: false
 git:
