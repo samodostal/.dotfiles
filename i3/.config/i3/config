@@ -16,7 +16,7 @@ set $ws5 "5:virt"
 set $ws6 "6:edit"
 set $ws7 "7:mail"
 set $ws8 "8:task"
-set $ws9 "9:spot"
+set $ws9 "9:sptf"
 set $ws0 "10:noop"
 
 # class                 border  backgr. text    indicator child_border
@@ -28,10 +28,7 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 # --- Execs ----------------------------------------------------------
 
 exec --no-startup-id setxkbmap us -variant altgr-intl
-exec --no-starutp-id xrandr --output HDMI-A-0 --auto --right-of eDP &
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id blueman-applet
-exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -b
@@ -52,6 +49,8 @@ exec alacritty
 exec thunderbird
 exec ticktick
 exec spotify
+exec blueman-applet
+exec nm-applet
 
 # --- Bindings -------------------------------------------------------
 

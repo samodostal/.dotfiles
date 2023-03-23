@@ -15,6 +15,7 @@ require('gruvbox').setup {
 		CursorLine = { bg = '#202020' },
 		CursorLineNr = { bg = '#202020' },
 		NvimTreeRootFolder = { fg = colors.neutral_yellow },
+		AerialLine = { bg = '#202020', bold = true },
 
 		-- Custom statusbar highlights
 		St_file_sep = { bg = colors.red },
