@@ -31,6 +31,8 @@ exec --no-startup-id setxkbmap us -variant altgr-intl
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
 
@@ -39,6 +41,7 @@ for_window [class="Alacritty"] move container to workspace $ws2
 for_window [class="thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
+for_window [class="python3"] move container to workspace $ws9
 
 for_window [class="Tk"] floating enable resize set 640 480
 for_window [class="Blueman-manager"] floating enable resize set 800 600, move position center
@@ -49,8 +52,7 @@ exec alacritty
 exec thunderbird
 exec ticktick
 exec spotify
-exec blueman-applet
-exec nm-applet
+exec blanket
 
 # --- Bindings -------------------------------------------------------
 
