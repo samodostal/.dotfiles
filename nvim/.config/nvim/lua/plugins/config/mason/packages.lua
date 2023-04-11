@@ -3,7 +3,7 @@ local M = {}
 -- !IMPORTANT! - short names of packgaes
 M.managed_separately = {
 	'tsserver',
-	'hls'
+	'hls',
 }
 
 M.lsp = {
@@ -41,6 +41,7 @@ M.dap = {
 	'node-debug2-adapter',
 	'chrome-debug-adapter',
 	'debugpy',
+	'cpptools',
 }
 
 return M

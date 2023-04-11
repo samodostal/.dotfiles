@@ -68,7 +68,7 @@ return {
 	{
 		'barrett-ruth/import-cost.nvim',
 		build = 'sh install.sh npm',
-		config = true,
+		config = conf 'language/import-cost',
 	},
 	{
 		'mrcjkb/haskell-tools.nvim',
@@ -108,15 +108,14 @@ return {
 	{
 		'kyazdani42/nvim-tree.lua',
 		config = conf 'tree',
-		commit = '4e24505e2b30c4a8c35a3dfb4f564f14f6d9bfd4',
 	},
 
 	-----[[------------]]-----
 	---        Git         ---
 	-----]]------------[[-----
 
-	{ 'lewis6991/gitsigns.nvim', config = conf 'gitsigns' },
-	{ 'kdheepak/lazygit.nvim', config = conf 'lazygit' },
+	{ 'lewis6991/gitsigns.nvim', config = conf 'git.gitsigns' },
+	{ 'kdheepak/lazygit.nvim', config = conf 'git.lazygit' },
 
 	-----[[------------]]-----
 	---      Editing       ---

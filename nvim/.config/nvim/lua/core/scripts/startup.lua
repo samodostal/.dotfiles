@@ -12,8 +12,15 @@ local function open_harpooned_files()
 	end
 end
 
+local function open_nvim_tree()
+	require('nvim-tree.api').tree.toggle {
+		focus = false,
+	}
+end
+
 vim.api.nvim_create_autocmd('VimEnter', {
 	callback = function()
+		open_nvim_tree()
 		open_harpooned_files()
 	end,
 })

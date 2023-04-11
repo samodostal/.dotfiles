@@ -77,7 +77,7 @@ map('n', '<leader>dh', ':lua require("dap").step_out()<CR>')
 map('n', '<leader>dc', ':lua require("dap").run_to_cursor()<CR>')
 
 -- Tree
-map('n', '<leader>b', ':lua require("nvim-tree").toggle(false, true)<CR>')
+map('n', '<leader>b', ':lua require("nvim-tree.api").tree.toggle({ focus = false })<CR>')
 map('n', '<leader>ft', ':NvimTreeFindFile<CR>')
 
 -- Spread

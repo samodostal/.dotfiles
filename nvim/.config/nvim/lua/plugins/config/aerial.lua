@@ -5,7 +5,7 @@ return function()
 	end
 
 	aerial.setup {
-		backends = { 'treesitter', 'lsp', 'markdown', 'man' },
+		backends = { 'lsp', 'treesitter', 'markdown', 'man' },
 		attach_mode = 'global',
 		layout = {
 			min_width = 30,
