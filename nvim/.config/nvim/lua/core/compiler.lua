@@ -12,7 +12,7 @@ end
 
 local commands = {
 	c = 'gcc -std=c99 -pedantic -Wall -Wextra -o out %s && ./out',
-	cpp = 'g++ -std=c++17 -O2 -Wall %s && ./a.out',
+	cpp = 'g++ -std=c++17 -O2 -Wall -o out %s && ./out',
 	javascript = 'node %s',
 	java = "cd src && find . -type f -name '*.class' -delete && javac gui/LoginScreen.java -Xlint:unchecked && java -cp . gui/LoginScreen",
 	go = 'go run %s',
