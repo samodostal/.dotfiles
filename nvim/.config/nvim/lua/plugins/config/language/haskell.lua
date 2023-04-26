@@ -12,7 +12,7 @@ return function()
 	haskell_tools.setup {
 		hls = {
 			cmd = { language_server_mason_command, '--lsp' },
-			on_attach = on_attach
+			on_attach = on_attach,
 		},
 	}
 end

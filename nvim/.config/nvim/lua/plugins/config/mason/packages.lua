@@ -1,13 +1,13 @@
 local M = {}
 
--- !IMPORTANT! - short names of packgaes
+-- ! IMPORTANT ! - short names of packgaes
 M.managed_separately = {
 	'tsserver',
 	'hls',
 }
 
 M.lsp = {
-	'sqls',
+	'sqlls',
 	'yaml-language-server',
 	'vim-language-server',
 	'typescript-language-server',
