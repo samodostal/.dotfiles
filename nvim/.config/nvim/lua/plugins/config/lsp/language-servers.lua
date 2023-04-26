@@ -1,10 +1,14 @@
 return function()
 	local lspconfig = safe_require 'lspconfig'
 	local mason_lspconfig = safe_require 'mason-lspconfig'
+	local neodev = safe_require 'neodev'
 
-	if not lspconfig or not mason_lspconfig then
+	if not lspconfig or not mason_lspconfig or not neodev then
 		return
 	end
+
+	-- Needs to be set-up before any other LSP server
+	neodev.setup {}
 
 	local packages = require 'plugins.config.mason.packages'
 	local on_attach = require 'plugins.config.lsp.on-attach'

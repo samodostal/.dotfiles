@@ -18,6 +18,10 @@ return {
 	-----]]------------[[-----
 
 	{
+		'folke/neodev.nvim',
+		config = 'language/neodev',
+	},
+	{
 		'neovim/nvim-lspconfig',
 		config = conf 'lsp.init',
 		dependencies = {
@@ -50,12 +54,6 @@ return {
 
 	{ 'stevearc/aerial.nvim', config = conf 'aerial' },
 	{ 'petertriho/nvim-scrollbar', config = conf 'scrollbar' },
-
-	{
-		'zbirenbaum/copilot.lua',
-		event = 'VimEnter',
-		config = conf 'copilot',
-	},
 
 	-----[[------------]]-----
 	---  Language specific  ---
@@ -126,4 +124,20 @@ return {
 		config = conf 'autopairs',
 	},
 	{ 'Wansmer/treesj', config = conf 'treesj' },
+
+	-----[[------------]]-----
+	---         AI         ---
+	-----]]------------[[-----
+	{
+		'zbirenbaum/copilot.lua',
+		event = 'VimEnter',
+		config = conf 'copilot',
+	},
+	-- {
+	-- 	'jackMort/ChatGPT.nvim',
+	-- 	event = 'VeryLazy',
+	-- 	config = function()
+	-- 		require('chatgpt').setup()
+	-- 	end,
+	-- },
 }
