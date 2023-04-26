@@ -76,3 +76,5 @@ vim.diagnostic.config {
 		focusable = false,
 	},
 }
+
+require('lspconfig.ui.windows').default_options.border = 'rounded'

@@ -67,7 +67,6 @@ map(
 	'<leader>de',
 	'<cmd>lua require("dapui").close()<CR><cmd>lua require("dap").clear_breakpoints()<CR><cmd>NvimTreeOpen<CR>'
 )
-
 map('n', '<leader>dd', ':lua require("dap").continue()<CR>')
 map('n', '<leader>db', ':lua require("dap").toggle_breakpoint()<CR>')
 map('n', '<leader>dl', ':lua require("dap").step_over()<CR>')
