@@ -99,6 +99,8 @@ return {
 
 			{ 'luc-tielen/telescope_hoogle' },
 
+			{ 'debugloop/telescope-undo.nvim' },
+
 			{ 'nvim-telescope/telescope-frecency.nvim' },
 			{ 'kkharji/sqlite.lua' },
 		},
