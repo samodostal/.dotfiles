@@ -41,7 +41,7 @@ for_window [class="Alacritty"] move container to workspace $ws2
 for_window [class="thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
-for_window [class="python3"] move container to workspace $ws9
+for_window [class="python3"] resize set width 400 px, move container to workspace $ws9
 
 for_window [class="Tk"] floating enable resize set 640 480
 for_window [class="Blueman-manager"] floating enable resize set 800 600, move position center
