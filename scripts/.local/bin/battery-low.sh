@@ -13,7 +13,7 @@ case "$1" in
             # low battery level (10%)
             "BAT0"|"BAT1")
                 if [ "$4" == "00000001" ] && [ "$5" == "00000000" ]; then
-                    notify-send -u critical "Battery level is low (10%)" "Plug in your computer soon"
+                    notify-send "Battery level is low (10%)" "$(echo -e "<span foreground='yellow'>Plug in your computer soon</span>")" -u normal
                 fi
                 ;;
             # critical battery level (5%)
