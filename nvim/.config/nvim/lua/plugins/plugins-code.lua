@@ -38,7 +38,7 @@ return {
 			{ 'dcampos/cmp-snippy' },
 			{ 'honza/vim-snippets' },
 
-			{ 'lvimuser/lsp-inlayhints.nvim' },
+			{ 'lvimuser/lsp-inlayhints.nvim', branch = 'anticonceal' },
 			{ 'ray-x/lsp_signature.nvim' },
 			{ 'onsails/lspkind.nvim' },
 		},
