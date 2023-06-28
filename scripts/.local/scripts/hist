@@ -1,6 +1,6 @@
 #!/bin/bash
 
-command=$(cat ~/.zsh_history | awk -F ';' '{print $2}' | fzf --no-sort --tac +s +m -1)
+command=$(cat ~/.zsh_history | awk -F ';' '!seen[$2]++ {print $2}' | fzf --layout=reverse --no-sort --tac +s +m -1)
 
 if [[ -n $command ]]; then
   echo "$command"
