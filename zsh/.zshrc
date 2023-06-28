@@ -20,9 +20,13 @@ alias nvim="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#S').pipe"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+[ -f "/home/samodostal/.ghcup/env" ] && source "/home/samodostal/.ghcup/env"
+
+# PATH
+
 export DENO_INSTALL="/home/samodostal/.deno/bin"
 export GHCUP_INSTALL="/home/samodostal/.ghcup/bin"
 
-export PATH=$PATH:$DENO_INSTALL:$GHCUP_INSTALL
+export USER_SCRIPTS="/home/samodostal/.local/scripts"
 
-[ -f "/home/samodostal/.ghcup/env" ] && source "/home/samodostal/.ghcup/env"
+export PATH=$PATH:$DENO_INSTALL:$GHCUP_INSTALL:$USER_SCRIPTS

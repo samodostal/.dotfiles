@@ -1,0 +1,14 @@
+#!/bin/bash
+
+command=$(cat ~/.zsh_history | awk -F ';' '{print $2}' | fzf --no-sort --tac +s +m -1)
+
+if [[ -n $command ]]; then
+  echo "$command"
+  read -p "Do you want to execute the command? (y/n): " choice
+
+  if [[ $choice == "y" ]]; then
+    eval "$command"
+  else
+    echo "Command not executed."
+  fi
+fi
