@@ -35,10 +35,9 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
-exec --no-startup-id unclutter
 
 for_window [class="Brave"] move container to workspace $ws1
-for_window [class="Alacritty"] move container to workspace $ws2
+for_window [class="kitty"] move container to workspace $ws2
 for_window [class="thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
@@ -49,7 +48,7 @@ for_window [class="Blueman-manager"] floating enable resize set 800 600, move po
 for_window [class="Thunar"] floating enable resize set 1000 600, move position center
 
 exec brave
-exec alacritty
+exec kitty --hold tmux new-session -As main \; send-keys -R nf C-m
 exec thunderbird
 exec ticktick
 exec spotify

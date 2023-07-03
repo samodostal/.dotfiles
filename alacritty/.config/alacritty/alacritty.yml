@@ -9,11 +9,11 @@ window:
     x: 6
     y: 6
   dynamic_padding: true
-shell:
-  program: /bin/zsh
-  args:
-    - -c
-    - tmux new-session -As main \; send-keys -R 'nf' C-m
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - -c
+#     - tmux new-session -As main \; send-keys -R 'nf' C-m
 
 scrolling:
   history: 5000
@@ -22,7 +22,7 @@ font:
   normal:
     family: SauceCodePro Nerd Font
     style: Regular
-  size: 6.0
+  size: 5.5
   offset:
     x: 0
     y: 0
