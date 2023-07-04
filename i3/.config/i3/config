@@ -3,7 +3,7 @@
 set $mod Mod1
 set $win Mod4
 floating_modifier $mod
-font pango:Hack Regular Nerd Font Complete 10
+font pango:Default 10
 for_window [class="^.*"] border pixel 0
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -27,7 +27,6 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 
 # --- Execs ----------------------------------------------------------
 
-exec --no-startup-id setxkbmap us -variant altgr-intl
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nitrogen --restore

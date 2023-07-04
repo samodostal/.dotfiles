@@ -212,8 +212,7 @@ return function()
 			diagnostics = 'nvim_lsp',
 			indicator = { icon = ' ', style = 'none' },
 			offsets = {
-				{ filetype = 'NvimTree', text = 'File Explorer', separator = true },
-				{ filetype = 'aerial', text = 'Symbols', separator = true },
+				{ filetype = 'NvimTree', text = 'File tree & Symbols', separator = false },
 			},
 			close_icon = '',
 			separator_style = { ' ', ' ' },

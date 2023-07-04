@@ -105,10 +105,7 @@ return {
 			{ 'kkharji/sqlite.lua' },
 		},
 	},
-	{
-		'kyazdani42/nvim-tree.lua',
-		config = conf 'tree',
-	},
+	{ 'nvim-tree/nvim-tree.lua', config = conf 'tree' },
 
 	-----[[------------]]-----
 	---        Git         ---

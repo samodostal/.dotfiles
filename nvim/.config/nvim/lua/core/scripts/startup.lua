@@ -18,10 +18,22 @@ local function open_nvim_tree()
 	}
 end
 
+local function open_aerial()
+	require('aerial').open {
+		focus = false,
+	}
+end
+
+local function open_minimap()
+	require('mini.map').open()
+end
+
 vim.api.nvim_create_autocmd('VimEnter', {
 	callback = function()
-		open_nvim_tree()
 		open_harpooned_files()
+		open_nvim_tree()
+		open_aerial()
+		open_minimap()
 	end,
 })
 

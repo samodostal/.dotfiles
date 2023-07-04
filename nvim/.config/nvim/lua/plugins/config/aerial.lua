@@ -5,15 +5,19 @@ return function()
 	end
 
 	aerial.setup {
-		backends = { 'lsp', 'treesitter', 'markdown', 'man' },
+		backends = {
+			'lsp',
+			'treesitter',
+			'markdown',
+			'man',
+		},
 		attach_mode = 'global',
 		layout = {
-			min_width = 30,
+			min_width = 25,
 			placement = 'edge',
 		},
 		show_guides = true,
 		highlight_on_hover = true,
-		filter_kind = false,
 		ignore = {
 			unlisted = true,
 		},

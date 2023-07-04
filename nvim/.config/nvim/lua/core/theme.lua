@@ -16,6 +16,9 @@ require('gruvbox').setup {
 		CursorLineNr = { bg = '#202020' },
 		NvimTreeRootFolder = { fg = colors.neutral_yellow },
 		AerialLine = { bg = '#202020', bold = true },
+		MiniMapNormal = { fg = '#808080', bg = 'none' },
+		MiniMapSymbolView = { fg = '#555555' },
+		MiniMapSymbolLine = { fg = '#707070' },
 
 		-- Custom statusbar highlights
 		St_file_sep = { bg = colors.red },

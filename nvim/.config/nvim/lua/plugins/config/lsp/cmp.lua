@@ -91,6 +91,7 @@ return function()
 		},
 		formatting = {
 			format = lspkind.cmp_format {
+				mode = "symbol",
 				with_text = true,
 				menu = {
 					buffer = '[buf]',

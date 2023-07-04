@@ -1,7 +1,5 @@
 local o = vim.opt
 
-o.winbar = '%s'
-
 o.wrap = false
 
 o.number = false

@@ -37,7 +37,7 @@ M.mode = function()
 end
 
 M.fileInfo = function()
-	local icon = '  '
+	local icon = ' 󰈙 '
 	local filename = (fn.expand '%' == '' and 'Empty ') or fn.expand '%:t'
 
 	if filename ~= 'Empty ' then
@@ -81,8 +81,8 @@ M.LSP_Diagnostics = function()
 
 	errors = (errors and errors > 0) and ('%#StatusLSPError#' .. ' ' .. errors .. ' ') or ''
 	warnings = (warnings and warnings > 0) and ('%#StatusLSPWarn#' .. '  ' .. warnings .. ' ') or ''
-	hints = (hints and hints > 0) and ('%#StatusLSPHint#' .. 'ﯧ ' .. hints .. ' ') or ''
-	info = (info and info > 0) and ('%#StatusLSPInfo#' .. ' ' .. info .. ' ') or ''
+	hints = (hints and hints > 0) and ('%#StatusLSPHint#' .. '󰛩 ' .. hints .. ' ') or ''
+	info = (info and info > 0) and ('%#StatusLSPInfo#' .. '󰋼 ' .. info .. ' ') or ''
 
 	return errors .. warnings .. hints .. info
 end
@@ -106,7 +106,7 @@ M.LSP_status = function()
 end
 
 M.cwd = function()
-	local dir_icon = '%#StatusCwd#' .. '  '
+	local dir_icon = '%#StatusCwd#' .. ' 󰉋 '
 	local dir_name = '%#StatusCwd#' .. ' ' .. fn.fnamemodify(fn.getcwd(), ':t') .. ' '
 	return (vim.o.columns > 85 and (dir_icon .. dir_name)) or ''
 end

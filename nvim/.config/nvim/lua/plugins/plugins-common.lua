@@ -8,7 +8,7 @@ return {
 	{ 'nvim-lua/plenary.nvim' },
 	{ 'alexghergh/nvim-tmux-navigation' },
 	{ 'MunifTanjim/nui.nvim' },
-	{ 'kyazdani42/nvim-web-devicons' },
+	{ 'nvim-tree/nvim-web-devicons', config = true },
 
 	-----[[------------]]-----
 	---     TreeSitter     ---
@@ -62,6 +62,20 @@ return {
 
 	{ 'ggandor/leap.nvim', config = conf 'leap' },
 	{ 'abecodes/tabout.nvim', config = conf 'tabout' },
+
+	-----[[------------]]-----
+	---       Layout       ---
+	-----]]------------[[-----
+
+	{
+		'folke/edgy.nvim',
+		config = conf 'edgy',
+	},
+	{
+		'echasnovski/mini.map',
+		version = false,
+		config = conf 'minimap',
+	},
 
 	-----[[------------]]-----
 	---        Other       ---

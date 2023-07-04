@@ -21,8 +21,8 @@ map('n', '<leader>t', ':b#<CR>')
 map('x', '<', '<gv')
 map('x', '>', '>gv')
 
-map('n', '<C-j>', ':cnext<CR>')
-map('n', '<C-k>', ':cprev<CR>')
+-- map('n', '<C-j>', ':cnext<CR>')
+-- map('n', '<C-k>', ':cprev<CR>')
 map('n', '<leader>co', ':copen<CR>')
 map('n', '<leader>ce', ':cclose<CR>')
 
