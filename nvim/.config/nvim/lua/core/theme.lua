@@ -11,6 +11,7 @@ require('gruvbox').setup {
 		Pmenu = { bg = 'none' },
 		WinBar = { bg = 'none' },
 		WinBarNC = { bg = 'none' },
+		WinSeparator = { fg = '#383838' },
 		VertSplit = { bg = 'none', fg = '#464646' },
 		CursorLine = { bg = '#202020' },
 		CursorLineNr = { bg = '#202020' },

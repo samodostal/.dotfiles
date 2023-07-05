@@ -8,8 +8,10 @@ tmux has-session -t dotfiles 2>/dev/null
 if [ $? -ne 0 ]; then
     tmux new-session -ds dotfiles -c ~/.dotfiles
     tmux send-keys -t dotfiles 'nvim ./nvim/.config/nvim/init.lua' 'C-m'
+    tmux split-window -t dotfiles -c ~/.dotfiles -h -l 50
+    tmux split-window -t dotfiles -c ~/.dotfiles -v
+    tmux select-pane -t dotfiles -L
 fi
-# tmux new-session -ds $selected -c $full_path \; send-keys 'nvim ' ' && clear' 'C-m' \; rename-window 'vim' \; new-window \; rename-window 'run' \; send-keys 'cd ' $full_path ' && clear' 'C-m' \; new-window \; rename-window 'git' \; send-keys 'cd ' $full_path ' && clear' 'C-m' \; send-keys 'lazygit' 'C-m' \; select-window -t 1 \;
 
 # NOTES
 tmux has-session -t notes 2>/dev/null
@@ -22,5 +24,5 @@ fi
 tmux has-session -t ghci 2>/dev/null
 if [ $? -ne 0 ]; then
     tmux new-session -ds ghci
-    tmux send-keys -t ghci 'ghci' 'C-m'
+    tmux send-keys -t ghci 'clear && ghci' 'C-m'
 fi

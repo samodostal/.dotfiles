@@ -15,6 +15,9 @@ return function()
 		layout = {
 			min_width = 25,
 			placement = 'edge',
+			win_opts = {
+				winbar = "%=Symbols%="
+			}
 		},
 		show_guides = true,
 		highlight_on_hover = true,
