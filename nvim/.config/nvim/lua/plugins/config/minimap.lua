@@ -276,7 +276,7 @@ return function()
 		},
 		symbols = {
 			encode = symbols_table_because_dot_function_doesnt_work,
-			scroll_view = '󰇙',
+			scroll_view = ' ',
 			scroll_line = '',
 		},
 		window = {
