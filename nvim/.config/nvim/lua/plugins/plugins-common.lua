@@ -84,4 +84,5 @@ return {
 	{ 'gbprod/yanky.nvim', config = conf 'yanky' },
 	{ 'ziontee113/color-picker.nvim', config = true },
 	{ 'makerj/vim-pdf' },
+	{ 'codethread/qmk.nvim', config = conf 'qmk' },
 }
