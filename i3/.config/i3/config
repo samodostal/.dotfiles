@@ -27,6 +27,9 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 
 # --- Execs ----------------------------------------------------------
 
+# disable urgency on startup
+for_window [urgent=latest] exec --no-startup-id i3-remove-urgency.sh
+
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nitrogen --restore
@@ -40,7 +43,7 @@ for_window [class="kitty"] move container to workspace $ws2
 for_window [class="thunderbird"] move container to workspace $ws7
 for_window [class="ticktick"] move container to workspace $ws8
 for_window [class="Spotify"] move container to workspace $ws9
-for_window [class="python3"] resize set width 400 px, move container to workspace $ws9
+for_window [class="python3"] move container to workspace $ws9
 
 for_window [class="Tk"] floating enable resize set 640 480
 for_window [class="Blueman-manager"] floating enable resize set 800 600, move position center
