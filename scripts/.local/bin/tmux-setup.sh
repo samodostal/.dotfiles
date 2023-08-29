@@ -26,3 +26,10 @@ if [ $? -ne 0 ]; then
     tmux new-session -ds ghci
     tmux send-keys -t ghci 'clear && ghci' 'C-m'
 fi
+
+# DOCKER
+tmux has-session -t docker 2>/dev/null
+if [ $? -ne 0 ]; then
+    tmux new-session -ds docker
+    tmux send-keys -t docker 'clear && lazydocker' 'C-m'
+fi
