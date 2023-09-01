@@ -27,10 +27,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export DENO_INSTALL="/home/samodostal/.deno/bin"
 export GHCUP_INSTALL="/home/samodostal/.ghcup/bin"
 export GO_INSTALL="/home/samodostal/go/bin"
+export DOTNET_INSTALL="/home/samodostal/.dotnet/tools"
 
 export USER_SCRIPTS="/home/samodostal/.local/scripts"
 
-export PATH=$PATH:$DENO_INSTALL:$GHCUP_INSTALL:$GO_INSTALL:$USER_SCRIPTS
+export PATH=$PATH:$DENO_INSTALL:$GHCUP_INSTALL:$GO_INSTALL:$DOTNET_INSTALL:$USER_SCRIPTS
 
 # TMUX SETUP
 
