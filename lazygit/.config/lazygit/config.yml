@@ -1,6 +1,6 @@
 gui:
   showBottomLine: false
-  showIcons: true
+  nerdFontsVersion: "3"
 quitOnTopLevelReturn: true
 disableStartupPopups: true
 promptToReturnFromSubprocess: false
