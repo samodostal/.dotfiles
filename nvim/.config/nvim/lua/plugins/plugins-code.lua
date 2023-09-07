@@ -70,7 +70,7 @@ return {
 	},
 	{
 		'mrcjkb/haskell-tools.nvim',
-		branch = '1.x.x',
+		branch = '2.x.x',
 		config = conf 'language/haskell',
 	},
 

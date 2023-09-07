@@ -3,6 +3,7 @@ local stylua = { formatCommand = 'stylua -s -', formatStdin = true } -- format a
 local clang = { formatCommand = 'clang-format -style=file ${INPUT}', formatStdin = true }
 local black = { formatCommand = 'python -m black --quiet --line-length 78 -', formatStdin = true }
 local haskell = { formatCommand = 'ormolu --no-cabal --unsafe --mode stdout ${INPUT}', formatStdin = true }
+local dotnet = { formatCommand = 'dotnet format --include ${INPUT}', formatStdin = true }
 
 return {
 	lua = { stylua },
@@ -15,4 +16,5 @@ return {
 	c = { clang },
 	python = { black },
 	haskell = { haskell },
+	cs = { dotnet },
 }
