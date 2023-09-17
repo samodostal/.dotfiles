@@ -56,6 +56,7 @@ else
 	map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<CR>')
 end
 map('n', '<leader>fr', ':lua require("telescope.builtin").live_grep()<CR>')
+map('n', '<leader>fa', ':lua require("telescope.builtin").resume()<CR>')
 map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
 map('n', '<leader>fc', ':lua require("telescope").extensions.frecency.frecency()<CR>')
 map('n', '<leader>fu', ':lua require("telescope").extensions.undo.undo()<CR>')
