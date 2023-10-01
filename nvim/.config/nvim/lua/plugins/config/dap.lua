@@ -63,6 +63,11 @@ return function()
 		command = 'haskell-debug-adapter',
 		args = { '--hackage-version=0.0.33.0' },
 	}
+	dap.adapters.coreclr = {
+		type = 'executable',
+		command = '/usr/bin/netcoredbg',
+		args = { '--interpreter=vscode' },
+	}
 
 	-- Configurations --
 
@@ -150,6 +155,16 @@ return function()
 			ghciPrompt = 'λ: ',
 			ghciInitialPrompt = 'λ: ',
 			ghciCmd = 'stack ghci --test --no-load --no-build --main-is TARGET --ghci-options -fprint-evld-with-show',
+		},
+	}
+	dap.configurations.cs = {
+		{
+			type = 'coreclr',
+			name = 'launch - netcoredbg',
+			request = 'launch',
+			program = function()
+				return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+			end,
 		},
 	}
 end
