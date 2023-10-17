@@ -132,11 +132,8 @@ return {
 		event = 'VimEnter',
 		config = conf 'copilot',
 	},
-	-- {
-	-- 	'jackMort/ChatGPT.nvim',
-	-- 	event = 'VeryLazy',
-	-- 	config = function()
-	-- 		require('chatgpt').setup()
-	-- 	end,
-	-- },
+	{
+		'David-Kunz/gen.nvim',
+		config = false
+	}
 }

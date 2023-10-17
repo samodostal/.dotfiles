@@ -282,6 +282,7 @@ return function()
 		window = {
 			winblend = 0,
 			show_integration_count = false,
+			width = 8
 		},
 	}
 end

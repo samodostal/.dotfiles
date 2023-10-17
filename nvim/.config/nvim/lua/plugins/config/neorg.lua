@@ -11,37 +11,37 @@ return function()
 	neorg.setup {
 		load = {
 			['core.defaults'] = {},
-			['core.norg.esupports.metagen'] = {
-				config = {
-					type = 'auto',
-					tab = '	',
-				},
-			},
-			['core.norg.concealer'] = {
-				config = {
-					folds = false,
-				},
-			},
-			['core.norg.completion'] = {
-				config = {
-					engine = 'nvim-cmp',
-				},
-			},
-			['core.presenter'] = {
-				config = {
-					zen_mode = 'zen-mode',
-				},
-			},
-			['core.integrations.nvim-cmp'] = {},
-			['core.norg.dirman'] = {
-				config = {
-					workspaces = {
-						muni = '~/OneDrive/notes/muni',
-						work = '~/OneDrive/notes/work',
-						home = '~/OneDrive/notes/home',
-					},
-				},
-			},
+			-- ['core.norg.esupports.metagen'] = {
+			-- 	config = {
+			-- 		type = 'auto',
+			-- 		tab = '	',
+			-- 	},
+			-- },
+			-- ['core.norg.concealer'] = {
+			-- 	config = {
+			-- 		folds = false,
+			-- 	},
+			-- },
+			-- ['core.norg.completion'] = {
+			-- 	config = {
+			-- 		engine = 'nvim-cmp',
+			-- 	},
+			-- },
+			-- ['core.presenter'] = {
+			-- 	config = {
+			-- 		zen_mode = 'zen-mode',
+			-- 	},
+			-- },
+			-- ['core.integrations.nvim-cmp'] = {},
+			-- ['core.norg.dirman'] = {
+			-- 	config = {
+			-- 		workspaces = {
+			-- 			muni = '~/OneDrive/notes/muni',
+			-- 			work = '~/OneDrive/notes/work',
+			-- 			home = '~/OneDrive/notes/home',
+			-- 		},
+			-- 	},
+			-- },
 		},
 	}
 end

@@ -116,3 +116,7 @@ map('n', '<C-l>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateRight()<
 -- Haskell tools
 map('n', '<leader>hc', ':lua require("haskell-tools").hoogle.hoogle_signature()<CR>')
 map('n', '<leader>hg', ':lua require("telescope").extensions.hoogle.hoogle()<CR>')
+
+-- Mistral AI
+map('v', '<leader>ha', ':Gen<CR>')
+map('n', '<leader>ha', ':Gen<CR>')
