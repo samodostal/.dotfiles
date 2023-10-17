@@ -1,27 +1,25 @@
 #!/usr/bin/env bash
 
-IFS=$'\n' read -d '' -r -a project_dirs < ~/.local/bin/tmux-project-dirs
+input_file=~/.local/bin/tmux-project-dirs
 
-if [[ $# -eq 1 ]]; then
-    selected=$1
-else
-    selected=$(
-        for project_dir in "${project_dirs[@]}"; do
-            ls -d $HOME/$project_dir | xargs -n 1
-        done | cut -c 27- | fzf --reverse
-    )
-fi
+project=$(while IFS= read -r line; do
+  if [[ "$line" =~ ^\s*# || -z "$line" ]]; then
+    continue
+  fi
 
-if [[ -z $selected ]]; then
+  ls -d $HOME/$line | cut -c 27-
+done < "$input_file" | fzf --reverse)
+
+if [[ -z $project ]]; then
     exit 0
 fi
 
-selected=$(echo $selected | sed 's/\//./g' | sed 's/\.$//g')
+project_path="$HOME/Projects/$project"
+project_name=$(basename "$project_path" | tr '.' '-')
 
-if ! tmux has-session -t $selected 2> /dev/null; then
-    prefix_path="$HOME/Projects/"
-    full_path="${prefix_path}${selected}"
-    tmux new-session -ds $selected -c $full_path \; send-keys 'nvim ' ' && clear' 'C-m' \; rename-window 'vim' \; new-window \; rename-window 'run' \; send-keys 'cd ' $full_path ' && clear' 'C-m' \; new-window \; rename-window 'git' \; send-keys 'cd ' $full_path ' && clear' 'C-m' \; send-keys 'lazygit' 'C-m' \; select-window -t 1 \;
+if tmux has-session -t $project_name 2>/dev/null; then
+    tmux switch-client -t $project_name
+else
+    tmux new-session -ds $project_name -c $project_path
+    tmux switch-client -t $project_name
 fi
-
-tmux switch-client -t $selected
