@@ -18,8 +18,6 @@
 	rebase = true
 [push]
 	default = current
-[tag]
-	gpgSign = true
 [color]
 	ui = true
 [delta]
