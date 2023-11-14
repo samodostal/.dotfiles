@@ -4,11 +4,11 @@ return function()
 		return
 	end
 
-	hover.setup({
+	hover.setup {
 		title = false,
 		init = function()
-			require("hover.providers.lsp")
-			require('hover.providers.man')
+			require 'hover.providers.lsp'
+			require 'hover.providers.man'
 		end,
-	})
+	}
 end

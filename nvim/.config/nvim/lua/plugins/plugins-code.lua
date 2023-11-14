@@ -52,6 +52,10 @@ return {
 		},
 	},
 	{
+		'j-hui/fidget.nvim',
+		config = conf 'fidget',
+	},
+	{
 		'lewis6991/hover.nvim',
 		config = conf 'hover',
 	},
