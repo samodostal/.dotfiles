@@ -1,20 +1,17 @@
-local prettier = { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true }
-local stylua = { formatCommand = 'stylua -s -', formatStdin = true } -- format all files: 'stylua --config-path ./.stylua.toml  -g '*.lua' .'
-local clang = { formatCommand = 'clang-format -style=file ${INPUT}', formatStdin = true }
-local black = { formatCommand = 'python -m black --quiet --line-length 78 -', formatStdin = true }
-local haskell = { formatCommand = 'ormolu --no-cabal --unsafe --mode stdout ${INPUT}', formatStdin = true }
-local dotnet = { formatCommand = 'dotnet format --include ${INPUT}', formatStdin = true }
+return function()
+	local conform = safe_require 'conform'
+	if not conform then
+		return
+	end
 
-return {
-	lua = { stylua },
-	javascript = { prettier },
-	typescript = { prettier },
-	javascriptreact = { prettier },
-	typescriptreact = { prettier },
-	yaml = { prettier },
-	cpp = { clang },
-	c = { clang },
-	python = { black },
-	haskell = { haskell },
-	cs = { dotnet },
-}
+	-- Formatters installed with Mason, 'bin/'s for formatters automatically added to $PATH on neovim start
+
+	local formatters_with_ft = require('plugins.config.mason.packages').formatters_with_ft
+
+	conform.setup {
+		format_on_save = {
+			timeout_ms = 100,
+		},
+		formatters_by_ft = formatters_with_ft,
+	}
+end

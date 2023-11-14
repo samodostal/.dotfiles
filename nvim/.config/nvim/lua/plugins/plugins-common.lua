@@ -40,7 +40,7 @@ return {
 		config = conf 'image',
 	},
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
-	{ 'lukas-reineke/indent-blankline.nvim', config = conf 'indent-blankline' },
+	{ 'lukas-reineke/indent-blankline.nvim', tag = 'v2.20.8', config = conf 'indent-blankline' },
 	{ 'akinsho/bufferline.nvim', config = conf 'bufferline' },
 	{ 'xiyaowong/nvim-cursorword' },
 
@@ -70,11 +70,6 @@ return {
 		'folke/edgy.nvim',
 		config = conf 'edgy',
 	},
-	{
-		'echasnovski/mini.map',
-		version = false,
-		config = conf 'minimap',
-	},
 
 	-----[[------------]]-----
 	---        Other       ---
@@ -82,6 +77,5 @@ return {
 
 	{ 'gbprod/yanky.nvim', config = conf 'yanky' },
 	{ 'ziontee113/color-picker.nvim', config = true },
-	{ 'makerj/vim-pdf' },
 	{ 'codethread/qmk.nvim', config = conf 'qmk' },
 }

@@ -1,9 +1,4 @@
--- local banned_buf_names = { 'NvimTree', 'aerial' }
-
--- vim.api.nvim_create_autocmd({ 'BufEnter' }, {
--- 	callback = function() end,
--- })
-
+-- 'help' files vertical split
 vim.api.nvim_create_autocmd('BufWinEnter', {
 	group = vim.api.nvim_create_augroup('help_window_right', {}),
 	pattern = { '*.txt' },

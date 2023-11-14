@@ -1,7 +1,5 @@
 return function(client, bufnr)
-	if client.name ~= 'efm' then
-		client.server_capabilities.documentFormattingProvider = false
-	end
+	client.server_capabilities.documentFormattingProvider = false
 
 	local inlayhints = safe_require 'lsp-inlayhints'
 	if inlayhints ~= nil then

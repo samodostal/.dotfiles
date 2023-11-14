@@ -24,10 +24,6 @@ local function open_aerial()
 	}
 end
 
-local function open_minimap()
-	require('mini.map').open()
-end
-
 local function open_quickfixlist()
 	vim.cmd [[ copen | wincmd p ]]
 end
@@ -37,7 +33,6 @@ vim.api.nvim_create_autocmd('VimEnter', {
 		open_harpooned_files()
 		open_nvim_tree()
 		open_aerial()
-		open_minimap()
 		open_quickfixlist()
 	end,
 })

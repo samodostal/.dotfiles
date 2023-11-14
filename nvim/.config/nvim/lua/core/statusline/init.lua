@@ -11,7 +11,12 @@ return {
 			'%=',
 
 			modules.LSP_Diagnostics(),
-			modules.LSP_status() or '',
+
+			modules.copilot_status(),
+			modules.lsp_status(),
+			modules.linters_status(),
+			modules.formatters_status(),
+
 			modules.cwd(),
 			modules.cursor_position(),
 		}

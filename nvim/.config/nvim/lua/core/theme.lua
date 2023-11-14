@@ -74,10 +74,10 @@ vim.diagnostic.config {
 	virtual_text = true,
 	severity_sort = true,
 	float = {
-		show_header = true,
-		source = 'if_many',
+		header = '',
+		source = true,
 		border = 'rounded',
-		focusable = false,
+		focusable = true,
 	},
 }
 

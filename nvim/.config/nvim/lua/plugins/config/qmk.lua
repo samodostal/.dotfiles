@@ -5,6 +5,7 @@ return function()
 	end
 
 	qmk.setup {
+		-- One MCU Dactyl Keyboard
 		name = 'LAYOUT_dactyl',
 		comment_preview = {
 			keymap_overrides = {

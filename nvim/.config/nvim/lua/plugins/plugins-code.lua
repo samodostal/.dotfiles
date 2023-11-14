@@ -18,10 +18,6 @@ return {
 	-----]]------------[[-----
 
 	{
-		'folke/neodev.nvim',
-		config = 'language/neodev',
-	},
-	{
 		'neovim/nvim-lspconfig',
 		config = conf 'lsp.init',
 		dependencies = {
@@ -31,8 +27,6 @@ return {
 			{ 'hrsh7th/cmp-nvim-lsp' },
 			{ 'hrsh7th/cmp-buffer' },
 			{ 'hrsh7th/cmp-path' },
-			{ 'saadparwaiz1/cmp_luasnip' },
-			{ 'hrsh7th/cmp-nvim-lua' },
 
 			{ 'dcampos/nvim-snippy' },
 			{ 'dcampos/cmp-snippy' },
@@ -41,9 +35,15 @@ return {
 			{ 'lvimuser/lsp-inlayhints.nvim', branch = 'anticonceal' },
 			{ 'ray-x/lsp_signature.nvim' },
 			{ 'onsails/lspkind.nvim' },
+
+			{ 'mfussenegger/nvim-lint' },
+			{ 'stevearc/conform.nvim' },
 		},
 	},
-
+	-- {
+	-- 	'folke/neodev.nvim',
+	-- 	config = 'language/neodev',
+	-- },
 	{
 		'utilyre/barbecue.nvim',
 		config = conf 'barbecue',
@@ -51,40 +51,45 @@ return {
 			'SmiteshP/nvim-navic',
 		},
 	},
-
+	{
+		'lewis6991/hover.nvim',
+		config = conf 'hover',
+	},
 	{ 'stevearc/aerial.nvim', config = conf 'aerial' },
 	{ 'petertriho/nvim-scrollbar', config = conf 'scrollbar' },
+	{ 'onsails/diaglist.nvim' },
+	{ 'yorickpeterse/nvim-pqf', config = true },
 
 	-----[[------------]]-----
 	---  Language specific  ---
 	-----]]------------[[-----
 
-	{
-		'jose-elias-alvarez/typescript.nvim',
-		config = conf 'language/typescript',
-	},
-	{
-		'barrett-ruth/import-cost.nvim',
-		build = 'sh install.sh npm',
-		config = conf 'language/import-cost',
-	},
-	{
-		'mrcjkb/haskell-tools.nvim',
-		branch = '2.x.x',
-		config = conf 'language/haskell',
-	},
+	-- {
+	-- 	'jose-elias-alvarez/typescript.nvim',
+	-- 	config = conf 'language/typescript',
+	-- },
+	-- {
+	-- 	'barrett-ruth/import-cost.nvim',
+	-- 	build = 'sh install.sh npm',
+	-- 	config = conf 'language/import-cost',
+	-- },
+	-- {
+	-- 	'mrcjkb/haskell-tools.nvim',
+	-- 	branch = '2.x.x',
+	-- 	config = conf 'language/haskell',
+	-- },
 
 	-----[[------------]]-----
 	---     Debugging      ---
 	-----]]------------[[-----
 
-	{
-		'rcarriga/nvim-dap-ui',
-		config = conf 'dap',
-		dependencies = {
-			'mfussenegger/nvim-dap',
-		},
-	},
+	-- {
+	-- 	'rcarriga/nvim-dap-ui',
+	-- 	config = conf 'dap',
+	-- 	dependencies = {
+	-- 		'mfussenegger/nvim-dap',
+	-- 	},
+	-- },
 
 	-----[[------------]]-----
 	---   File switching   ---
@@ -134,6 +139,6 @@ return {
 	},
 	{
 		'David-Kunz/gen.nvim',
-		config = false
-	}
+		config = false,
+	},
 }

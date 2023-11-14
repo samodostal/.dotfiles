@@ -58,12 +58,10 @@ return function()
 			end,
 		},
 		sources = cmp.config.sources {
-			{ name = 'nvim_lua' },
 			{ name = 'nvim_lsp' },
-			{ name = 'neorg' },
-			{ name = 'path' },
 			{ name = 'snippy' },
-			{ name = 'buffer', keyword_length = 5 },
+			{ name = 'path' },
+			{ name = 'buffer',  keyword_length = 5 },
 		},
 		sorting = {
 			comparators = {
@@ -91,16 +89,24 @@ return function()
 		},
 		formatting = {
 			format = lspkind.cmp_format {
-				mode = "symbol",
+				mode = 'symbol',
 				with_text = true,
 				menu = {
-					buffer = '[buf]',
-					nvim_lsp = '[LSP]',
-					nvim_lua = '[api]',
-					path = '[path]',
+					nvim_lsp = '[lsp]',
 					snippy = '[snip]',
+					path = '[path]',
+					buffer = '[buf]',
 				},
 			},
 		},
+		enabled = function()
+			local context = require 'cmp.config.context'
+			if vim.api.nvim_get_mode().mode == 'c' then
+				return true
+			else
+				return not context.in_treesitter_capture("comment")
+				    and not context.in_syntax_group("Comment")
+			end
+		end
 	}
 end

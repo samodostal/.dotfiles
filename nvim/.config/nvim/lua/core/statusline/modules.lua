@@ -79,35 +79,93 @@ M.LSP_Diagnostics = function()
 	local hints = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
 	local info = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
 
-	errors = (errors and errors > 0) and ('%#StatusLSPError#' .. ' ' .. errors .. ' ') or ''
-	warnings = (warnings and warnings > 0) and ('%#StatusLSPWarn#' .. '  ' .. warnings .. ' ') or ''
-	hints = (hints and hints > 0) and ('%#StatusLSPHint#' .. '󰛩 ' .. hints .. ' ') or ''
-	info = (info and info > 0) and ('%#StatusLSPInfo#' .. '󰋼 ' .. info .. ' ') or ''
+	local s_errors = (errors and errors > 0) and ('%#StatusLSPError#' .. ' ' .. errors .. ' ') or ''
+	local s_warnings = (warnings and warnings > 0) and ('%#StatusLSPWarn#' .. '  ' .. warnings .. ' ') or ''
+	local s_hints = (hints and hints > 0) and ('%#StatusLSPHint#' .. '󰛩 ' .. hints .. ' ') or ''
+	local s_info = (info and info > 0) and ('%#StatusLSPInfo#' .. '󰋼 ' .. info .. ' ') or ''
 
-	return errors .. warnings .. hints .. info
+	return s_errors .. s_warnings .. s_hints .. s_info
 end
 
-M.LSP_status = function()
-	local client_names = ''
+M.copilot_status = function()
+	local is_copilot_attached = false
 
-	if rawget(vim, 'lsp') then
-		for _, client in ipairs(vim.lsp.get_active_clients()) do
-			if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-				if client_names == '' then
-					client_names = client.name
-				else
-					client_names = client_names .. ', ' .. client.name
-				end
+	for _, client in ipairs(vim.lsp.get_clients()) do
+		if client.attached_buffers[vim.api.nvim_get_current_buf()] then
+			if client.name == 'copilot' then
+				is_copilot_attached = true
+				break
 			end
 		end
 	end
 
-	return (vim.o.columns > 100 and '%#StatusLSPStatus#' .. '   LSP - ' .. client_names .. ' ') or '   LSP ~'
+	return ('%#StatusLSPStatus#' .. '< ' .. (is_copilot_attached and '' or '') .. ' /> ')
+end
+
+M.lsp_status = function()
+	local client_names = ''
+
+	if rawget(vim, 'lsp') then
+		for _, client in ipairs(vim.lsp.get_clients()) do
+			if client.attached_buffers[vim.api.nvim_get_current_buf()] then
+				if client.name == 'copilot' then
+					goto continue
+				end
+
+				if client_names == '' then
+					client_names = client.name
+				else
+					client_names = client_names .. ', ' .. client.name
+				end
+				::continue::
+			end
+		end
+	end
+
+	return ('%#StatusLSPStatus#' .. '<  LSP - ' .. client_names .. '/> ')
+end
+
+M.linters_status = function()
+	local lint = safe_require 'lint'
+	if not lint then
+		return
+	end
+
+	local client_names = ''
+
+	for _, client in ipairs(lint._resolve_linter_by_ft(vim.bo.filetype)) do
+		if client_names == '' then
+			client_names = client
+		else
+			client_names = client_names .. ', ' .. client
+		end
+	end
+
+	return ('%#StatusLSPStatus#' .. '<󰨮 Lint - ' .. client_names .. '/> ')
+end
+
+M.formatters_status = function()
+	local conform = safe_require 'conform'
+	if not conform then
+		return
+	end
+
+	local client_names = ''
+
+	for _, client in ipairs(conform.list_formatters_for_buffer(0)) do
+		if client_names == '' then
+			client_names = client
+		else
+			client_names = client_names .. ', ' .. client
+		end
+	end
+
+	return ('%#StatusLSPStatus#' .. '<󰸱 Format - ' .. client_names .. '/> ')
 end
 
 M.cwd = function()
 	local dir_icon = '%#StatusCwd#' .. ' 󰉋 '
-	local dir_name = '%#StatusCwd#' .. ' ' .. fn.fnamemodify(fn.getcwd(), ':t') .. ' '
+	local dir_name = '%#StatusCwd#' .. fn.fnamemodify(fn.getcwd(), ':t') .. ' '
 	return (vim.o.columns > 85 and (dir_icon .. dir_name)) or ''
 end
 

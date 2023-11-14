@@ -6,13 +6,12 @@ end
 
 vim.g.mapleader = ' '
 
-map('n', '<C-o>', '<C-o>zz')
-map('n', '<C-e>', '<C-i>zz')
+map('n', '<C-e>', '<C-i>')
 
-map('n', '<C-i>', '<C-u>zz')
-map('n', '<C-d>', '<C-d>zz')
-map('v', '<C-i>', '<C-u>zz')
-map('v', '<C-d>', '<C-d>zz')
+map('n', '<C-i>', '<C-u>')
+map('n', '<C-d>', '<C-d>')
+map('v', '<C-i>', '<C-u>')
+map('v', '<C-d>', '<C-d>')
 
 map('n', '<leader>', '<Nop>')
 map('n', 'q:', '<Nop>')
@@ -21,8 +20,8 @@ map('n', '<leader>t', ':b#<CR>')
 map('x', '<', '<gv')
 map('x', '>', '>gv')
 
--- map('n', '<C-j>', ':cnext<CR>')
--- map('n', '<C-k>', ':cprev<CR>')
+map('n', '<F18>', ':cprev<CR>')
+map('n', '<F19>', ':cnext<CR>')
 map('n', '<leader>co', ':copen<CR>')
 map('n', '<leader>ce', ':cclose<CR>')
 
@@ -35,10 +34,15 @@ map('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
 map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
 map('n', 'gy', ':lua vim.lsp.buf.type_definition()<CR>')
 map('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
-map('n', '<leader>fp', ':w | lua vim.lsp.buf.format({ async = true })<CR>')
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
-map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+
+-- Hover
+map('n', 'K', ':lua require("hover").hover()<CR>')
+map('n', 'gK', ':lua require("hover").hover_select()<CR>')
+
+-- Format
+map('n', '<leader>fp', ':lua require("conform").format()<CR>')
 
 -- Harpoon
 map('n', '<leader>uf', ':lua require("harpoon.mark").add_file()<CR>:e<CR>') -- e to register bufferline

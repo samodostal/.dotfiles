@@ -2,38 +2,63 @@ local M = {}
 
 -- ! IMPORTANT ! - short names of packgaes
 M.managed_separately = {
-	'tsserver',
-	'hls',
+	-- 'tsserver', -- 'typescript-language-server'
+	-- 'hls', -- 'haskell-language-server'
+	-- 'lua_ls', -- 'lua-language-server'
+	-- 'rust_analyzer' -- 'rust-analyzer'
 }
 
 M.lsp = {
-	'sqlls',
+	-- [ Common ]
 	'yaml-language-server',
-	'vim-language-server',
-	'typescript-language-server',
-	'tailwindcss-language-server',
-	'rust-analyzer',
-	'python-lsp-server',
-	'lua-language-server',
-	'lemminx',
-	'haskell-language-server',
-	'intelephense',
-	'jdtls',
 	'json-lsp',
-	'graphql-language-service-cli',
-	'html-lsp',
-	'gopls',
-	'golangci-lint-langserver',
-	'eslint-lsp',
-	'dockerfile-language-server',
-	'css-lsp',
-	'cmake-language-server',
-	'clangd',
-	'bash-language-server',
-	'arduino-language-server',
+	'lemminx',
+	'ltex-ls',
+	'taplo',
+
+	-- [ Unix ]
 	'ansible-language-server',
-	'efm',
-	'csharp-language-server',
+	'bash-language-server',
+
+	-- [ Embedded ]
+	'clangd',
+	'cmake-language-server',
+	'rust-analyzer',
+	'asm-lsp',
+	'arduino-language-server',
+
+	-- [ Web dev ]
+	'typescript-language-server',
+	'html-lsp',
+	'css-lsp',
+	-- 'tailwindcss-language-server'
+	-- 'graphql-language-service-cli'
+	-- 'deno'
+
+	-- [ Docker ]
+	'docker-compose-language-service',
+	'dockerfile-language-server',
+
+	-- [ Neovim ]
+	'lua-language-server',
+
+	-- [ Python ]
+	'python-lsp-server',
+
+	-- [ Dotnet ]
+	'omnisharp',
+
+	-- [ PHP ]
+	'intelephense',
+
+	-- [ Go ]
+	'gopls',
+
+	-- [ Haskell ]
+	'haskell-language-server',
+
+	-- [ Database ]
+	'sqlls',
 }
 
 M.dap = {
@@ -42,6 +67,29 @@ M.dap = {
 	'chrome-debug-adapter',
 	'debugpy',
 	'cpptools',
+}
+
+-- Packages for linters and formatters also include filetypes, for easy integration with conform.nvim / nvim-lint
+
+-- Check linters availability at: https://github.com/mfussenegger/nvim-lint
+M.linters_with_ft = {
+	c = { 'cpplint' },
+	python = { 'mypy' },
+}
+
+-- Check formatters availability at: https://github.com/stevearc/conform.nvim
+M.formatters_with_ft = {
+	lua = { 'stylua' },
+	javascript = { 'prettier' },
+	typescript = { 'prettier' },
+	javascriptreact = { 'prettier' },
+	typescriptreact = { 'prettier' },
+	yaml = { 'prettier' },
+	cpp = { 'clang_format' },
+	c = { 'clang_format' },
+	python = { 'black' },
+	haskell = { 'ormolu' },
+	csharp = { 'csharpier' },
 }
 
 return M

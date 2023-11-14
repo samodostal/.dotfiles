@@ -7,24 +7,18 @@ return function()
 	edgy.setup {
 		options = { bottom = { size = 8 } },
 		animate = { enabled = false },
-		wo = { winbar = true },
+		wo = { winbar = false },
 		exit_when_last = true,
 		left = {
 			{
-				title = 'File tree',
 				ft = 'NvimTree',
 				size = { height = 0.6 },
-				open = 'NvimTreeOpen',
-				pinned = true,
-				wo = { winbar = '%=File tree%=' },
+				pinned = false,
 			},
 			{
-				title = 'Symbols',
 				ft = 'aerial',
 				size = { height = 0.4 },
-				open = 'AerialOpen',
-				pinned = true,
-				wo = { winbar = '%=Symbols%=' },
+				pinned = false,
 			},
 		},
 		bottom = {
@@ -32,8 +26,7 @@ return function()
 				title = 'QuickFix',
 				ft = 'qf',
 				size = { height = 0.1 },
-				open = 'copen',
-				pinned = true,
+				pinned = false,
 				wo = { winbar = ' QuickFix' },
 			},
 		},

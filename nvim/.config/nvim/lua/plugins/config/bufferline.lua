@@ -201,14 +201,24 @@ end
 
 return function()
 	local bufferline = safe_require 'bufferline'
-	local harpoon = safe_require 'harpoon'
-	if not bufferline or not harpoon then
+	if not bufferline then
 		return
 	end
 
 	bufferline.setup {
 		options = {
-			numbers = 'ordinal',
+			numbers = function(opts)
+				local marks = require('harpoon').get_mark_config().marks
+				local bufname = vim.fn.bufname(opts.id)
+
+				for i, mark in ipairs(marks) do
+					if bufname == mark.filename then
+						return i
+					end
+				end
+
+				return -1
+			end,
 			diagnostics = 'nvim_lsp',
 			indicator = { icon = ' ', style = 'none' },
 			offsets = {
