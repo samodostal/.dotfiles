@@ -29,6 +29,9 @@ local function i_hate_how_highlights_work_in_bufferline_why_wont_they_just_expos
 			fg = '#dddddd',
 		},
 		numbers = {
+			max_width = 0, -- Maximum width of the notification window
+			max_height = 0, -- Maximum height of the notification window
+			x_padding = 1, -- Padding from right edge of window boundary
 			fg = '#dddddd',
 		},
 		numbers_visible = {

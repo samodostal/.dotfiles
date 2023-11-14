@@ -108,16 +108,13 @@ M.lsp_status = function()
 	if rawget(vim, 'lsp') then
 		for _, client in ipairs(vim.lsp.get_clients()) do
 			if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-				if client.name == 'copilot' then
-					goto continue
+				if client.name ~= 'copilot' then
+					if client_names == '' then
+						client_names = client.name
+					else
+						client_names = client_names .. ', ' .. client.name
+					end
 				end
-
-				if client_names == '' then
-					client_names = client.name
-				else
-					client_names = client_names .. ', ' .. client.name
-				end
-				::continue::
 			end
 		end
 	end
