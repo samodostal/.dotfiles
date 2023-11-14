@@ -34,6 +34,7 @@ export USER_SCRIPTS="/home/samodostal/.local/scripts"
 
 export PATH=$PATH:$DENO_INSTALL:$GHCUP_INSTALL:$CABAL_INSTALL:$GO_INSTALL:$DOTNET_INSTALL:$USER_SCRIPTS
 
-# TMUX SETUP
+# xmodmap ~/.Xmodmap
 
+# TMUX SETUP
 tmux-setup.sh
