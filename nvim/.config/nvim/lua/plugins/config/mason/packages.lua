@@ -75,6 +75,7 @@ M.dap = {
 M.linters_with_ft = {
 	c = { 'cpplint' },
 	python = { 'mypy' },
+	lua = { 'luacheck' },
 }
 
 -- Check formatters availability at: https://github.com/stevearc/conform.nvim
