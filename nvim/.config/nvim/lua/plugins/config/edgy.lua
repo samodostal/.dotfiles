@@ -7,18 +7,19 @@ return function()
 	edgy.setup {
 		options = { bottom = { size = 8 } },
 		animate = { enabled = false },
-		wo = { winbar = false },
 		exit_when_last = true,
 		left = {
 			{
 				ft = 'NvimTree',
 				size = { height = 0.6 },
 				pinned = false,
+				wo = { winbar = '%=File tree%=' },
 			},
 			{
 				ft = 'aerial',
 				size = { height = 0.4 },
 				pinned = false,
+				wo = { winbar = '%=Symbols%=' },
 			},
 		},
 		bottom = {

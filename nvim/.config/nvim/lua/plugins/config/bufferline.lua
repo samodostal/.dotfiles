@@ -208,6 +208,8 @@ return function()
 		return
 	end
 
+	local project_directory = '< ' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':t') .. ' />'
+
 	bufferline.setup {
 		options = {
 			numbers = function(opts)
@@ -225,7 +227,7 @@ return function()
 			diagnostics = 'nvim_lsp',
 			indicator = { icon = ' ', style = 'none' },
 			offsets = {
-				{ filetype = 'NvimTree', text = 'File tree & Symbols', separator = false },
+				{ filetype = 'NvimTree', text = project_directory, separator = false },
 			},
 			close_icon = '',
 			separator_style = { ' ', ' ' },
