@@ -12,5 +12,15 @@ return function()
 			relativenumber = true,
 			signcolumn = 'no',
 		},
+		renderer = {
+			icons = {
+				glyphs = {
+					git = {
+						unstaged = '',
+						untracked = '',
+					},
+				},
+			},
+		},
 	}
 end
