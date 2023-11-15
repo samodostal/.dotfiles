@@ -14,4 +14,11 @@ return function()
 		},
 		formatters_by_ft = formatters_with_ft,
 	}
+
+	conform.formatters = {
+		ormolu = {
+			command = 'ormolu',
+			args = { '--no-cabal' },
+		},
+	}
 end
