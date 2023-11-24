@@ -1,8 +1,8 @@
 # --- Sets -----------------------------------------------------------
 
-set $mod Mod1
+set $alt Mod1
 set $win Mod4
-floating_modifier $mod
+floating_modifier $alt
 font pango:Default 10
 for_window [class="^.*"] border pixel 0
 
@@ -58,13 +58,13 @@ exec blanket
 
 # --- Bindings -------------------------------------------------------
 
-bindsym $mod+g kill
-bindsym $mod+f fullscreen toggle
-bindsym $mod+p move workspace to output right
+bindsym $alt+g kill
+bindsym $alt+f fullscreen toggle
+bindsym $alt+p move workspace to output right
 
-bindsym $mod+Shift+e exec --no-startup-id dm-tool lock
+bindsym $alt+Shift+e exec --no-startup-id dm-tool lock
 
-bindsym $mod+r mode "resize"
+bindsym $alt+r mode "resize"
 
 bindsym $win+h focus left
 bindsym $win+j focus down
@@ -76,11 +76,13 @@ bindsym $win+Shift+j move down
 bindsym $win+Shift+k move up
 bindsym $win+Shift+l move right
 
-bindsym $mod+t move workspace to output left
+bindsym $alt+t move workspace to output left
 
-bindsym $mod+e exec --no-startup-id i3-dmenu-desktop
+bindsym $alt+Tab workspace back_and_forth
 
-bindsym $mod+c exec brave
+bindsym $alt+e exec --no-startup-id i3-dmenu-desktop
+
+bindsym $alt+c exec brave
 
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
@@ -114,28 +116,28 @@ bindsym XF86Favorites exec toggle-keyboard.sh
 
 # --- Workspaces -----------------------------------------------------
 
-bindsym $mod+h workspace $ws1
-bindsym $mod+m workspace $ws2
-bindsym $mod+w workspace $ws3
-bindsym $mod+v workspace $ws4
-bindsym $mod+z workspace $ws5
-bindsym $mod+Shift+colon workspace $ws6
-bindsym $mod+colon workspace $ws6
-bindsym $mod+q workspace $ws7
-bindsym $mod+j workspace $ws8
-bindsym $mod+k workspace $ws9
-bindsym $mod+u workspace $ws0
+bindsym $alt+h workspace $ws1
+bindsym $alt+m workspace $ws2
+bindsym $alt+w workspace $ws3
+bindsym $alt+v workspace $ws4
+bindsym $alt+z workspace $ws5
+bindsym $alt+Shift+colon workspace $ws6
+bindsym $alt+colon workspace $ws6
+bindsym $alt+q workspace $ws7
+bindsym $alt+j workspace $ws8
+bindsym $alt+k workspace $ws9
+bindsym $alt+u workspace $ws0
 
-bindsym $mod+Shift+h move container to workspace $ws1
-bindsym $mod+Shift+m move container to workspace $ws2
-bindsym $mod+Shift+w move container to workspace $ws3
-bindsym $mod+Shift+v move container to workspace $ws4
-bindsym $mod+Shift+z move container to workspace $ws5
-# bindsym $mod+Shift+colon move container to workspace $ws6
-bindsym $mod+Shift+q move container to workspace $ws7
-bindsym $mod+Shift+j move container to workspace $ws8
-bindsym $mod+Shift+k move container to workspace $ws9
-bindsym $mod+Shift+u move container to workspace $ws0
+bindsym $alt+Shift+h move container to workspace $ws1
+bindsym $alt+Shift+m move container to workspace $ws2
+bindsym $alt+Shift+w move container to workspace $ws3
+bindsym $alt+Shift+v move container to workspace $ws4
+bindsym $alt+Shift+z move container to workspace $ws5
+# bindsym $alt+Shift+colon move container to workspace $ws6
+bindsym $alt+Shift+q move container to workspace $ws7
+bindsym $alt+Shift+j move container to workspace $ws8
+bindsym $alt+Shift+k move container to workspace $ws9
+bindsym $alt+Shift+u move container to workspace $ws0
 
 workspace $ws1 output eDP
 workspace $ws2 output eDP
