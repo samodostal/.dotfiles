@@ -90,7 +90,7 @@ M.formatters_with_ft = {
 	c = { 'clang_format' },
 	python = { 'black' },
 	haskell = { 'ormolu' },
-	csharp = { 'csharpier' },
+	cs = { 'csharpier' },
 }
 
 return M
