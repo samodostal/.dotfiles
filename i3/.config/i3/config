@@ -77,7 +77,7 @@ bindsym $win+Shift+k move up
 bindsym $win+Shift+l move right
 
 bindsym $alt+t move workspace to output left
-bindsym $mod+t layout splitv
+bindsym $win+t layout toggle split
 
 bindsym $alt+Tab workspace back_and_forth
 
