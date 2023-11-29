@@ -33,6 +33,3 @@ export DOTNET_INSTALL="/home/samodostal/.dotnet/tools"
 export USER_SCRIPTS="/home/samodostal/.local/scripts"
 
 export PATH=$PATH:$DENO_INSTALL:$GHCUP_INSTALL:$CABAL_INSTALL:$GO_INSTALL:$DOTNET_INSTALL:$USER_SCRIPTS
-
-# TMUX SETUP
-tmux-setup.sh

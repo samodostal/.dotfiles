@@ -1,1 +1,2 @@
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
+tmux-setup.sh
