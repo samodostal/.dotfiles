@@ -33,3 +33,10 @@ if [ $? -ne 0 ]; then
     tmux new-session -ds docker
     tmux send-keys -t docker 'clear && lazydocker' 'C-m'
 fi
+
+# BTOP
+tmux has-session -t btop 2>/dev/null
+if [ $? -ne 0 ]; then
+    tmux new-session -ds btop
+    tmux send-keys -t btop 'clear && btop' 'C-m'
+fi
