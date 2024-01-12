@@ -54,7 +54,6 @@ exec kitty --hold tmux new-session -As main \; send-keys -R nf C-m
 exec thunderbird
 exec ticktick
 exec spotify
-exec blanket
 
 # --- Bindings -------------------------------------------------------
 
