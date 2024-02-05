@@ -1,10 +1,25 @@
 local utils = require 'core.utils'
 
-local map = function(mode, key, cmd, opts)
-	vim.api.nvim_set_keymap(mode, key, cmd, opts or { noremap = true, silent = true })
-end
+local map = require('core.scripts.keymap_helpers').map
+local map_menu = require('core.scripts.keymap_helpers').map_menu
 
 vim.g.mapleader = ' '
+
+-- Menu maps (used less, do not require separate keymaps for now)
+
+map_menu('Neovim management', '<leader>nn', {
+	{ text = 'Check health', cmd = ':checkhealth' },
+	{ text = 'Lazy', cmd = ':Lazy' },
+	{ text = 'Mason', cmd = ':Mason' },
+	{ text = 'LSP info', cmd = ':LspInfo' },
+})
+
+map_menu('Haskell tools', '<leader>hh', {
+	{ text = 'Hoogle search', cmd = ':lua require("telescope").extensions.hoogle.hoogle()' },
+	{ text = 'Hoogle signature', cmd = ':lua require("haskell-tools").hoogle.hoogle_signature()' },
+})
+
+-- Standard maps (used frequently)
 
 map('n', '<C-e>', '<C-i>')
 
@@ -36,10 +51,7 @@ map('n', 'gy', ':lua vim.lsp.buf.type_definition()<CR>')
 map('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 map('n', '<leader>pd', ':lua vim.diagnostic.open_float()<CR>')
-
--- Hover
-map('n', 'K', ':lua require("hover").hover()<CR>')
-map('n', 'gK', ':lua require("hover").hover_select()<CR>')
+map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 
 -- Format
 map('n', '<leader>fp', ':lua require("conform").format()<CR>')
@@ -108,18 +120,11 @@ map('n', '<leader>gh', ':LazyGitFilterCurrentFile<CR>')
 -- Aerial
 map('n', '<leader>cs', ':AerialToggle<CR>')
 
--- Leap
-map('n', 's', ':lua require("leap").leap({target_windows={vim.fn.win_getid()}})<CR>')
-
 -- Nvim Tmux Navigator
 map('n', '<C-h>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateLeft()<CR>')
 map('n', '<C-j>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateDown()<CR>')
 map('n', '<C-k>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateUp()<CR>')
 map('n', '<C-l>', ':lua require("nvim-tmux-navigation").NvimTmuxNavigateRight()<CR>')
-
--- Haskell tools
-map('n', '<leader>hc', ':lua require("haskell-tools").hoogle.hoogle_signature()<CR>')
-map('n', '<leader>hg', ':lua require("telescope").extensions.hoogle.hoogle()<CR>')
 
 -- Mistral AI
 map('v', '<leader>ha', ':Gen<CR>')
