@@ -21,6 +21,10 @@ require('gruvbox').setup {
 		MiniMapSymbolView = { fg = '#555555' },
 		MiniMapSymbolLine = { fg = '#707070' },
 
+		FlashMatch = { fg = '#ffff00', bg = 'none' },
+		FlashCurrent = { fg = '#ffA500', bg = 'none' },
+		FlashLabel = { fg = '#00ffff', bg = 'none', bold = true },
+
 		-- Custom statusbar highlights
 		St_file_sep = { bg = colors.red },
 		StatusLine = { bg = colors.red },
