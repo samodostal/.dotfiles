@@ -8,8 +8,8 @@ return function()
 		signs = {
 			add = { text = '+' },
 			change = { text = '~' },
-			delete = { text = '-' },
-			topdelete = { text = '-' },
+			delete = { text = '-', show_count = true },
+			topdelete = { text = '-', show_count = true  },
 			untracked = { text = '' },
 		},
 	}
