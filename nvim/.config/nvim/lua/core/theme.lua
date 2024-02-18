@@ -3,9 +3,9 @@ local colors = require 'core.colors'
 require('gruvbox').setup {
 	transparent_mode = true,
 	overrides = {
-		IndentBlankline = { fg = '#363636' },
+		IndentBlankline = { fg = '#262626' },
+		IndentBlanklineContextChar = { fg = '#262626' },
 		IndentBlanklineSpaceChar = { bg = 'none' },
-		IndentBlanklineContextChar = { fg = '#363636' },
 		NormalFloat = { bg = 'none' },
 		FloatBorder = { bg = 'none' },
 		Pmenu = { bg = 'none' },
