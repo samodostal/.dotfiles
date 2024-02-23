@@ -13,6 +13,7 @@ return function()
 			signcolumn = 'no',
 		},
 		renderer = {
+			indent_width = 1,
 			icons = {
 				glyphs = {
 					git = {

@@ -227,7 +227,7 @@ return function()
 			diagnostics = 'nvim_lsp',
 			indicator = { icon = ' ', style = 'none' },
 			offsets = {
-				{ filetype = 'NvimTree', text = project_directory, separator = false },
+				{ filetype = 'NvimTree', text = project_directory, separator = true },
 			},
 			close_icon = '',
 			separator_style = { ' ', ' ' },
