@@ -37,6 +37,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
+exec --no-startup-id flameshot
 
 for_window [class="Brave"] move container to workspace $ws1
 for_window [class="kitty"] move container to workspace $ws2
@@ -48,6 +49,9 @@ for_window [class="python3"] move container to workspace $ws9
 for_window [class="Tk"] floating enable resize set 640 480
 for_window [class="Blueman-manager"] floating enable resize set 800 600, move position center
 for_window [class="Thunar"] floating enable resize set 1000 600, move position center
+
+for_window [instance="Godot_Editor"] floating disable
+for_window [instance="Godot_Engine"] floating enable, border pixel 5
 
 exec brave
 exec kitty --hold tmux new-session -As main \; send-keys -R nf C-m
