@@ -15,7 +15,6 @@ return function()
 	local servers_config = require 'plugins.config.lsp.configurations'
 
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	-- capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 	mason_lspconfig.setup()
 	mason_lspconfig.setup_handlers {

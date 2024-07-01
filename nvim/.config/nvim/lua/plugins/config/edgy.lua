@@ -22,14 +22,14 @@ return function()
 				wo = { winbar = '%=Symbols%=' },
 			},
 		},
-		bottom = {
-			{
-				title = 'QuickFix',
-				ft = 'qf',
-				size = { height = 0.1 },
-				pinned = false,
-				wo = { winbar = ' QuickFix' },
-			},
-		},
+		-- bottom = {
+		-- 	{
+		-- 		title = 'QuickFix',
+		-- 		ft = 'qf',
+		-- 		size = { height = 0.1 },
+		-- 		pinned = false,
+		-- 		wo = { winbar = ' QuickFix' },
+		-- 	},
+		-- },
 	}
 end

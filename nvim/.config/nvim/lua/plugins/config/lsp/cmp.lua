@@ -1,34 +1,30 @@
 return function()
 	local cmp = safe_require 'cmp'
 	local lspkind = safe_require 'lspkind'
-	local cmp_autopairs = safe_require 'nvim-autopairs.completion.cmp'
 
-	if not cmp or not lspkind or not cmp_autopairs then
+	if not cmp then
 		return
 	end
 
-	cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
-
-	cmp.setup.cmdline(':', {
-		sources = {
-			{ name = 'cmdline' },
-		},
-	})
-
 	cmp.setup.cmdline('/', {
+		mapping = cmp.mapping.preset.cmdline(),
 		sources = {
 			{ name = 'buffer' },
 		},
 	})
 
+	cmp.setup.cmdline(':', {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = {
+			{ name = 'cmdline' },
+			{ name = 'path' },
+		},
+	})
+
 	cmp.setup {
 		window = {
-			completion = {
-				border = 'rounded',
-			},
-			documentation = {
-				border = 'rounded',
-			},
+			completion = cmp.config.window.bordered(),
+			documentation = cmp.config.window.bordered(),
 		},
 		mapping = cmp.mapping.preset.insert {
 			['<CR>'] = cmp.mapping.confirm { select = true },
@@ -47,22 +43,24 @@ return function()
 					fallback()
 				end
 			end, { 'i', 's' }),
-			['<C-q>'] = cmp.mapping.confirm {
-				behavior = cmp.ConfirmBehavior.Replace,
-				select = true,
-			},
+			-- ['<C-r>'] = cmp.mapping.confirm {
+			-- 	behavior = cmp.ConfirmBehavior.Replace,
+			-- 	select = true,
+			-- },
 		},
 		snippet = {
 			expand = function(args)
 				require('snippy').expand_snippet(args.body)
 			end,
 		},
-		sources = cmp.config.sources {
+		sources = cmp.config.sources({
 			{ name = 'nvim_lsp' },
-			{ name = 'snippy' },
+			{ name = 'neorg' },
 			{ name = 'path' },
-			{ name = 'buffer', keyword_length = 5 },
-		},
+			{ name = 'buffer' },
+		}, {
+			{ name = 'snippy' },
+		}),
 		sorting = {
 			comparators = {
 				cmp.config.compare.offset,
@@ -88,22 +86,17 @@ return function()
 			},
 		},
 		formatting = {
-			format = lspkind.cmp_format {
+			format = lspkind.cmp_format({
 				mode = 'symbol',
-				with_text = true,
-				menu = {
-					nvim_lsp = '[lsp]',
-					snippy = '[snip]',
-					path = '[path]',
-					buffer = '[buf]',
-				},
-			},
+				maxwidth = 50,
+				ellipsis_char = '...',
+			}),
 		},
 		enabled = function()
-			local context = require 'cmp.config.context'
 			if vim.api.nvim_get_mode().mode == 'c' then
 				return true
 			else
+				local context = require 'cmp.config.context'
 				return not context.in_treesitter_capture 'comment' and not context.in_syntax_group 'Comment'
 			end
 		end,

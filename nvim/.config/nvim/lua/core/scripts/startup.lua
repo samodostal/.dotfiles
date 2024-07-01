@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
 		open_harpooned_files()
 		open_nvim_tree()
 		open_aerial()
-		open_quickfixlist()
+		-- open_quickfixlist()
 	end,
 })
 

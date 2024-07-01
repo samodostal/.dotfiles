@@ -42,6 +42,8 @@ map('n', '<leader>ce', ':cclose<CR>')
 
 map('n', '<leader>cc', ':lua require("core.compiler").compile_and_run()<CR>')
 
+map('n', '<leader>v', '"+p`[v`]=')
+
 -- LSP
 map('n', 'gd', ':lua require("telescope.builtin").lsp_definitions()<CR>')
 map('n', 'gr', ':lua require("telescope.builtin").lsp_references()<CR>')

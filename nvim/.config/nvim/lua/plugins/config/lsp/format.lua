@@ -9,9 +9,6 @@ return function()
 	local formatters_with_ft = require('plugins.config.mason.packages').formatters_with_ft
 
 	conform.setup {
-		format_on_save = {
-			timeout_ms = 100,
-		},
 		formatters_by_ft = formatters_with_ft,
 	}
 

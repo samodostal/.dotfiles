@@ -33,16 +33,17 @@ return {
 
 	{ 'ellisonleao/gruvbox.nvim' },
 	{
-		dir = '~/Projects/nvim_plugins/image.nvim',
-		dependencies = {
-			{ 'm00qek/baleia.nvim' },
-		},
+		'3rd/image.nvim',
 		config = conf 'image',
+		dependencies = {
+			{ 'dfendr/clipboard-image.nvim' },
+		},
 	},
 	{ 'norcalli/nvim-colorizer.lua', config = conf 'colorizer' },
 	{ 'lukas-reineke/indent-blankline.nvim', tag = 'v2.20.8', config = conf 'indent-blankline' },
 	{ 'akinsho/bufferline.nvim', config = conf 'bufferline' },
 	{ 'xiyaowong/nvim-cursorword' },
+	{ 'pocco81/high-str.nvim' },
 
 	-----[[------------]]-----
 	---      TPope <3      ---

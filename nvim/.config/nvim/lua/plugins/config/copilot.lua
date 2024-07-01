@@ -20,4 +20,9 @@ return function()
 			},
 		}
 	end, 100)
+
+	local api = require 'copilot.api'
+	api.register_status_notification_handler(function(data)
+		vim.api.nvim_set_var('copilot_status', data.status)
+	end)
 end

@@ -8,13 +8,19 @@ M.managed_separately = {
 	-- 'rust_analyzer' -- 'rust-analyzer'
 }
 
+-- ! IMPORTANT ! - short names of packgaes
+M.disable_inlayhints = {
+	'clangd',
+}
+
+
 M.lsp = {
 	-- [ Common ]
 	'yaml-language-server',
 	'json-lsp',
-	'lemminx',
-	'ltex-ls',
 	'taplo',
+	-- 'lemminx',
+	-- 'ltex-ls',
 
 	-- [ Unix ]
 	'ansible-language-server',
@@ -43,7 +49,7 @@ M.lsp = {
 	'lua-language-server',
 
 	-- [ Python ]
-	'python-lsp-server',
+	'pyright',
 
 	-- [ Dotnet ]
 	'omnisharp',
@@ -69,13 +75,16 @@ M.dap = {
 	'cpptools',
 }
 
--- Packages for linters and formatters also include filetypes, for easy integration with conform.nvim / nvim-lint
+-- Packages for linters and formatters also include filetypes, for easy integration with conform.nvim and nvim-lint
 
 -- Check linters availability at: https://github.com/mfussenegger/nvim-lint
 M.linters_with_ft = {
 	c = { 'cpplint' },
-	python = { 'mypy' },
 	lua = { 'luacheck' },
+	javascript = { 'eslint' },
+	typescript= { 'eslint' },
+	javascriptreact = { 'eslint' },
+	typescriptreact= { 'eslint' },
 }
 
 -- Check formatters availability at: https://github.com/stevearc/conform.nvim
@@ -85,6 +94,7 @@ M.formatters_with_ft = {
 	typescript = { 'prettier' },
 	javascriptreact = { 'prettier' },
 	typescriptreact = { 'prettier' },
+	html = { 'prettier' },
 	yaml = { 'prettier' },
 	cpp = { 'clang_format' },
 	c = { 'clang_format' },

@@ -1,24 +1,22 @@
 local lspconfig = require 'lspconfig'
 
 return {
-	-- lua_ls = {
-	-- 	settings = {
-	-- 		Lua = {
-	-- 			diagnostics = {
-	-- 				globals = { 'vim' },
-	-- 			},
-	-- 		},
-	-- 	},
-	-- },
-	-- clangd = {
-	-- 	cmd = {
-	-- 		'clangd',
-	-- 		'--background-index',
-	-- 		'--clang-tidy',
-	-- 		'--offset-encoding=utf-16',
-	-- 		'--inlay-hints=false' -- For competitive programming :/
-	-- 	},
-	-- },
+	clangd = {
+		cmd = {
+			'clangd',
+			'--background-index',
+			'--clang-tidy',
+		},
+	},
+	lua_ls = {
+		settings = {
+			Lua = {
+				diagnostics = {
+					globals = { 'vim' },
+				},
+			},
+		},
+	},
 	-- eslint = {
 	-- 	root_dir = lspconfig.util.root_pattern { '.eslintrc.js', '.git/' },
 	-- },
@@ -38,3 +36,7 @@ return {
 	-- 	},
 	-- },
 }
+
+-- category thery: page 60
+-- how linux works: page 21
+

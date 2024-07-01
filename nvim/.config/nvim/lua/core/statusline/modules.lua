@@ -99,7 +99,21 @@ M.copilot_status = function()
 		end
 	end
 
-	return ('%#StatusLSPStatus#' .. '< ' .. (is_copilot_attached and '' or '') .. ' /> ')
+	-- local copilot_status = vim.api.nvim_get_var 'copilot_status'
+	-- local copilot_status_icon = {
+	-- 	['Normal'] = '',
+	-- 	['InProgress'] = 'S',
+	-- 	['Warning'] = 'X',
+	-- }
+
+	return (
+		'%#StatusLSPStatus#'
+		.. '< '
+		.. (is_copilot_attached and '' or '')
+		-- .. ' '
+		-- .. copilot_status_icon
+		.. ' /> '
+	)
 end
 
 M.lsp_status = function()
@@ -171,8 +185,9 @@ M.cursor_position = function()
 
 	local position = fn.getpos '.'
 	local current_line = position[2]
+	local current_col = string.format('%-2s', position[3])
 
-	return left_sep .. '%#StatusCursor# ' .. current_line
+	return left_sep .. '%#StatusCursor# ' .. current_line .. ':' .. current_col
 end
 
 return M

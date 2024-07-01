@@ -21,6 +21,9 @@ require('gruvbox').setup {
 		MiniMapSymbolView = { fg = '#555555' },
 		MiniMapSymbolLine = { fg = '#707070' },
 
+		MarkdownError = { bg = '#000000' },
+		LuaParenError = { bg = '#000000' },
+
 		FlashMatch = { fg = '#ffff00', bg = 'none' },
 		FlashCurrent = { fg = '#ffA500', bg = 'none' },
 		FlashLabel = { fg = '#00ffff', bg = 'none', bold = true },
@@ -60,10 +63,10 @@ vim.cmd 'colorscheme gruvbox'
 
 -- LSP
 
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-	signs = true,
-	update_in_insert = true,
-})
+-- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+-- 	signs = true,
+-- 	update_in_insert = true,
+-- })
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
 	border = 'single',
@@ -75,14 +78,14 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.s
 
 vim.diagnostic.config {
 	underline = true,
+	signs = false,
 	virtual_text = true,
 	severity_sort = true,
 	float = {
 		header = '',
 		source = true,
-		border = 'rounded',
 		focusable = true,
 	},
 }
 
-require('lspconfig.ui.windows').default_options.border = 'rounded'
+-- require('lspconfig.ui.windows').default_options.border = 'rounded'

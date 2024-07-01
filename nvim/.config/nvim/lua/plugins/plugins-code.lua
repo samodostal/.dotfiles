@@ -27,14 +27,15 @@ return {
 			{ 'hrsh7th/cmp-nvim-lsp' },
 			{ 'hrsh7th/cmp-buffer' },
 			{ 'hrsh7th/cmp-path' },
+			{ 'hrsh7th/cmp-cmdline' },
+
+			{ 'onsails/lspkind.nvim' },
 
 			{ 'dcampos/nvim-snippy' },
 			{ 'dcampos/cmp-snippy' },
 			{ 'honza/vim-snippets' },
 
 			{ 'lvimuser/lsp-inlayhints.nvim', branch = 'anticonceal' },
-			{ 'ray-x/lsp_signature.nvim' },
-			{ 'onsails/lspkind.nvim' },
 
 			{ 'mfussenegger/nvim-lint' },
 			{ 'stevearc/conform.nvim' },
@@ -55,10 +56,6 @@ return {
 		'j-hui/fidget.nvim',
 		config = conf 'fidget',
 	},
-	{
-		'lewis6991/hover.nvim',
-		config = conf 'hover',
-	},
 	{ 'stevearc/aerial.nvim', config = conf 'aerial' },
 	{ 'petertriho/nvim-scrollbar', config = conf 'scrollbar' },
 	{ 'onsails/diaglist.nvim' },
@@ -72,11 +69,11 @@ return {
 	-- 	'jose-elias-alvarez/typescript.nvim',
 	-- 	config = conf 'language/typescript',
 	-- },
-	-- {
-	-- 	'barrett-ruth/import-cost.nvim',
-	-- 	build = 'sh install.sh npm',
-	-- 	config = conf 'language/import-cost',
-	-- },
+	{
+		'barrett-ruth/import-cost.nvim',
+		build = 'sh install.sh npm',
+		config = conf 'language/import-cost',
+	},
 	-- {
 	-- 	'mrcjkb/haskell-tools.nvim',
 	-- 	branch = '2.x.x',
@@ -87,13 +84,13 @@ return {
 	---     Debugging      ---
 	-----]]------------[[-----
 
-	-- {
-	-- 	'rcarriga/nvim-dap-ui',
-	-- 	config = conf 'dap',
-	-- 	dependencies = {
-	-- 		'mfussenegger/nvim-dap',
-	-- 	},
-	-- },
+	--	{
+	--		'rcarriga/nvim-dap-ui',
+	--		config = conf 'dap',
+	--		dependencies = {
+	--			'mfussenegger/nvim-dap',
+	--		},
+	--	},
 
 	-----[[------------]]-----
 	---   File switching   ---
@@ -110,7 +107,6 @@ return {
 
 			{ 'debugloop/telescope-undo.nvim' },
 
-			{ 'nvim-telescope/telescope-frecency.nvim' },
 			{ 'kkharji/sqlite.lua' },
 		},
 	},
@@ -121,28 +117,24 @@ return {
 	-----]]------------[[-----
 
 	{ 'lewis6991/gitsigns.nvim', config = conf 'git.gitsigns' },
-	{ 'kdheepak/lazygit.nvim', config = conf 'git.lazygit' },
+	-- { 'kdheepak/lazygit.nvim', config = conf 'git.lazygit' },
+	{ dir = '~/Projects/nvim_plugins/lazygit.nvim', config = conf 'git.lazygit' },
 
 	-----[[------------]]-----
 	---      Editing       ---
 	-----]]------------[[-----
 
-	{
-		'windwp/nvim-autopairs',
-		config = conf 'autopairs',
-	},
+	{ 'windwp/nvim-autopairs', config = true },
 	{ 'Wansmer/treesj', config = conf 'treesj' },
 
 	-----[[------------]]-----
 	---         AI         ---
 	-----]]------------[[-----
 	{
-		'zbirenbaum/copilot.lua',
+
+		dir = '~/Projects/nvim_plugins/copilot.lua',
+		-- 'zbirenbaum/copilot.lua',
 		event = 'VimEnter',
 		config = conf 'copilot',
-	},
-	{
-		'David-Kunz/gen.nvim',
-		config = false,
 	},
 }

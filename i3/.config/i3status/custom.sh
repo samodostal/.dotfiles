@@ -5,5 +5,5 @@ do
     read line
     LG=$(print-keyboard.sh) 
     SPOTIFY=$(spotify-status.sh)
-    echo -e "$SPOTIFY | $LG | $line" || exit 1
+    echo -e "<Week 13/> | $SPOTIFY | $LG | $line" || exit 1
 done
