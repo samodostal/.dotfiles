@@ -1,0 +1,41 @@
+* {
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.modules-left,
+.modules-center,
+.modules-right
+{
+    padding: 0;
+}
+
+#workspaces button {
+  border:none;
+  color: #ffffff;
+  padding: 0 4px;
+  border-radius: 0;
+}
+
+#workspaces button.active {
+    background: #0c567a; 
+    font-size: 16px;
+}
+
+#workspaces button:hover {
+    background: none;
+    box-shadow: initial;
+    background: #107cb0;
+}
+
+#custom-arch {
+    padding: 0px 6px;
+    margin-right: -15px;
+    font-size: 14px;
+    color: #1793d1;
+}

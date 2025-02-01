@@ -1,30 +1,13 @@
 [user]
 	name = samodostal
 	email = samuel.dostal.sk@gmail.com
-	signingkey = samuel.dostal.sk@gmail.com
 [init]
 	defaultBranch = main
 [core]
 	editor = nvim
-	excludesfile = ~/.config/git/.gitignore_global
-	pager = delta
-[interactive]
-  diffFilter = delta --color-only
-[add.interactive]
-    useBuiltin = false # required for git 2.37.0
-[commit]
-	gpgsign = true
 [pull]
 	rebase = true
 [push]
 	default = current
-[color]
-	ui = true
-[delta]
-  navigate = true
-  light = false
-	line-numbers = true
-[merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
+[rebase]
+	autoStash = true

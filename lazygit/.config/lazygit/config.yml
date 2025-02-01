@@ -1,14 +1,8 @@
 gui:
   showBottomLine: false
-  nerdFontsVersion: "3"
 quitOnTopLevelReturn: true
-disableStartupPopups: true
-promptToReturnFromSubprocess: false
 git:
   paging:
-    colorArg: always
     pager: delta --dark --paging=never
-    #externalDiffCommand: difft --color=always --tab-width 2
 os:
-  edit: nvim --server /tmp/nvim-server-$(tmux display-message -p '#S').pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
-  open: nvim --server /tmp/nvim-server-$(tmux display-message -p '#S').pipe --remote-send "<cmd>lua require('core.scripts.lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+  editPreset: 'nvim-remote'

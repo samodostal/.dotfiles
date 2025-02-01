@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ignoreList=("keyboard")
+ignoreList=()
 
 for dir in */
 do
