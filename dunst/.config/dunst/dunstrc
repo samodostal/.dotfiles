@@ -1,5 +1,5 @@
 [global]
-    offset = 10x32
+    offset = (10, 10)
     progress_bar = true
     transparency = 10
     separator_height = 2
