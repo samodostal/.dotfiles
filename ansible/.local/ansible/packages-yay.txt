@@ -1,0 +1,15 @@
+ticktick
+oh-my-zsh-git
+auto-cpufreq
+lazydocker
+adwaita-qt5-git
+adwaita-qt6-git
+nvm
+gvfs
+slides
+ttf-unifont
+grimshot
+nrfutil
+nrf-command-line-tools
+jlink
+nrf-udev

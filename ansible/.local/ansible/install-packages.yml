@@ -1,0 +1,24 @@
+- name: Install packages using pacman and yay
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Read pacman packages from file
+      command: cat ./packages-pacman.txt
+      register: pacman_packages
+      changed_when: false
+
+    - name: Read AUR packages from file
+      command: cat ./packages-yay.txt
+      register: aur_packages
+      changed_when: false
+
+    - name: Install pacman packages
+      command: pacman -S --noconfirm --needed {{ item }}
+      loop: "{{ pacman_packages.stdout_lines }}"
+      register: pacman_install_output
+      changed_when: "'nothing to do' not in pacman_install_output.stdout"
+
+    - name: Install AUR packages using yay
+      become: no
+      command: yay -S --noconfirm --needed {{ item }}
+      loop: "{{ aur_packages.stdout_lines }}"

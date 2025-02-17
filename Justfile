@@ -9,3 +9,6 @@ stow:
 
 unstow:
 	stow --delete */
+
+install-packages:
+    ansible-playbook ./ansible/.local/ansible/install-packages.yml
