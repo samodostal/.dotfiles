@@ -1,50 +1,50 @@
 {
-    "custom/arch": {
-        "format": "󰣇",
-        "tooltip": false
-    },
-    "hyprland/workspaces": {
-    	"persistent-workspaces": {
-		"1": [],
-		"2": [],
-		"3": [],
-		"4": [],
-		"5": [],
-		"6": [],
-		"7": [],
-		"8": [],
-		"9": []
-	}
-    },
-    "memory": {
-        "format": " {used}GB",
-        "tooltip": false
-    },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": false
-    },
-    "backlight": {
-        "format": "󰃠 {percent}%",
-        "tooltip": false
-    },
-    "wireplumber": {
-	"format": " {volume}",
-	"format-muted": " {volume}",
-	"tooltip": false
-    },
-    "custom/auto-cpufreq" : {
-      "format": "{}",
-      "exec": "auto-cpufreq-status.sh",
-      "interval" : 10
-    },
-    "battery": {
-        "format": " {capacity}%",
-	"format-charging": "󰂅 {capacity}%",
-        "tooltip": false
-    },
-    "clock": {
-	"format": " {:%H:%M | %d-%m}",
-        "tooltip": false
+  "custom/arch": {
+    "format": "󰣇",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": []
     }
+  },
+  "memory": {
+    "format": " {used}GB",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": "󰃠 {percent}%",
+    "tooltip": false
+  },
+  "wireplumber": {
+    "format": " {volume}",
+    "format-muted": " {volume}",
+    "tooltip": false
+  },
+  "custom/auto-cpufreq": {
+    "format": "{}",
+    "exec": "~/.dotfiles/scripts/.config/shell_scripts/auto-cpufreq-status.sh",
+    "interval": 10
+  },
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": "󰂅 {capacity}%",
+    "tooltip": false
+  },
+  "clock": {
+    "format": " {:%H:%M | %d-%m}",
+    "tooltip": false
+  }
 }
