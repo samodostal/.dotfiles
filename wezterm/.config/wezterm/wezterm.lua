@@ -11,6 +11,7 @@ config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.font_size = 10.0
+config.warn_about_missing_glyphs = false
 
 config.font = wezterm.font({
 	family = "JetBrains Mono",
