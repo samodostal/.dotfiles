@@ -18,7 +18,7 @@ fi
 # NOTES
 tmux has-session -t notes 2>/dev/null
 if [ $? -ne 0 ]; then
-    tmux new-session -ds notes -c ~/Notes/muni/semester_5
+    tmux new-session -ds notes -c ~/Notes/muni/semester_6
     tmux send-keys -t notes 'nvim' 'C-m'
 fi
 

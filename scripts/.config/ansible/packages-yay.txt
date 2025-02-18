@@ -13,3 +13,5 @@ nrfutil
 nrf-command-line-tools
 jlink
 nrf-udev
+jlink-software-and-documentation
+rstudio-desktop
