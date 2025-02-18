@@ -16,6 +16,12 @@
       "9": []
     }
   },
+  "custom/spotify": {
+    "format": "{}",
+    "exec": "~/.dotfiles/scripts/.config/shell_scripts/spotify-status.sh",
+    "interval": 1,
+    "tooltip": false
+  },
   "memory": {
     "format": " {used}GB",
     "tooltip": false
@@ -36,7 +42,8 @@
   "custom/auto-cpufreq": {
     "format": "{}",
     "exec": "~/.dotfiles/scripts/.config/shell_scripts/auto-cpufreq-status.sh",
-    "interval": 10
+    "interval": 10,
+    "tooltip": false
   },
   "battery": {
     "format": " {capacity}%",
