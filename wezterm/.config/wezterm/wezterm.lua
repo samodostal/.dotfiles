@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 config.default_domain = "local"
 
 config.term = "xterm-256color"
-config.color_scheme = "GruvboxDarkHard"
+config.color_scheme = "Tokyo Night"
 -- config.window_background_opacity = 0.9
 config.window_background_opacity = 1.0
 config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
