@@ -15,8 +15,10 @@ alias copy="wl-copy"
 export USER_SCRIPTS=$HOME/.dotfiles/scripts/.config/shell_scripts
 export CARGO=$HOME/.cargo/bin
 export PYENV=$HOME/.pyenv/bin
+export GHCUP=$HOME/.ghcup/bin
+export CABAL=$HOME/.cabal/bin
 
-export PATH=$USER_SCRIPTS:$CARGO:$PYENV:$PATH
+export PATH=$USER_SCRIPTS:$CARGO:$PYENV:$GHCUP:$CABAL:$PATH
 
 # External
 source /usr/share/nvm/init-nvm.sh
