@@ -47,3 +47,7 @@ just
 ansible
 maven
 wev
+bitwarden-cli
+bitwarden
+python-tldextract
+rofi-wayland
