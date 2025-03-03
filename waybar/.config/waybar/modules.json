@@ -51,7 +51,8 @@
     "tooltip": false
   },
   "clock": {
-    "format": " {:%H:%M | %d-%m}",
+    "format": " {:%H:%M:%S | %d-%m}",
+    "interval": 1,
     "tooltip": false
   }
 }
