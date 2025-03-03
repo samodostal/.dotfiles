@@ -15,3 +15,7 @@ jlink
 nrf-udev
 jlink-software-and-documentation
 rstudio-desktop
+python-west
+zephyr-sdk
+python-adafruit-nrfutil
+tio

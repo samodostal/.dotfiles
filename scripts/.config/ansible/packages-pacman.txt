@@ -1,4 +1,3 @@
-qutebrowser
 thunderbird
 spotify-launcher
 neovim
@@ -51,3 +50,14 @@ bitwarden-cli
 bitwarden
 python-tldextract
 rofi-wayland
+pdfjs
+arm-none-eabi-gcc
+arm-none-eabi-gdb
+docker
+docker-compose
+godot
+mesa
+vulkan-icd-loader
+vulkan-radeon
+python-pipx
+firefox-tridactyl
