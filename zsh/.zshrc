@@ -7,6 +7,9 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+# Options
+unsetopt share_history
+
 # Aliases
 alias nf="clear && neofetch"
 alias copy="wl-copy"
