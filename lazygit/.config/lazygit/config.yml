@@ -3,6 +3,6 @@ gui:
 quitOnTopLevelReturn: true
 git:
   paging:
-    pager: delta --dark --paging=never
+    pager: delta --dark --paging=never --diff-so-fancy
 os:
   editPreset: 'nvim-remote'
