@@ -61,3 +61,5 @@ vulkan-icd-loader
 vulkan-radeon
 python-pipx
 firefox-tridactyl
+thunar-volman
+gvfs
