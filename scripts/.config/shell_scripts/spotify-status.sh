@@ -4,11 +4,11 @@ status=$(playerctl status 2>/dev/null)
 metadata=$(playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null)
 
 if [ "$status" = "Playing" ]; then
-    icon=" "
+    icon=""
 elif [ "$status" = "Paused" ]; then
-    icon=" "
+    icon=""
 else
-    icon=" "
+    icon=""
     metadata="No music playing"
 fi
 
