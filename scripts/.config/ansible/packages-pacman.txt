@@ -63,3 +63,5 @@ python-pipx
 firefox-tridactyl
 thunar-volman
 gvfs
+aspnet-runtime
+batsignal
