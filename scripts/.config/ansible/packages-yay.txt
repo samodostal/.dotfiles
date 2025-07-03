@@ -19,3 +19,6 @@ python-west
 zephyr-sdk
 python-adafruit-nrfutil
 tio
+saleae-logic2
+cura
+zoom

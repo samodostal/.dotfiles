@@ -2,6 +2,7 @@ thunderbird
 spotify-launcher
 neovim
 wl-clipboard
+less
 btop
 bluez
 bluez-utils
@@ -42,6 +43,7 @@ glow
 usbutils
 stlink
 kicad
+kicad-library
 just
 ansible
 maven
@@ -65,3 +67,7 @@ thunar-volman
 gvfs
 aspnet-runtime
 batsignal
+powertop
+hyprlock
+texlive
+freecad
