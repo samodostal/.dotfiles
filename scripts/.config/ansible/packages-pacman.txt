@@ -72,3 +72,4 @@ hyprlock
 texlive
 freecad
 gimp
+audacity
