@@ -71,3 +71,4 @@ powertop
 hyprlock
 texlive
 freecad
+gimp
