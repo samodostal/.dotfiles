@@ -13,6 +13,7 @@ unsetopt share_history
 # Aliases
 alias nf="clear && neofetch"
 alias copy="wl-copy"
+alias tt="tmux-setup.sh"
 
 # PATH
 export USER_SCRIPTS=$HOME/.dotfiles/scripts/.config/shell_scripts
