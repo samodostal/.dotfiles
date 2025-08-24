@@ -23,4 +23,4 @@ saleae-logic2
 cura
 zoom
 logseq-desktop
-pnmixer
+pasystray
