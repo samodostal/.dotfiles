@@ -24,3 +24,4 @@ cura
 zoom
 logseq-desktop
 pasystray
+quartus-free
