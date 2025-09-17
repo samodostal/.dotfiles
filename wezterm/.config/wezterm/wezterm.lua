@@ -31,6 +31,9 @@ config.font_rules = {
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = false
+
+config.dpi = 384.0
+
 --
 -- -- Keymaps
 -- local action = wezterm.action
