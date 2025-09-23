@@ -2,7 +2,7 @@
 
 readonly MAX_LENGTH=32
 
-status=$(playerctl status 2>/dev/null)
+status=$(playerctl -p spotify status 2>/dev/null)
 metadata=$(playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null)
 
 if [ ${#metadata} -gt $MAX_LENGTH ]; then
