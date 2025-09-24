@@ -25,3 +25,4 @@ zoom
 logseq-desktop
 pasystray
 quartus-free
+digital
