@@ -33,6 +33,11 @@ window#waybar {
     background: #107cb0;
 }
 
+#custom-superproductivity.sp-idle,
+#custom-superproductivity.sp-offline {
+    color: #666666;
+}
+
 #custom-arch {
     padding: 0px 6px;
     margin-right: -15px;

@@ -16,6 +16,12 @@
       "9": []
     }
   },
+  "custom/superproductivity": {
+    "exec": "node ~/.dotfiles/scripts/.config/shell_scripts/superproductivity-watch.mjs",
+    "return-type": "json",
+    "restart-interval": 5,
+    "tooltip": true
+  },
   "custom/spotify": {
     "format": "{}",
     "exec": "~/.dotfiles/scripts/.config/shell_scripts/spotify-status.sh",
@@ -34,11 +40,16 @@
     "format": "󰃠 {percent}%",
     "tooltip": false
   },
-  "wireplumber": {
-    "format": " {volume}",
-    "format-muted": " {volume}",
-    "tooltip": false
-  },
+	"pulseaudio": {
+		"format": "{icon} {volume}",
+		"format-bluetooth": "{icon} {volume}",
+		"format-muted": " {volume}",
+		"format-icons": {
+			"headphone": "",
+			"default": [""]
+		},
+		"tooltip": false
+	},
   "custom/auto-cpufreq": {
     "format": "{}",
     "exec": "~/.dotfiles/scripts/.config/shell_scripts/auto-cpufreq-status.sh",
