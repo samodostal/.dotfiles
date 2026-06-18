@@ -2,7 +2,7 @@ gui:
   showBottomLine: false
 quitOnTopLevelReturn: true
 git:
-  paging:
-    pager: delta --dark --paging=never --diff-so-fancy
+  pagers:
+    - pager: delta --dark --paging=never --diff-so-fancy
 os:
   editPreset: 'nvim-remote'
