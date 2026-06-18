@@ -1,5 +1,4 @@
 thunderbird
-spotify-launcher
 neovim
 wl-clipboard
 less
