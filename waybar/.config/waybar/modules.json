@@ -16,12 +16,6 @@
       "9": []
     }
   },
-  "custom/superproductivity": {
-    "exec": "node ~/.dotfiles/scripts/.config/shell_scripts/superproductivity-watch.mjs",
-    "return-type": "json",
-    "restart-interval": 5,
-    "tooltip": true
-  },
   "custom/spotify": {
     "format": "{}",
     "exec": "~/.dotfiles/scripts/.config/shell_scripts/spotify-status.sh",

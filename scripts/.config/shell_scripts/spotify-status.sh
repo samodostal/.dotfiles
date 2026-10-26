@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly MAX_LENGTH=32
+readonly MAX_LENGTH=42
 
 status=$(playerctl -p spotify status 2>/dev/null)
 metadata=$(playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null)
