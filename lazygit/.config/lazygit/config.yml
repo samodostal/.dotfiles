@@ -1,8 +1,13 @@
 gui:
   showBottomLine: false
-quitOnTopLevelReturn: true
+quitOnTopLevelReturn: false
 git:
-  pagers:
-    - pager: delta --dark --paging=never --diff-so-fancy
+  diffRenderers:
+    - command: >-
+        delta --dark --paging=never --diff-so-fancy --syntax-theme=TwoDark
+        --zero-style='syntax'
+        --minus-style='syntax "#3f0001"' --plus-style='syntax "#002800"'
 os:
-  editPreset: 'nvim-remote'
+  edit: '[ -z "$NVIM" ] && (nvim -- {{filename}}) || (nvim --server "$NVIM" --remote-send "q" && nvim --server "$NVIM" --remote {{filename}})'
+  editAtLine: '[ -z "$NVIM" ] && (nvim +{{line}} -- {{filename}}) || (nvim --server "$NVIM" --remote-send "q" &&  nvim --server "$NVIM" --remote {{filename}} && nvim --server "$NVIM" --remote-send ":{{line}}<CR>")'
+  openDirInEditor: '[ -z "$NVIM" ] && (nvim -- {{dir}}) || (nvim --server "$NVIM" --remote-send "q" && nvim --server "$NVIM" --remote {{dir}})'
