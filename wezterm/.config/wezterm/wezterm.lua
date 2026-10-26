@@ -5,6 +5,9 @@ config.default_domain = "local"
 
 config.term = "xterm-256color"
 config.color_scheme = "Tokyo Night"
+config.colors = {
+	background = "#0a0a0f",
+}
 -- config.window_background_opacity = 0.9
 config.window_background_opacity = 1.0
 config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
@@ -32,7 +35,7 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = false
 
-config.dpi = 384.0
+-- config.dpi = 384.0
 
 --
 -- -- Keymaps
