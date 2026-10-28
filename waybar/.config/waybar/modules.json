@@ -31,9 +31,11 @@
     "tooltip": false
   },
 	"pulseaudio": {
-		"format": "{icon} {volume}",
-		"format-bluetooth": "{icon} {volume}",
-		"format-muted": " {volume}",
+		"format": "{icon} {volume}  {format_source}",
+		"format-bluetooth": "{icon} {volume}  {format_source}",
+		"format-muted": " {volume}  {format_source}",
+		"format-source": "",
+		"format-source-muted": "",
 		"format-icons": {
 			"headphone": "",
 			"default": [""]
