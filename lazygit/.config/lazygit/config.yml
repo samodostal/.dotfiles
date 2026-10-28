@@ -2,6 +2,7 @@ gui:
   colorScheme: dark
   showBottomLine: false
   nerdFontsVersion: "3"
+  showFileTree: false
 quitOnTopLevelReturn: false
 git:
   diffRenderers:
