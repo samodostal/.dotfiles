@@ -1,7 +1,7 @@
 window {
 	margin: 0px;
-	border: 1px solid #928374;
-	background-color: #282828;
+	border: 1px solid #3c3836;
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 #input {
@@ -14,13 +14,13 @@ window {
 #inner-box {
 	margin: 5px;
 	border: none;
-	background-color: #282828;
+	background-color: transparent;
 }
 
 #outer-box {
 	margin: 5px;
 	border: none;
-	background-color: #282828;
+	background-color: transparent;
 }
 
 #scroll {
@@ -35,5 +35,9 @@ window {
 }
 
 #entry:selected {
-	background-color: #1d2021;
+	background-color: #d79921;
+}
+
+#entry:selected #text {
+	color: #000000;
 }

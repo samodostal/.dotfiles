@@ -4,12 +4,39 @@ local config = wezterm.config_builder()
 config.default_domain = "local"
 
 config.term = "xterm-256color"
-config.color_scheme = "Tokyo Night"
 config.colors = {
-	background = "#0a0a0f",
+	foreground = "#ebdbb2",
+	background = "#000000",
+	cursor_bg = "#d79921",
+	cursor_border = "#d79921",
+	cursor_fg = "#000000",
+	selection_bg = "#3c3836",
+	selection_fg = "#ebdbb2",
+	scrollbar_thumb = "#3c3836",
+	split = "#3c3836",
+	ansi = {
+		"#282828",
+		"#cc241d",
+		"#98971a",
+		"#d79921",
+		"#458588",
+		"#b16286",
+		"#689d6a",
+		"#a89984",
+	},
+	brights = {
+		"#928374",
+		"#fb4934",
+		"#b8bb26",
+		"#fabd2f",
+		"#83a598",
+		"#d3869b",
+		"#8ec07c",
+		"#ebdbb2",
+	},
 }
 -- config.window_background_opacity = 0.9
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.9
 config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
@@ -31,7 +58,7 @@ config.font_rules = {
 		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
 	},
 }
-config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" }
 
 config.enable_tab_bar = false
 

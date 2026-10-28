@@ -1,8 +1,4 @@
 {
-  "custom/arch": {
-    "format": "󰣇",
-    "tooltip": false
-  },
   "hyprland/workspaces": {
     "persistent-workspaces": {
       "1": [],
