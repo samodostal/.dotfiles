@@ -1,31 +1,32 @@
 [global]
     offset = (10, 10)
     progress_bar = true
-    transparency = 10
+    transparency = 20
     separator_height = 2
     padding = 8
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 1
-    frame_color = "#CCCCCC"
+    frame_color = "#3c3836"
     separator_color = frame
     sort = yes
+    hide_duplicate_count = yes
     font = Monospace 8
     line_height = 0
     corner_radius = 3
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#888888"
+    background = "#000000"
+    foreground = "#928374"
     timeout = 10
 
 [urgency_normal]
-    background = "#222222"
-    foreground = "#ffffff"
+    background = "#000000"
+    foreground = "#ebdbb2"
     timeout = 10
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
+    background = "#cc241d"
+    foreground = "#ebdbb2"
+    frame_color = "#fb4934"
     timeout = 0
