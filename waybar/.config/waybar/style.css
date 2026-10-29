@@ -39,3 +39,11 @@ window#waybar {
 #custom-superproductivity.sp-offline {
     color: #928374;
 }
+
+#temperature.warning {
+    color: #fabd2f;
+}
+
+#temperature.critical {
+    color: #fb4934;
+}

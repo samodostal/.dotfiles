@@ -2,8 +2,9 @@ gui:
   colorScheme: dark
   showBottomLine: false
   nerdFontsVersion: "3"
-  showFileTree: false
+  # showFileTree: false
 quitOnTopLevelReturn: false
+promptToReturnFromSubprocess: false
 git:
   diffRenderers:
     - command: >-

@@ -29,4 +29,4 @@ if [[ "$added" -eq 0 && "$deleted" -eq 0 && "$changed" -eq 0 ]]; then
 	exit 0
 fi
 
-printf '󰊢 %s  󰐕 %d 󰏫 %d 󰍴 %d' "$branch" "$added" "$changed" "$deleted"
+printf '󰊢 %s  +%d ~%d -%d' "$branch" "$added" "$changed" "$deleted"

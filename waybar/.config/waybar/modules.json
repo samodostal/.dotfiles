@@ -26,6 +26,15 @@
     "format": " {usage}%",
     "tooltip": false
   },
+  "temperature": {
+    "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
+    "input-filename": "temp1_input",
+    "interval": 2,
+    "warning-threshold": 85,
+    "critical-threshold": 95,
+    "format": " {temperatureC}°C",
+    "tooltip": false
+  },
   "backlight": {
     "format": "󰃠 {percent}%",
     "tooltip": false

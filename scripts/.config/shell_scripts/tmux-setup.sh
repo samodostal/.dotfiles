@@ -33,7 +33,7 @@ fi
 tmux has-session -t gerry_dae 2>/dev/null
 if [ $? -ne 0 ]; then
     tmux new-session -ds gerry_dae -c ~/Projects/godot_projects/gerry_dae
-    tmux send-keys -t gerry_dae 'clear && just' 'C-m'
+    tmux send-keys -t gerry_dae 'clear && nvim' 'C-m'
 fi
 
 # DOCKER

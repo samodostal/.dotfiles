@@ -9,6 +9,7 @@
     "hyprland/language",
     "memory",
     "cpu",
+    "temperature",
     "backlight",
     "pulseaudio",
     "custom/auto-cpufreq",
