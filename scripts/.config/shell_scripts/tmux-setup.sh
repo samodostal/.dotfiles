@@ -5,7 +5,7 @@
 tmux has-session -t home 2>/dev/null
 if [ $? -ne 0 ]; then
     tmux new-session -ds home -c ~/
-    tmux send-keys -t home 'clear && neofetch' 'C-m'
+    tmux send-keys -t home 'clear && fastfetch' 'C-m'
 fi
 
 # DOTFILES

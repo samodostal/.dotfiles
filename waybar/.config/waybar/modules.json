@@ -1,4 +1,10 @@
 {
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+    "format-en-dvorak": "DV",
+    "tooltip": false
+  },
   "hyprland/workspaces": {
     "persistent-workspaces": {
       "1": [],
@@ -36,17 +42,21 @@
     "tooltip": false
   },
   "backlight": {
-    "format": "󰃠 {percent}%",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
     "tooltip": false
   },
 	"pulseaudio": {
-		"format": "{format_source}  {icon} {volume}",
-		"format-bluetooth": "{format_source}  {icon} {volume}",
-		"format-muted": " {format_source}  {volume}",
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "<span font_size='large'>󰂰</span> {volume}%",
+		"format-muted": " {volume}%",
+		"max-volume": 100,
 		"format-source": "",
 		"format-source-muted": "",
 		"format-icons": {
 			"headphone": "",
+			"headset": "",
+			"hdmi": "",
 			"default": [""]
 		},
 		"tooltip": false
@@ -68,3 +78,8 @@
     "tooltip": false
   }
 }
+  },
+  "clock#date": {
+    "format": "{:%d-%m}",
+    "interval": 60,
+    "tooltip": false

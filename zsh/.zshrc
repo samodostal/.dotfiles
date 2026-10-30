@@ -1,7 +1,8 @@
 # ZSH config
 export ZSH=/usr/share/oh-my-zsh
 export ZSH_THEME=robbyrussell
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+mkdir -p $HOME/.cache/zsh
+export ZSH_COMPDUMP=$HOME/.cache/zsh/.zcompdump-$HOST
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -24,4 +25,4 @@ export CABAL=$HOME/.cabal/bin
 export PATH=$USER_SCRIPTS:$CARGO:$GHCUP:$CABAL:$PATH
 
 # External
-source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh --no-use
