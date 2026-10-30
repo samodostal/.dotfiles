@@ -36,13 +36,6 @@ if [ $? -ne 0 ]; then
     tmux send-keys -t gerry_dae 'clear && nvim' 'C-m'
 fi
 
-# DOCKER
-tmux has-session -t docker 2>/dev/null
-if [ $? -ne 0 ]; then
-    tmux new-session -ds docker
-    tmux send-keys -t docker 'clear && lazydocker' 'C-m'
-fi
-
 # BTOP
 tmux has-session -t btop 2>/dev/null
 if [ $? -ne 0 ]; then

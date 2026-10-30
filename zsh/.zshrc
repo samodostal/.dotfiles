@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt share_history
 
 # Aliases
-alias nf="clear && neofetch"
+alias nf="clear && fastfetch"
 alias copy="wl-copy"
 alias tt="tmux-setup.sh"
 
@@ -20,7 +20,6 @@ export USER_SCRIPTS=$HOME/.dotfiles/scripts/.config/shell_scripts
 export CARGO=$HOME/.cargo/bin
 export GHCUP=$HOME/.ghcup/bin
 export CABAL=$HOME/.cabal/bin
-export LD_LIBRARY_PATH=""
 
 export PATH=$USER_SCRIPTS:$CARGO:$GHCUP:$CABAL:$PATH
 

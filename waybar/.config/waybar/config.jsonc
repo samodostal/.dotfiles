@@ -12,7 +12,7 @@
     "temperature",
     "backlight",
     "pulseaudio",
-    "custom/auto-cpufreq",
+    // "custom/auto-cpufreq",
     "battery",
     "clock",
     "tray",
