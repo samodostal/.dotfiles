@@ -35,6 +35,20 @@ window#waybar {
     color: #ebdbb2;
 }
 
+#clock.date {
+    margin-right: 8px;
+}
+
+#custom-network.connecting {
+    color: #fabd2f;
+}
+
+#bluetooth.off,
+#bluetooth.disabled,
+#custom-network.disconnected {
+    color: #928374;
+}
+
 #custom-superproductivity.sp-idle,
 #custom-superproductivity.sp-offline {
     color: #928374;
@@ -46,4 +60,34 @@ window#waybar {
 
 #temperature.critical {
     color: #fb4934;
+}
+
+#battery.charging,
+#battery.plugged,
+#battery.full {
+    color: #b8bb26;
+}
+
+#battery.warning {
+    color: #fabd2f;
+}
+
+#battery.critical {
+    color: #fb4934;
+}
+
+.module {
+    margin: 0 1px;
+}
+
+#custom-separator {
+    color: rgba(235, 219, 178, 0.15);
+    font-size: 7px;
+    margin: 0;
+}
+
+#custom-divider {
+    color: rgba(235, 219, 178, 0.15);
+    font-weight: 900;
+    margin: 0 -2px;
 }

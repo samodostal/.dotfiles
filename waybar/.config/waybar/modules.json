@@ -59,8 +59,55 @@
 			"hdmi": "",
 			"default": [""]
 		},
-		"tooltip": false
+		"tooltip": false,
+		"on-click": "~/.local/bin/sni-menu.sh pasystray pavucontrol",
+		"on-click-right": "~/.local/bin/sni-menu.sh pasystray pavucontrol"
 	},
+	"pulseaudio#mic": {
+		"format": "{format_source}",
+		"format-source": "",
+		"format-source-muted": "",
+		"tooltip": false,
+		"on-click": "~/.local/bin/sni-menu.sh pasystray pavucontrol",
+		"on-click-right": "~/.local/bin/sni-menu.sh pasystray pavucontrol"
+	},
+  "bluetooth": {
+    "format": "<span font_size='large'>{icon}</span>",
+    "format-on": "<span font_size='large'>{icon}</span>",
+    "format-connected": "<span font_size='large'>{icon}</span> {num_connections}",
+    "format-off": "<span font_size='large'>󰂲</span>",
+    "format-disabled": "<span font_size='large'>󰂲</span>",
+    "format-no-controller": "<span font_size='large'>󰂲</span>",
+    "format-icons": {
+      "on": "\uf294",
+      "off": "󰂲",
+      "connected": "\uf294"
+    },
+    "tooltip": false,
+    "on-click": "~/.local/bin/sni-menu.sh blueman blueman-manager",
+    "on-click-right": "~/.local/bin/sni-menu.sh blueman blueman-manager"
+  },
+  "custom/network": {
+    "exec": "~/.local/bin/network-status.py",
+    "restart-interval": 2,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": false,
+    "on-click": "~/.local/bin/sni-menu.sh nm-applet nm-connection-editor",
+    "on-click-right": "~/.local/bin/sni-menu.sh nm-applet nm-connection-editor"
+  },
+  "custom/separator": {
+    "exec": "printf '●'",
+    "format": "●",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/divider": {
+    "exec": "printf '|'",
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
   "custom/auto-cpufreq": {
     "format": "{}",
     "exec": "~/.dotfiles/scripts/.config/shell_scripts/auto-cpufreq-status.sh",
@@ -68,18 +115,30 @@
     "tooltip": false
   },
   "battery": {
-    "format": " {capacity}%",
-    "format-charging": "󰂅 {capacity}%",
+    "format": "{icon} {capacity}%",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format-icons": {
+      "discharging": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "full": "󰁹",
+      "plugged": "󰚥",
+      "not-charging": "󰚥",
+      "unknown": "󰂑",
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
     "tooltip": false
   },
   "clock": {
-    "format": " {:%H:%M:%S | %d-%m}",
+    "format": "{:%H:%M:%S}",
     "interval": 1,
     "tooltip": false
-  }
-}
   },
   "clock#date": {
     "format": "{:%d-%m}",
     "interval": 60,
     "tooltip": false
+  }
+}
